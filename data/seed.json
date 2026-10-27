@@ -3314,6 +3314,155 @@
           "access": "主管部门越文解读正文"
         }
       ]
+    },
+    {
+      "id": "us-platform-impersonation-anprm",
+      "title": "冒充诈骗：平台广告优化责任征询",
+      "topic": "欺诈与商业行为",
+      "topics": [
+        "欺诈与商业行为"
+      ],
+      "region": "美国 · 联邦",
+      "code": "USA",
+      "xy": [
+        -100,
+        39
+      ],
+      "stage": "政策酝酿 / 预先规则制定征询",
+      "eventDate": "2026-10-01",
+      "deadline": "2026-11-30",
+      "effectiveDate": null,
+      "priority": "P2",
+      "fact": "FTC就平台广告优化助长政府与企业冒充诈骗征求意见，截止2026年11月30日；尚未形成最终规则。",
+      "impact": "风险可能从诈骗账号本身延伸到平台的广告推荐和优化服务。",
+      "action": "梳理直播推广投放、仿冒品牌账号与跳转链路；汇总识别、举报和重复违规数据，准备征询意见。",
+      "scope": "拟研究搜索、社交媒体及数字市场平台的广告优化行为；普通自然流量直播是否纳入，需看后续文本。",
+      "appliesTo": "拟研究搜索、社交媒体及数字市场平台的广告优化行为；普通自然流量直播是否纳入，需看后续文本。",
+      "source": "https://www.govinfo.gov/content/pkg/FR-2026-10-01/html/2026-20143.htm",
+      "checkedAt": "2026-10-27",
+      "confidence": "官方条文与监管材料",
+      "history": [
+        {
+          "date": "2026-10-01",
+          "event": "Federal Register刊登ANPRM并开放意见窗口。"
+        }
+      ],
+      "review": "跟踪后续官方文件与适用变化。",
+      "lawId": "16 CFR Part 461; RIN 3084-AB90; Matter R207000; FR 2026-20143",
+      "instrument": "预先规则制定通知（ANPRM）",
+      "scenarios": [
+        "直播付费推广",
+        "仿冒品牌直播",
+        "站外引流"
+      ],
+      "priorityReason": "公开征询仍开放，适合准备业务证据与意见。",
+      "owners": [],
+      "deliverable": "事件处置记录与规则差距清单。",
+      "uncertainty": "ANPRM是规则制定前期征询；新增义务、最终范围及生效日均未确定。",
+      "titleEn": "冒充诈骗：平台广告优化责任征询",
+      "reviewStatus": "官方正文核实",
+      "sourceCheckedAt": "2026-10-27T12:57:46.637741+00:00",
+      "deadlineType": "公众意见截止",
+      "statusEvidence": "FTC就平台广告优化助长政府与企业冒充诈骗征求意见，截止2026年11月30日；尚未形成最终规则。",
+      "policyImplication": {
+        "direction": "冒充诈骗：平台广告优化责任征询",
+        "proposal": "梳理直播推广投放、仿冒品牌账号与跳转链路；汇总识别、举报和重复违规数据，准备征询意见。",
+        "trigger": "11月30日是意见截止，不是实施日。新增平台义务须经后续规则制定、最终公布及适用安排；现行反欺诈规则继续适用。",
+        "tradeoff": "用户保护、误伤控制与可核验处置。",
+        "validation": "以合法测试样本核对适用条件与处理流程。"
+      },
+      "evidence": [
+        {
+          "url": "https://www.govinfo.gov/content/pkg/FR-2026-10-01/html/2026-20143.htm",
+          "publisher": "Federal Register / FTC",
+          "locator": "91 FR 62347–62357; Summary, Dates, Overview",
+          "checkedAt": "2026-10-27T12:57:46.637741+00:00",
+          "supports": "FTC就平台广告优化助长政府与企业冒充诈骗征求意见，截止2026年11月30日；尚未形成最终规则。",
+          "access": "官方正文"
+        }
+      ]
+    },
+    {
+      "id": "us-take-it-down",
+      "title": "TAKE IT DOWN：私密影像48小时删除机制",
+      "topic": "有害内容与身心健康",
+      "topics": [
+        "有害内容与身心健康",
+        "AI 与真实性",
+        "隐私与数据"
+      ],
+      "region": "美国 · 联邦",
+      "code": "USA",
+      "xy": [
+        -100,
+        39
+      ],
+      "stage": "已生效 / 平台义务实施",
+      "eventDate": "2026-05-19",
+      "deadline": "2026-05-19",
+      "effectiveDate": "2026-05-19",
+      "priority": "P1",
+      "fact": "第3节平台义务于2026年5月19日开始实施：有效请求触发48小时删除时限，覆盖真实及合成的非自愿私密影像。",
+      "impact": "删除流程需覆盖直播衍生回放与相同副本；没有平台账号的受害者也应能提出请求。",
+      "action": "为直播与回放提供清晰举报入口；收到有效请求后尽快删除、最迟48小时内完成，并合理查找相同副本，保留处置时间记录。",
+      "scope": "适用的用户生成内容平台；FTC指引明确涉及直播、帖子、消息和评论。合法请求须满足法定要件。",
+      "appliesTo": "适用的用户生成内容平台；FTC指引明确涉及直播、帖子、消息和评论。合法请求须满足法定要件。",
+      "source": "https://www.ftc.gov/business-guidance/resources/complying-take-it-down-act",
+      "checkedAt": "2026-10-27",
+      "confidence": "官方条文与监管材料",
+      "history": [
+        {
+          "date": "2025-05-19",
+          "event": "法律签署；平台删除机制留出一年建立期。"
+        },
+        {
+          "date": "2026-05-19",
+          "event": "第3节平台合规期限届满，FTC开始执法。"
+        }
+      ],
+      "review": "跟踪后续官方文件与适用变化。",
+      "lawId": "Public Law 119-12, Sections 3–4",
+      "instrument": "法律",
+      "scenarios": [
+        "直播画面与连麦",
+        "直播回放与切片",
+        "AI合成私密影像",
+        "受害者删除请求"
+      ],
+      "priorityReason": "已适用的内容处置期限。",
+      "owners": [],
+      "deliverable": "事件处置记录与规则差距清单。",
+      "uncertainty": "48小时针对有效请求；相同副本适用合理努力要求。哈希防重传是FTC建议，勿写成独立法定义务。",
+      "titleEn": "TAKE IT DOWN：私密影像48小时删除机制",
+      "reviewStatus": "官方正文核实",
+      "sourceCheckedAt": "2026-10-27T12:57:46.637741+00:00",
+      "deadlineType": "第3节平台合规期限",
+      "statusEvidence": "第3节平台义务于2026年5月19日开始实施：有效请求触发48小时删除时限，覆盖真实及合成的非自愿私密影像。",
+      "policyImplication": {
+        "direction": "TAKE IT DOWN：私密影像48小时删除机制",
+        "proposal": "为直播与回放提供清晰举报入口；收到有效请求后尽快删除、最迟48小时内完成，并合理查找相同副本，保留处置时间记录。",
+        "trigger": "第3节合规期限已于2026年5月19日届满；每次收到有效请求即开始48小时计时。严重伤害按平台安全规则即时处理，不等待期限用尽。",
+        "tradeoff": "用户保护、误伤控制与可核验处置。",
+        "validation": "以合法测试样本核对适用条件与处理流程。"
+      },
+      "evidence": [
+        {
+          "url": "https://www.ftc.gov/business-guidance/resources/complying-take-it-down-act",
+          "publisher": "Federal Trade Commission",
+          "locator": "Scope, notice and removal, duplicate copies",
+          "checkedAt": "2026-10-27T12:57:46.637741+00:00",
+          "supports": "覆盖直播与合成私密影像；有效请求48小时处置；合理查找已知相同副本。",
+          "access": "官方指引正文"
+        },
+        {
+          "url": "https://www.govinfo.gov/content/pkg/PLAW-119publ12/html/PLAW-119publ12.htm",
+          "publisher": "U.S. Government Publishing Office",
+          "locator": "Section 3",
+          "checkedAt": "2026-10-27T12:57:46.637741+00:00",
+          "supports": "法定平台定义、通知要件、一年建立期与48小时删除要求。",
+          "access": "正式法律正文"
+        }
+      ]
     }
   ],
   "collection": {
