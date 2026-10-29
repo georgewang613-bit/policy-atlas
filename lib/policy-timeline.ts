@@ -11,7 +11,7 @@ const profiles:Record<string,Framework>={
  'eu-dfa-frontier':{route:'欧盟倡议 → 委员会提案 → 欧洲议会与理事会审议 → 最终文本与适用安排',gate:'EESC 意见本身不创设平台义务。需要正式提案、最终立法和适用条款；法规与指令的执行路径还需按最终法律形式判断。',next:'委员会正式提案及法律形式',url:eu},
  'eu-kids-proposal':{route:'提案反馈 → 委员会文本 → 立法机关审议 → 最终适用安排',gate:'反馈截止不是生效日。须核对正式文本、适用服务及最终生效／适用条款；现有 DSA 义务持续存在。',next:'核对反馈门户日期与正式提案版本',url:eu},
  'us-kosa':{route:'两院审议同一文本 → 总统签署或其他宪法成法路径 → 法律规定的实施安排',gate:'程序请求遭反对不等于法案永久终止，也不产生新合规义务。成法后仍须读取实际生效条款和授权规则。',next:'后续表决、替代文本与两院进程',url:'https://www.house.gov/the-house-explained/the-legislative-process'},
- 'au-duty-bill':{route:'两院通过 → 总督御准 → 法律规定的 commencement → 适用义务',gate:'提出法案不是生效。平台设计义务须待最终文本、启动条款和适用范围确认；不能把草案处罚当作现行处罚。',next:'两院审议与修订文本',url:au},
+ 'au-duty-bill':{route:'两院通过 → 总督御准 → 法律规定的生效节点 → 适用义务',gate:'提出法案不是生效。平台设计义务须待最终文本、启动条款和适用范围确认；不能把草案处罚当作现行处罚。',next:'两院审议与修订文本',url:au},
  'au-feed-draft':{route:'草案征询 → 母法授权成立 → 正式制定配套文书 → 启动及过渡安排',gate:'信息流草案依赖母法获御准及后续正式文书。11月5日只是意见窗口，不是上线截止。',next:'母法御准与正式用户工具规则'},
  'ca-digital-safety-bill':{route:'众议院及参议院同文通过 → 御准 → 条款启动／配套规则',gate:'宪章声明说明权利影响，不是批准或生效证明。实际义务需按成法后的启动条款、服务定义及配套要求判断。',next:'C-34 后续审读及修订文本',url:'https://www.ourcommons.ca/procedure/our-procedure/legislativeprocess/c_g_legislativeprocess-e.html'},
  'sg-tiered-next':{route:'政策方向 → 正式法案 → 国会审议与总统同意 → 启动安排',gate:'2027年是拟提法案的政策目标，不是已确定的实施日。新年龄保证及功能义务需等待正式立法和适用安排。',next:'正式法案及年龄／功能分层定义',url:'https://www.parliament.gov.sg/about-us/parliament-information/functions'},
