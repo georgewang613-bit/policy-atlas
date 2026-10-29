@@ -1,0 +1,225 @@
+{
+  "reviewedAt": "2026-10-29",
+  "items": [
+    {
+      "id": "hybrid-live-moderation",
+      "title": "直播审核：分类器＋相似案例匹配",
+      "category": "审核模型",
+      "publishedAt": "2026-06-03",
+      "version": "论文 v3",
+      "status": "论文报告生产实验",
+      "checkedAt": "2026-10-29",
+      "conclusion": "适合评估新型违规的补充识别路线。",
+      "fact": "论文结合监督分类与参考案例匹配，并用多模态大模型向轻量推理流程蒸馏知识；作者报告A/B测试中不良直播观看量下降6–8%。",
+      "liveUse": "将已知违规交给分类器，新型或隐晦案例进入相似案例检索，再由审核员核对上下文。",
+      "limits": "结果来自作者实验环境；不等于所有地区或所有违规类别的效果。",
+      "nextStep": "选一个频繁变形的违规主题，离线对比现有分类器与双路召回。",
+      "measure": "同等精确率下的召回、违规观看量、审核负荷、推理时延。",
+      "sources": [
+        {
+          "url": "https://arxiv.org/abs/2512.03553",
+          "publisher": "Yew 等 / arXiv",
+          "locator": "摘要；2026-06-03修订"
+        }
+      ]
+    },
+    {
+      "id": "pasbench-video",
+      "title": "PaSBench-Video：预警是否及时、是否误报",
+      "category": "评测研究",
+      "publishedAt": "2026-06-01",
+      "version": "740段视频",
+      "status": "研究基准",
+      "checkedAt": "2026-10-29",
+      "conclusion": "预警评测应同时看时机、内容与误报。",
+      "fact": "基准含481段风险视频和259段无风险视频。13个模型在最严格指标上均未超过20%；召回提高常伴随更多误报。",
+      "liveUse": "用于设计危险行为直播的评测方法：只给模型看到当前时刻以前的画面。",
+      "limits": "基准场景为驾驶、医疗、生活和工业，并非直播社区规则数据集。",
+      "nextStep": "建立LIVE安全与风险对照样本，标注首次风险线索和允许介入窗口。",
+      "measure": "有效预警提前量、安全片段误报率、分场景召回。",
+      "sources": [
+        {
+          "url": "https://arxiv.org/abs/2606.02443",
+          "publisher": "Zhao 等 / arXiv",
+          "locator": "摘要与基准设计"
+        }
+      ]
+    },
+    {
+      "id": "synthid-api",
+      "title": "SynthID：检测已嵌入的AI水印",
+      "category": "来源验证",
+      "publishedAt": "2026-05-19",
+      "version": "AI Content Detection API公告",
+      "status": "合作伙伴试用公告",
+      "checkedAt": "2026-10-29",
+      "conclusion": "可作为AI来源信号，适合与内容审核并行。",
+      "fact": "Google宣布通过API扩展AI生成内容检测，首批与可信合作伙伴合作完善服务。",
+      "liveUse": "对AI主播素材、回放和投稿增加来源信号，辅助标识与争议复核。",
+      "limits": "检测范围取决于所支持的水印与生成工具；未检出不等于真人原创。",
+      "nextStep": "先核对当前接入资格与媒体支持，再用压缩、裁切和转码样本验证。",
+      "measure": "检出率、误报率、编辑后稳定性、处理时延。",
+      "sources": [
+        {
+          "url": "https://blog.google/innovation-and-ai/products/identifying-ai-generated-media-online/",
+          "publisher": "Google",
+          "locator": "2026-05-19产品公告"
+        }
+      ]
+    },
+    {
+      "id": "tiktok-automation",
+      "title": "TikTok：自动化处理与人工复核的分工",
+      "category": "平台实践",
+      "publishedAt": "2026-08-31",
+      "version": "2026上半年欧盟报告",
+      "status": "平台自报数据",
+      "checkedAt": "2026-10-29",
+      "conclusion": "规模指标要与误伤和申诉结果一起看。",
+      "fact": "TikTok称94.1%的违规内容由自动化系统处理、无需人工审核；报告覆盖视频、LIVE、广告、商品和评论等内容。",
+      "liveUse": "设计审核分流：高置信度自动处理，模糊语境和申诉交给人工。",
+      "limits": "94.1%是跨内容类型的处理比例，不是LIVE专项准确率。",
+      "nextStep": "按LIVE语言、违规类型与处置级别拆分指标，再确定自动处理边界。",
+      "measure": "误伤率、申诉改判率、违规曝光、人工复核耗时。",
+      "sources": [
+        {
+          "url": "https://newsroom.tiktok.com/digital-services-act-our-seventh-transparency-report-on-content-moderation-in-europe?lang=en-150",
+          "publisher": "TikTok Newsroom",
+          "locator": "第七份DSA透明度报告公告"
+        }
+      ]
+    },
+    {
+      "id": "sam-audio",
+      "title": "SAM Audio：从混合声音中分离目标声源",
+      "category": "音频处理",
+      "publishedAt": "2025-12-16",
+      "version": "SAM Audio",
+      "status": "模型已发布",
+      "checkedAt": "2026-10-29",
+      "conclusion": "可先用于辅助复核多人连麦与嘈杂直播。",
+      "fact": "Meta公布支持文字、视觉与时间片段提示的音频分离模型，可从混合音频中提取目标声源。",
+      "liveUse": "分离嘉宾声音或背景声，再辅助转写与审核定位。",
+      "limits": "分离不等于违规判断；实时性能、串音与分离失真需实测。",
+      "nextStep": "先对已获授权的回放做离线评测，同时保留原音供复核。",
+      "measure": "转写错误率、声源归属错误、失真、端到端延迟。",
+      "sources": [
+        {
+          "url": "https://about.fb.com/news/2025/12/our-new-sam-audio-model-transforms-audio-editing/",
+          "publisher": "Meta",
+          "locator": "2025-12-16公告；三种提示方式"
+        }
+      ]
+    },
+    {
+      "id": "qwen3guard-stream",
+      "title": "Qwen3Guard：流式文本安全检查",
+      "category": "审核模型",
+      "publishedAt": "2025-10-16",
+      "version": "Stream / Gen",
+      "status": "模型与评测代码已公开",
+      "checkedAt": "2026-10-29",
+      "conclusion": "可评估AI主播生成文本的逐步拦截。",
+      "fact": "Qwen提供生成式与流式两类安全模型；流式版本针对增量文本生成，另有流式响应评测集。",
+      "liveUse": "在AI主播输出文字、转语音前增加检查；弹幕与语音转写需另做适配测试。",
+      "limits": "文本流式能力不等于实时音视频理解；口语、省略与跨语言语境会改变表现。",
+      "nextStep": "用完整对话及逐字输入分别测试，比较拦截时机与误报。",
+      "measure": "危险输出暴露长度、P95延迟、误报、分语言表现。",
+      "sources": [
+        {
+          "url": "https://github.com/QwenLM/Qwen3Guard",
+          "publisher": "Qwen团队",
+          "locator": "README：News、Basic information、Stream"
+        }
+      ]
+    },
+    {
+      "id": "shieldgemma2",
+      "title": "ShieldGemma 2：图像安全分类",
+      "category": "审核模型",
+      "publishedAt": null,
+      "version": "4B模型卡",
+      "status": "开放权重模型",
+      "checkedAt": "2026-10-29",
+      "conclusion": "可作为直播抽帧和AI素材的预筛选候选。",
+      "fact": "模型接收图像与安全政策提示，对真实或合成图像输出Yes/No概率，供阈值校准。",
+      "liveUse": "检查封面、直播抽帧和AI生成画面，再与语音、上下文合并判断。",
+      "limits": "单帧缺少时间关系；输出分数需要按业务样本校准。",
+      "nextStep": "选择明确视觉风险，建立正常、边界与违规三类样本。",
+      "measure": "分主题精确率与召回、校准误差、抽帧成本。",
+      "sources": [
+        {
+          "url": "https://ai.google.dev/gemma/docs/shieldgemma/model_card_2",
+          "publisher": "Google AI for Developers",
+          "locator": "Model Information；Inputs and outputs"
+        }
+      ]
+    },
+    {
+      "id": "llama-guard4",
+      "title": "Llama Guard 4：图文联合安全检查",
+      "category": "审核模型",
+      "publishedAt": null,
+      "version": "12B模型卡",
+      "status": "模型已发布",
+      "checkedAt": "2026-10-29",
+      "conclusion": "优先评估带文字上下文的图像审核。",
+      "fact": "Meta文档说明模型联合评估文字与图像，并明确不面向纯图像分类；图像提示的文本部分针对英语优化。",
+      "liveUse": "对直播抽帧附带标题或转写上下文，辅助审核员定位风险。",
+      "limits": "该文档明确不支持评估生成式AI图像；其他语言和连续视频需单独验证。",
+      "nextStep": "先限定自然图像与英语上下文，对比单帧规则和图文联合输入。",
+      "measure": "上下文增益、分语境误伤、GPU成本与延迟。",
+      "sources": [
+        {
+          "url": "https://dev.meta.ai/llama/docs/model-cards-and-prompt-formats/llama-guard-4",
+          "publisher": "Meta",
+          "locator": "Architecture；Image Support"
+        }
+      ]
+    },
+    {
+      "id": "c2pa-live",
+      "title": "C2PA：直播分段来源验证",
+      "category": "来源验证",
+      "publishedAt": null,
+      "version": "规范2.5 / Live Media",
+      "status": "技术规范",
+      "checkedAt": "2026-10-29",
+      "conclusion": "适合验证来源与完整性，不能单独判断内容真假。",
+      "fact": "规范为直播媒体提供分段验证机制，支持分段清单或可验证片段信息；2.5将live video扩为live media。",
+      "liveUse": "在采集、转码、分发到回放链路保留来源信息，辅助处理伪造与剪辑争议。",
+      "limits": "签名可信度依赖签发者与验证链；有效签名不代表画面所述事实正确。",
+      "nextStep": "用一条测试直播链路验证转码、断流、重连和回放后的凭证保留。",
+      "measure": "验证成功率、凭证丢失率、验签延迟、签名开销。",
+      "sources": [
+        {
+          "url": "https://spec.c2pa.org/specifications/specifications/2.5/specs/C2PA_Specification.html",
+          "publisher": "C2PA",
+          "locator": "第15节：Live Media"
+        }
+      ]
+    },
+    {
+      "id": "stopncii-hash",
+      "title": "StopNCII：已知私密影像的哈希匹配",
+      "category": "匹配工具",
+      "publishedAt": null,
+      "version": "运行机制",
+      "status": "已有平台协作机制",
+      "checkedAt": "2026-10-29",
+      "conclusion": "适合已知内容防重传，与新内容识别配合使用。",
+      "fact": "设备本地为图片或视频生成哈希；参与平台检查匹配内容，并按其私密影像滥用规则处理。",
+      "liveUse": "用于回放、切片与上传素材的已知NCII重复传播治理。",
+      "limits": "仅覆盖参与平台；哈希匹配与新内容语义判断不同。",
+      "nextStep": "核对参与条件、适用年龄与数据流程，再验证匹配后的复核和申诉。",
+      "measure": "匹配覆盖、变形后漏检、误匹配、处理时长。",
+      "sources": [
+        {
+          "url": "https://stopncii.org/how-it-works/",
+          "publisher": "StopNCII.org",
+          "locator": "步骤2、4、5"
+        }
+      ]
+    }
+  ]
+}
