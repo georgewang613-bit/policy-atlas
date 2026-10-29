@@ -1,21 +1,16 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-27",
-  "reviewedAt": "2026-10-27T11:44:15.432410+00:00",
-  "briefTitle": "近期窗口与LIVE落地重点",
+  "updatedAt": "2026-10-29",
+  "reviewedAt": "2026-10-29T13:20:13.612425+00:00",
+  "briefTitle": "今日重点",
   "briefEventIds": [
-    "sa-pdpl-draft",
-    "uk-transparency-draft",
-    "jp-election-guidance",
-    "eu-ai",
-    "ny-safe",
-    "uk-ncii-enforcement",
-    "eu-data-omnibus",
-    "al-tiktok-settlement",
-    "us-tiktok-coppa-settlement"
+    "uk-age-forthcoming",
+    "ny-ai-companion-minors",
+    "tx-hb18-en-banc",
+    "br-eca"
   ],
-  "runStatus": "40条事件 · 新增越南AI透明度规则",
-  "brief": "先跟进沙特11月5日、英国11月25日与日本11月24日的政策窗口。欧盟部分旧AI系统的标记义务于12月2日落实，纽约SAFE for Kids于2027年1月25日实施。近期新增英国NCII调查、欧盟数据规则谈判及TikTok美国和解案例，分别评估内容处置、隐私和未成年人控制。",
+  "runStatus": "44条政策 · 12条技术动态 · 10月29日复核",
+  "brief": "英国公布16岁年龄核验评估，正式法规仍待出台。纽约AI陪伴功能限制已成法，2027年1月1日实施。得州HB18进入全院复审，原小组意见已撤销。巴西新指引细化未成年人可能访问服务的判断。",
   "events": [
     {
       "id": "ny-safe",
@@ -718,17 +713,17 @@
         -14
       ],
       "topic": "未成年人保护",
-      "title": "ECA Digital：数字儿童保护框架",
+      "title": "ECA Digital适用指引公布",
       "stage": "已生效 / 分阶段监管",
-      "eventDate": "2025-09-17",
+      "eventDate": "2026-10-28",
       "deadline": null,
       "priority": "P1",
-      "fact": "ANPD确认 ECA Digital 已于2026年3月17日生效；年龄保证实施与监管另有分阶段路线图。",
-      "impact": "直播产品的儿童安全设计与数据处理应纳入当地评估。",
-      "action": "追踪 ANPD 最新适用指引，建立本地年龄、监护及风险设计核对表。",
-      "scope": "ANPD路线图不是暂停法律效力；2027年重点执法安排不排除其他时间执法。",
-      "source": "https://www.gov.br/anpd/pt-br/assuntos/eca-digital/eca-digital-english",
-      "checkedAt": "2026-10-27",
+      "fact": "ANPD公布指引，解释哪些服务属于未成年人“可能访问”，并细化预防责任。ECA Digital已于3月17日生效；本次是适用解释。",
+      "impact": "即使标注成人服务，也要结合直播吸引力、进入难度和实际风险判断适用性。",
+      "action": "复查观看、推荐、评论和礼物入口，留存风险判断及保护措施效果。",
+      "scope": "指引说明现行法适用范围，没有新设统一宽限期。",
+      "source": "https://www.gov.br/anpd/pt-br/assuntos/noticias/anpd-publica-guia-que-esclarece-quem-deve-cumprir-e-quais-sao-as-responsabilidades-das-plataformas-na-protecao-de-criancas-e-adolescentes",
+      "checkedAt": "2026-10-29",
       "confidence": "官方来源",
       "history": [
         {
@@ -738,6 +733,10 @@
         {
           "date": "2026-03-17",
           "event": "法律生效；与监管路线图分开记录"
+        },
+        {
+          "date": "2026-10-28",
+          "event": "ANPD公布1.0版适用范围及一般义务指引。"
         }
       ],
       "review": "跟踪适用范围与后续修订。",
@@ -751,30 +750,34 @@
       "scenarios": [
         "年龄核验",
         "账号准入",
-        "商业推广"
+        "商业推广",
+        "直播观看",
+        "直播推荐",
+        "评论互动",
+        "虚拟礼物"
       ],
       "appliesTo": "面向儿童青少年或可能被其访问的相关数字产品和服务提供者",
-      "priorityReason": "法律已于2026-03-17生效；ANPD年龄保证实施路线图仍有分阶段安排，应分别核验。",
+      "priorityReason": "新指引细化现行义务的适用判断，可直接用于复查直播产品。",
       "owners": [
         "Legal",
         "LATAM Policy",
         "未成年人安全",
         "隐私"
       ],
-      "deliverable": "将儿童风险、年龄保证、监护与商业设计映射到巴西产品流程；复核配套文件最终版本。",
-      "uncertainty": "ANPD路线图不是暂停法律效力；2027年重点执法安排不排除其他时间执法。",
-      "titleEn": "Brazil ECA Digital: in force with staged supervision",
+      "deliverable": "一份巴西LIVE适用性判断，附各入口风险、控制措施和效果证据。",
+      "uncertainty": "年龄保证另有分阶段安排；应逐条核对，不能整体延后现行义务。",
+      "titleEn": "ECA Digital: scope and general duties guidance",
       "reviewStatus": "公开来源已复核",
-      "sourceCheckedAt": "2026-10-27T11:37:08.510681+00:00",
+      "sourceCheckedAt": "2026-10-29T13:20:13.612425+00:00",
       "effectiveDate": "2026-03-17",
       "deadlineType": "后续阶段日期非统一宽限期",
-      "statusEvidence": "官方页面已核实；后续修法与司法限制仍需持续监测",
+      "statusEvidence": "ANPD10月28日公告及1.0版指引已核对；本次不改变法律生效日期。",
       "policyImplication": {
-        "direction": "直播产品的儿童安全设计与数据处理应纳入当地评估。",
-        "proposal": "追踪 ANPD 最新适用指引，建立本地年龄、监护及风险设计核对表。",
-        "trigger": "ECA Digital自2026年3月17日起生效；按具体条款及ANPD配套安排落实，监管路线图不构成统一延期。",
-        "tradeoff": "同时评估安全收益、创作者正常表达、年龄误判、隐私数据成本与申诉可达性。",
-        "validation": "将儿童风险、年龄保证、监护与商业设计映射到巴西产品流程；复核配套文件最终版本。"
+        "direction": "即使标注成人服务，也要结合直播吸引力、进入难度和实际风险判断适用性。",
+        "proposal": "复查观看、推荐、评论和礼物入口，留存风险判断及保护措施效果。",
+        "trigger": "现行义务已经适用；按新指引复查差距，具体分阶段要求依对应条款落实。",
+        "tradeoff": "评估年龄判断、内容审核和商业设计时，同时检查未成年人隐私。",
+        "validation": "一份巴西LIVE适用性判断，附各入口风险、控制措施和效果证据。"
       },
       "evidence": [
         {
@@ -784,6 +787,22 @@
           "checkedAt": "2026-10-26T13:40:00Z",
           "supports": "事件及日期；适用边界见分析",
           "access": "官方页面检索"
+        },
+        {
+          "url": "https://www.gov.br/anpd/pt-br/assuntos/noticias/anpd-publica-guia-que-esclarece-quem-deve-cumprir-e-quais-sao-as-responsabilidades-das-plataformas-na-protecao-de-criancas-e-adolescentes",
+          "publisher": "ANPD",
+          "locator": "2026-10-28；acesso provável / deveres dos fornecedores",
+          "checkedAt": "2026-10-29T13:20:13.612425+00:00",
+          "supports": "发布日期、可能访问的判断及预防责任。",
+          "access": "官方正文"
+        },
+        {
+          "url": "https://www.gov.br/anpd/pt-br/centrais-de-conteudo/materiais-educativos-e-publicacoes/guia-fornecedores-de-produtos-ou-servicos-de-tecnologia-da-informacao.pdf/@@display-file/file",
+          "publisher": "ANPD",
+          "locator": "1.0版；第5–9页、29页起及43页起",
+          "checkedAt": "2026-10-29T13:20:13.612425+00:00",
+          "supports": "适用范围、可能访问和预防责任的解释。",
+          "access": "官方PDF"
         }
       ]
     },
@@ -1139,7 +1158,7 @@
       "action": "核对反馈门户最新截止日，拆解账户、观看、互动与变现四层年龄场景。",
       "scope": "委员会采纳提案不等于议会和理事会完成立法；本条尚非已生效义务。",
       "source": "https://digital-strategy.ec.europa.eu/en/news/commission-seeks-feedback-eu-kids-act",
-      "checkedAt": "2026-10-26",
+      "checkedAt": "2026-10-29",
       "confidence": "官方一手来源",
       "history": [
         {
@@ -1169,8 +1188,8 @@
       "deliverable": "提案影响矩阵、证据缺口和反馈问题；截止日确认后再安排提交。",
       "uncertainty": "官方新闻页出现11月26日与12月3日两个日期，反馈门户正文未成功读取；暂不设硬截止。",
       "titleEn": "EU KIDS Act：提案反馈正在进行",
-      "reviewStatus": "原文核对 / 尚未定案",
-      "sourceCheckedAt": "2026-10-26T14:00:48Z",
+      "reviewStatus": "公开来源已复核",
+      "sourceCheckedAt": "2026-10-29T13:20:13.612425+00:00",
       "effectiveDate": null,
       "deadlineType": "截止日冲突：11/26 与 12/03，待核实",
       "statusEvidence": "已核对下列官方证据；不把政策意向或规则草案当作最终义务。",
@@ -1197,6 +1216,14 @@
           "checkedAt": "2026-10-26T14:00:48Z",
           "supports": "门户入口已定位；正文不可读，未用于确认截止日期",
           "access": "官方网页正文"
+        },
+        {
+          "url": "https://digital-strategy.ec.europa.eu/en/news/commission-seeks-feedback-eu-kids-act",
+          "publisher": "European Commission",
+          "locator": "反馈正文及入口文字；2026-10-29复核",
+          "checkedAt": "2026-10-29T13:20:13.612425+00:00",
+          "supports": "仍同时列11月26日及12月3日；门户正文为空，维持日期待核实。",
+          "access": "官方正文"
         }
       ]
     },
@@ -1359,27 +1386,31 @@
         54
       ],
       "topic": "未成年人保护",
-      "title": "未成年人社交媒体限制：二级法规待提交",
+      "title": "16岁年龄核验评估公布",
       "stage": "政策酝酿 / 待法规",
-      "eventDate": "2026-09-10",
+      "eventDate": "2026-10-29",
       "deadline": null,
       "priority": "P1",
-      "fact": "教育委员会9月10日发布政府回应：政府继续制定未成年人社交媒体与高风险功能限制政策，计划2026年底前提交法规。",
-      "impact": "需要区分观看、开播、连麦和与陌生人互动，现有18岁开播规则不能替代全部适用性评估。",
-      "action": "建立按年龄和功能的场景矩阵，跟踪正式法规及Ofcom年龄保证评估。",
-      "scope": "相关母法已提供授权；本条拟议的具体限制仍待二级法规，不等于新限制已经全面生效。",
-      "source": "https://committees.parliament.uk/committee/203/education-committee/news/217822/social-media-ban-committee-publishes-government-response-to-report-on-childrens-screentime/",
-      "checkedAt": "2026-10-26",
+      "fact": "Ofcom公布16岁年龄核验评估，列出证件比对、数字身份、银行信息和人脸年龄估计四类可用方法。评估供议会讨论，正式法规和实施指引仍待出台。",
+      "impact": "需分别评估直播观看、开播和陌生人互动入口，不能只检查主播年龄。",
+      "action": "测试四类方法的误判、隐私和绕过风险，为无证件用户准备补充路径。",
+      "scope": "这是前期评估，不是最终实施指引；现有在线安全义务继续适用。",
+      "source": "https://www.ofcom.org.uk/online-safety/protecting-children/rapid-assessment-of-highly-effective-age-assurance-at-16",
+      "checkedAt": "2026-10-29",
       "confidence": "官方一手来源",
       "history": [
         {
           "date": "2026-09-10",
           "event": "教育委员会9月10日发布政府回应：政府继续制定未成年人社交媒体与高风险功能限制政策，计划2026年底前提交法规。"
+        },
+        {
+          "date": "2026-10-29",
+          "event": "Ofcom公布16岁年龄核验评估；下一步为法规及指引征询。"
         }
       ],
       "review": "独立研究建议 · 非法律签批",
       "lawId": "OSA delegated regulations / government response",
-      "instrument": "未定案政策 / 规则形成进程",
+      "instrument": "拟议限制的技术评估",
       "topics": [
         "未成年人保护"
       ],
@@ -1388,27 +1419,27 @@
         "年龄核验",
         "连麦与评论"
       ],
-      "appliesTo": "相关母法已提供授权；本条拟议的具体限制仍待二级法规，不等于新限制已经全面生效。",
-      "priorityReason": "对产品入口及年龄策略影响大，需提前准备而非等待最终上线。",
+      "appliesTo": "英国拟议社交媒体限制及高风险功能；具体服务范围待法规确认。",
+      "priorityReason": "新的16岁阈值会影响账号和功能入口，需提前评估年龄核验方案。",
       "owners": [
         "Policy",
         "Legal",
         "相关产品团队"
       ],
-      "deliverable": "年龄×地区×功能的可执行决策表，附每项依据和待定条件。",
-      "uncertainty": "年底为政府计划，具体文本、例外、实施日期仍需核对。",
-      "titleEn": "未成年人社交媒体限制：二级法规待提交",
-      "reviewStatus": "原文核对 / 尚未定案",
-      "sourceCheckedAt": "2026-10-26T14:00:48Z",
+      "deliverable": "按观看、开播和陌生人互动列出年龄判断方式、失败后续步骤和申诉入口。",
+      "uncertainty": "正式法规、服务范围和具体实施日待确认。",
+      "titleEn": "Ofcom assessment of highly effective age assurance at 16",
+      "reviewStatus": "公开来源已复核",
+      "sourceCheckedAt": "2026-10-29T13:20:13.612425+00:00",
       "effectiveDate": null,
-      "deadlineType": "2026年底前拟提交；非硬生效日",
-      "statusEvidence": "已核对下列官方证据；不把政策意向或规则草案当作最终义务。",
+      "deadlineType": "后续法规及实施日待公布",
+      "statusEvidence": "10月29日Ofcom报告明确：评估供议会讨论，法规提交后另行征询实施指引。",
       "policyImplication": {
-        "direction": "需要区分观看、开播、连麦和与陌生人互动，现有18岁开播规则不能替代全部适用性评估。",
-        "proposal": "建立按年龄和功能的场景矩阵，跟踪正式法规及Ofcom年龄保证评估。",
-        "trigger": "当最终文本、适用产品与执行口径得到确认后再转为地区强制规则；此前可做内部研究与可逆试点。",
-        "tradeoff": "同时评估安全收益、创作者正常表达、年龄误判、隐私数据成本与申诉可达性。",
-        "validation": "年龄×地区×功能的可执行决策表，附每项依据和待定条件。"
+        "direction": "需分别评估直播观看、开播和陌生人互动入口，不能只检查主播年龄。",
+        "proposal": "测试四类方法的误判、隐私和绕过风险，为无证件用户准备补充路径。",
+        "trigger": "法规提交议会后跟进Ofcom指引征询；按最终适用范围和启动日落实新限制。",
+        "tradeoff": "比较误判、无证件用户可达性、隐私数据和绕过风险。",
+        "validation": "按观看、开播和陌生人互动列出年龄判断方式、失败后续步骤和申诉入口。"
       },
       "evidence": [
         {
@@ -1418,6 +1449,22 @@
           "checkedAt": "2026-10-26T14:00:48Z",
           "supports": "本条事实、阶段及日期",
           "access": "官方网页正文"
+        },
+        {
+          "url": "https://www.ofcom.org.uk/online-safety/protecting-children/rapid-assessment-of-highly-effective-age-assurance-at-16",
+          "publisher": "Ofcom",
+          "locator": "2026-10-29；Assessment / Next steps",
+          "checkedAt": "2026-10-29T13:20:13.612425+00:00",
+          "supports": "四类方法、技术评估定位和后续征询。",
+          "access": "官方正文"
+        },
+        {
+          "url": "https://www.ofcom.org.uk/siteassets/resources/documents/online-safety/protecting-children/rapid-assessment-of-highly-effective-age-assurance-at-16.pdf?v=427159",
+          "publisher": "Ofcom",
+          "locator": "第3–6页；Overview、1.1及1.6",
+          "checkedAt": "2026-10-29T13:20:13.612425+00:00",
+          "supports": "直播功能相关背景；评估不是最终实施指引。",
+          "access": "官方PDF"
         }
       ]
     },
@@ -1656,22 +1703,26 @@
         -14
       ],
       "topic": "未成年人保护",
-      "title": "ANPD执法程序修订：10月26日意见窗口",
-      "stage": "草案 / 征求意见",
-      "eventDate": "2026-09-09",
+      "title": "ANPD执法程序征询结束",
+      "stage": "草案 / 意见期结束",
+      "eventDate": "2026-10-26",
       "deadline": "2026-10-26",
-      "priority": "P0",
-      "fact": "ANPD9月9日启动执法及行政制裁程序修订咨询，公告和参与门户均列10月26日结束；拟适配ECA Digital等新增监管职责。",
+      "priority": "P1",
+      "fact": "官方参与门户标记征询已结束，列示截止日为10月26日。执法程序修订仍待最终决议。",
       "impact": "未来监管问询更强调措施、证据与责任链；LIVE未成年人保护不能只展示封禁数量。",
-      "action": "核对当天窗口与是否延期，整理年龄保证、投诉、风险评估和处理记录目录。",
+      "action": "跟进意见汇总和最终决议，整理年龄保证、投诉及风险评估记录。",
       "scope": "ECA Digital已生效；此处未定案的是执法程序修订，不能据此延后现有法律义务。",
       "source": "https://www.gov.br/anpd/pt-br/assuntos/noticias/anpd-abre-audiencia-consulta-atualizacao-regulamento-fiscalizacao",
-      "checkedAt": "2026-10-27",
+      "checkedAt": "2026-10-29",
       "confidence": "官方一手来源",
       "history": [
         {
           "date": "2026-09-09",
           "event": "ANPD9月9日启动执法及行政制裁程序修订咨询，公告和参与门户均列10月26日结束；拟适配ECA Digital等新增监管职责。"
+        },
+        {
+          "date": "2026-10-26",
+          "event": "公布的征询期结束；10月29日复核门户为已关闭。"
         }
       ],
       "review": "独立研究建议 · 非法律签批",
@@ -1687,24 +1738,24 @@
         "连麦与评论"
       ],
       "appliesTo": "ECA Digital已生效；此处未定案的是执法程序修订，不能据此延后现有法律义务。",
-      "priorityReason": "意见截止在当前当地日期，需及时确认；不是认定平台违反现行法。",
+      "priorityReason": "已过意见窗口，重点转为跟踪最终规则和准备问询证据。",
       "owners": [
         "Policy",
         "Legal",
         "相关产品团队"
       ],
       "deliverable": "法规适用清单、证据保留与问询响应责任表。",
-      "uncertainty": "参与门户有缓存提示，截止依据与ANPD公告交叉核对；具体时刻和延期仍需核实。",
-      "titleEn": "ANPD执法程序修订：10月26日意见窗口",
-      "reviewStatus": "原文核对 / 尚未定案",
-      "sourceCheckedAt": "2026-10-27T01:03:46.875371Z",
+      "uncertainty": "门户带缓存提示；截止日已和ANPD公告交叉核对，未见延期或最终决议。",
+      "titleEn": "ANPD enforcement procedure consultation closed",
+      "reviewStatus": "公开来源已复核",
+      "sourceCheckedAt": "2026-10-29T13:20:13.612425+00:00",
       "effectiveDate": null,
       "deadlineType": "征询截止（当地日期）",
-      "statusEvidence": "已核对下列官方证据；不把政策意向或规则草案当作最终义务。",
+      "statusEvidence": "参与门户显示Encerrada；ANPD公告同列10月26日截止。",
       "policyImplication": {
         "direction": "未来监管问询更强调措施、证据与责任链；LIVE未成年人保护不能只展示封禁数量。",
-        "proposal": "核对当天窗口与是否延期，整理年龄保证、投诉、风险评估和处理记录目录。",
-        "trigger": "当最终文本、适用产品与执行口径得到确认后再转为地区强制规则；此前可做内部研究与可逆试点。",
+        "proposal": "跟进意见汇总和最终决议，整理年龄保证、投诉及风险评估记录。",
+        "trigger": "现行法律继续执行；新增程序要求按最终决议及其生效条款落实。",
         "tradeoff": "同时评估安全收益、创作者正常表达、年龄误判、隐私数据成本与申诉可达性。",
         "validation": "法规适用清单、证据保留与问询响应责任表。"
       },
@@ -1724,6 +1775,22 @@
           "checkedAt": "2026-10-26T14:15:01Z",
           "supports": "门户列示日期；页面有缓存提示，不单独保证实时开放状态",
           "access": "官方网页正文"
+        },
+        {
+          "url": "https://brasilparticipativo.presidencia.gov.br/processes/regulamento-de-fiscalizacao",
+          "publisher": "Brasil Participativo",
+          "locator": "Encerrada；ENCERRAMENTO 26/10/2026",
+          "checkedAt": "2026-10-29T13:20:13.612425+00:00",
+          "supports": "关闭状态及公布的截止日期。",
+          "access": "官方正文，含缓存提示"
+        },
+        {
+          "url": "https://www.gov.br/anpd/pt-br/assuntos/noticias/audiencia-publica-para-discutir-novo-regulamento-de-fiscalizacao-da-anpd-sera-nesta-quinta-24",
+          "publisher": "ANPD",
+          "locator": "2026-09-22公告",
+          "checkedAt": "2026-10-29T13:20:13.612425+00:00",
+          "supports": "交叉核对10月26日征询截止。",
+          "access": "官方检索正文"
         }
       ]
     },
@@ -3463,18 +3530,193 @@
           "access": "正式法律正文"
         }
       ]
+    },
+    {
+      "id": "ny-ai-companion-minors",
+      "region": "美国 · 纽约州",
+      "code": "New York",
+      "xy": [
+        -75,
+        43
+      ],
+      "topic": "AI 与真实性",
+      "title": "AI陪伴功能限制已成法",
+      "stage": "已通过 / 待实施",
+      "eventDate": "2026-10-28",
+      "deadline": "2027-01-01",
+      "priority": "P1",
+      "fact": "S9051B于10月28日签署成Chapter 368，2027年1月1日实施；限制向未成年人提供列明的不安全AI陪伴功能。",
+      "impact": "持续对话的AI主播或陪伴角色，需评估情感诱导、拟人表达和跨会话记忆。",
+      "action": "核对功能定义、年龄判断和记忆设置，准备未成年人交互测试。",
+      "scope": "适用于纽约用户的受规管AI陪伴系统；限定用途的客服等有例外。",
+      "source": "https://www.nysenate.gov/legislation/bills/2025/S9051/amendment/B",
+      "checkedAt": "2026-10-29",
+      "confidence": "官方一手来源",
+      "history": [
+        {
+          "date": "2026-01-27",
+          "event": "法案提出。"
+        },
+        {
+          "date": "2026-06-04",
+          "event": "参议院通过B版。"
+        },
+        {
+          "date": "2026-06-05",
+          "event": "众议院通过。"
+        },
+        {
+          "date": "2026-10-28",
+          "event": "州长签署Chapter 368。"
+        }
+      ],
+      "review": "按最终B版核对适用功能。",
+      "lawId": "NY S9051B / Chapter 368 (2026) / GBL Article 48",
+      "instrument": "州法律",
+      "topics": [
+        "AI 与真实性",
+        "未成年人保护",
+        "隐私与数据"
+      ],
+      "scenarios": [
+        "AI主播",
+        "陪伴对话",
+        "语音互动"
+      ],
+      "appliesTo": "向纽约用户提供符合定义的AI陪伴系统的运营者。",
+      "priorityReason": "实施日期已定，需为功能和年龄流程改造预留时间。",
+      "owners": [
+        "Policy",
+        "Legal",
+        "AI产品",
+        "未成年人安全"
+      ],
+      "deliverable": "功能清单、年龄流程及未成年人对话测试结果。",
+      "uncertainty": "后续实施规则和司法限制仍需跟踪。",
+      "titleEn": "New York unsafe AI companion features law",
+      "reviewStatus": "公开来源已复核",
+      "sourceCheckedAt": "2026-10-29T13:20:13.612425+00:00",
+      "effectiveDate": "2027-01-01",
+      "deadlineType": "实施日期",
+      "statusEvidence": "官方Actions确认10月28日签署；B版第3节列2027年1月1日实施。",
+      "policyImplication": {
+        "direction": "先判断AI功能是否落入定义。",
+        "proposal": "对照第1800、1801及1804节检查产品。",
+        "trigger": "2027年1月1日开始落实适用要求；此前完成配置和测试。",
+        "tradeoff": "年龄判断应兼顾隐私、可达性和防绕过。",
+        "validation": "抽查未成年人交互及年龄判断失败路径。"
+      },
+      "evidence": [
+        {
+          "url": "https://www.nysenate.gov/legislation/bills/2025/S9051/amendment/B",
+          "publisher": "New York State Senate",
+          "locator": "Actions；ACTIVE B版§§1800–1805及§3",
+          "checkedAt": "2026-10-29T13:20:13.612425+00:00",
+          "supports": "签署、功能范围、年龄要求和实施日期。",
+          "access": "官方正文"
+        }
+      ]
+    },
+    {
+      "id": "tx-hb18-en-banc",
+      "region": "美国 · 得克萨斯州",
+      "code": "Texas",
+      "xy": [
+        -99,
+        31
+      ],
+      "topic": "未成年人保护",
+      "title": "HB18进入全院复审",
+      "stage": "诉讼 / 全院复审",
+      "eventDate": "2026-10-28",
+      "deadline": null,
+      "priority": "P1",
+      "fact": "第五巡回上诉法院决定全院复审HB18案件，并撤销7月24日的小组意见；口头辩论和补充书状安排待定。",
+      "impact": "涉及未成年人内容过滤、广告和年龄措施的司法依据需要重新核对。",
+      "action": "逐条核对下级法院禁令和后续命令，停止把已撤销意见当作现行依据。",
+      "scope": "本次是复审程序决定，未最终裁定HB18各条款的可执行性。",
+      "source": "https://www.ca5.uscourts.gov/opinions/pub/24/24-50721-CV1.pdf",
+      "checkedAt": "2026-10-29",
+      "confidence": "法院原文",
+      "history": [
+        {
+          "date": "2026-07-24",
+          "event": "小组发布意见；该意见已于10月28日撤销。"
+        },
+        {
+          "date": "2026-10-28",
+          "event": "准许全院复审，辩论日期待定。"
+        }
+      ],
+      "review": "按条款核对当前可执行命令。",
+      "lawId": "Texas HB18 / Nos. 24-50721 and 25-50096",
+      "instrument": "上诉法院程序命令",
+      "topics": [
+        "未成年人保护",
+        "隐私与数据",
+        "有害内容与身心健康"
+      ],
+      "scenarios": [
+        "直播推荐",
+        "年龄核验",
+        "商业推广"
+      ],
+      "appliesTo": "HB18适用的数字服务；具体限制须结合有效禁令判断。",
+      "priorityReason": "小组意见失效，既有法律分析需复核。",
+      "owners": [
+        "Legal",
+        "US Policy",
+        "未成年人安全"
+      ],
+      "deliverable": "按条款列出禁令、适用对象和后续待决事项。",
+      "uncertainty": "本轮未穷尽下级法院后续案卷；不据此推定禁令已解除。",
+      "titleEn": "Texas HB18: rehearing en banc granted",
+      "reviewStatus": "法院命令已复核",
+      "sourceCheckedAt": "2026-10-29T13:20:13.612425+00:00",
+      "effectiveDate": null,
+      "deadlineType": "辩论及补充书状安排待定",
+      "statusEvidence": "10月28日命令第2页：准许全院复审并撤销7月24日意见。",
+      "policyImplication": {
+        "direction": "更新法律依据，不把程序变化当作新内容禁令。",
+        "proposal": "核对各项现行控制对应的有效命令。",
+        "trigger": "依适用禁令和后续可执行裁判落实；本次没有统一上线日。",
+        "tradeoff": "保留儿童保护措施，避免扩大未确定的内容限制。",
+        "validation": "确认每项产品调整有当前有效的条款或命令依据。"
+      },
+      "evidence": [
+        {
+          "url": "https://www.ca5.uscourts.gov/opinions/pub/24/24-50721-CV1.pdf",
+          "publisher": "U.S. Court of Appeals for the Fifth Circuit",
+          "locator": "2026-10-28；Document 224-1，第2页",
+          "checkedAt": "2026-10-29T13:20:13.612425+00:00",
+          "supports": "全院复审、撤销原意见及待定程序安排。",
+          "access": "法院PDF"
+        },
+        {
+          "url": "https://www.ca5.uscourts.gov/opinions/pub/24/24-50721-CV0.pdf",
+          "publisher": "U.S. Court of Appeals for the Fifth Circuit",
+          "locator": "2026-07-24意见第2–3页；已撤销",
+          "checkedAt": "2026-10-29T13:20:13.612425+00:00",
+          "supports": "仅用于识别争议条款和程序背景，不作现行裁判依据。",
+          "access": "法院PDF"
+        }
+      ]
     }
   ],
   "collection": {
-    "lastSuccess": "2026-10-27",
-    "schedule": "公开研究快照，随版本更新",
+    "lastSuccess": "2026-10-29",
+    "schedule": "每天北京时间21:00研究更新",
     "failedSources": [
       "TikTok LIVE Monetization Guidelines：页面可定位但正文未由检索工具获取",
       "Congress.gov S.1748：检索快照滞后于委员会公告",
       "希腊未满15岁社媒禁令：Reuters于2026-10-23报道议会通过，但本轮未定位官方法案或政府公报，未新增事件",
       "印度DPDP媒体诉讼：Reuters于2026-10-26报道DNPA挑战，但本轮未定位最高法院官方案卷或当日命令，未新增事件",
       "欧盟KIDS Act官方反馈页：2026-10-27读取返回429，沿用旧日期且未更新",
-      "BBC News线索检索：robots.txt阻止本轮读取"
+      "BBC News线索检索：robots.txt阻止本轮读取",
+      "2026-10-29 EU KIDS Act反馈门户：返回空正文；新闻页仍列两个截止日，未设硬截止。",
+      "2026-10-29 Ofcom新闻页：直接读取失败；已改用同日官方评估页和PDF核实。",
+      "2026-10-29 ICO年龄核验声明：读取失败；未作为新增事实依据。",
+      "2026-10-29 Apple年龄核验支持页：HTTP 429；未新增条目。"
     ]
   }
 }

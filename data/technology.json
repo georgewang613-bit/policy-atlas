@@ -220,6 +220,55 @@
           "locator": "步骤2、4、5"
         }
       ]
+    },
+    {
+      "id": "ofcom-age16-assessment",
+      "title": "16岁年龄核验方案",
+      "category": "年龄识别",
+      "publishedAt": "2026-10-29",
+      "version": "Ofcom · 2026年10月评估",
+      "status": "监管技术评估",
+      "checkedAt": "2026-10-29",
+      "conclusion": "可比较四类核验方法；仅凭平台行为推测年龄不适合作为新账号门槛。",
+      "fact": "Ofcom评估证件比对、银行信息、数字身份和人脸年龄估计，认为四类方法有能力达到16岁阈值的高有效性要求。",
+      "liveUse": "项目建议：比较直播观看入口的核验方案，行为推测用于发现绕过核验的账号。",
+      "limits": "评估不代表任何供应商获认证；需检查真实人群误差、证件可得性和隐私。",
+      "nextStep": "先用经同意的测试样本比较误判、失败后补充核验和申诉路径。",
+      "measure": "误放未满16岁用户比例、误拦成年人比例、完成率、绕过率、数据留存。",
+      "sources": [
+        {
+          "url": "https://www.ofcom.org.uk/siteassets/resources/documents/online-safety/protecting-children/rapid-assessment-of-highly-effective-age-assurance-at-16.pdf?v=427159",
+          "publisher": "Ofcom",
+          "locator": "2026-10-29；Overview、第3–4节"
+        }
+      ]
+    },
+    {
+      "id": "adtguard-streaming",
+      "title": "边生成边拦截风险文本",
+      "category": "审核模型",
+      "publishedAt": "2026-10-27",
+      "version": "ADTGuard · arXiv v1",
+      "status": "研究预印本",
+      "checkedAt": "2026-10-29",
+      "conclusion": "可研究在AI主播文字转语音前拦截风险输出。",
+      "fact": "ADTGuard读取模型内部状态，在每个文本单元放出前检查。作者在Qwen、Llama和Gemma基座上评估，额外检测模块约1600万参数。",
+      "liveUse": "项目建议：用于可读取内部状态的自托管AI主播，在语音合成前暂停高风险回复。",
+      "limits": "测试对象是文本生成，未验证直播音视频；普通封闭API无法直接复用该接入方式。",
+      "nextStep": "在离线直播对话集上对比逐段检查和逐步检查，再测试转语音前的拦截。",
+      "measure": "拦截前已暴露文本长度、误拦率、漏拦率、额外延迟及各语言表现。",
+      "sources": [
+        {
+          "url": "https://arxiv.org/abs/2610.36574",
+          "publisher": "论文作者 / arXiv",
+          "locator": "v1提交于2026-10-27；本次补录，非当日发布"
+        },
+        {
+          "url": "https://arxiv.org/html/2610.36574v1",
+          "publisher": "论文作者 / arXiv",
+          "locator": "第3节、第4.1–4.4节；实验基座和接入条件"
+        }
+      ]
     }
   ]
 }
