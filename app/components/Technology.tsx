@@ -36,7 +36,7 @@ export default function Technology(){
    <h3>试用建议</h3><p>{selected.nextStep}</p>
    <dl className="update-facts">
     <div><dt>关注指标</dt><dd>{selected.measure}</dd></div>
-    <div><dt>适用边界</dt><dd>{selected.limits}</dd></div>
+    <div><dt>使用限制</dt><dd>{selected.limits}</dd></div>
    </dl>
   </section>
   <section className="update-sources"><h3>来源</h3>{selected.sources.map(s=><p key={s.url}><a href={s.url} target="_blank" rel="noreferrer">{s.publisher} ↗</a><small>{s.locator}</small></p>)}</section>

@@ -196,3 +196,6 @@ aside input,aside select{font-weight:400}
  .method-fold summary{grid-template-columns:minmax(0,1fr) auto 14px}
  .method-fold summary small{max-width:95px}
 }
+
+.stage-activities{align-items:center;padding-top:12px;border-top:1px solid var(--line)}
+.stage-activities>span{font-size:12px;color:var(--muted);margin-right:4px}

@@ -22,7 +22,7 @@ export default function Method({data}:{data:Atlas}){
    <article className="content-card"><h2>研究方法</h2>
     <p>政策事实核对政府、监管、议会和法院材料，媒体用于发现线索；按地区、法案和版本区分提案、法律效力、司法状态及实施日期。</p>
     <p>主题取自 <a href="https://www.tiktok.com/community-guidelines/en/" target="_blank" rel="noreferrer">TikTok 社区准则 ↗</a>，结合 LIVE 打赏、变现场景分类。</p>
-    <p>首页默认未定案政策。事件日、抓取日、核验日分别记录，内容随项目版本更新。</p>
+    <p>首页默认展示尚未确定的政策。事件日、抓取日、核验日分别记录，内容随项目版本更新。</p>
     <div className="source-meta"><span>复核 · 北京时间 {reviewed}</span></div>
    </article>
    <article className="content-card"><h2>行动优先级</h2>
@@ -31,7 +31,7 @@ export default function Method({data}:{data:Atlas}){
   </div>
   <div className="method-folds">
    <details className="method-fold"><summary><span>阅读说明</span></summary><div className="fold-content">
-    <p>阶段表示法律进度，P0–P3 表示行动优先级。实施依据、日期冲突、适用范围和排序理由见事件详情。</p>
+    <p>①—⑤ 表示从提出政策方向到生效的先后阶段，具体程序以事件详情为准。监管指导、执法和诉讼可发生在不同阶段。P0–P3 表示行动优先级。实施依据、日期冲突、适用范围和排序理由见事件详情。</p>
     <p>空白地图区域暂无匹配记录。时间线按节点排列，间距不代表时长。</p>
     <p>独立 LIVE 政策研究。事实来自公开来源，规则建议为项目分析，不代表 TikTok 内部决定或法律签批。实验室案例处于设计、评估阶段。</p>
     <p>执行前复核当地法律、后续修订和司法状态。</p>

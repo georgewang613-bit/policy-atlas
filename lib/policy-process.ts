@@ -1,19 +1,39 @@
 import type {PolicyEvent} from './atlas-schema';
 export const legalStages = [
- {id:'agenda',name:'政策酝酿',meaning:'政府提出方向或准备征询。',start:'正式文本公布后评估新增要求；现行义务继续执行。',action:'识别风险，建立场景清单。'},
- {id:'draft',name:'草案 / 征询',meaning:'文本公开，规则仍可修改。',start:'征询截止后进入审阅；实施时间以最终文本为准。',action:'提交意见，准备规则选项和影响评估。'},
- {id:'debate',name:'立法审议',meaning:'议会审议、修订或表决。',start:'完成当地成法程序，再核对启动条款与过渡期。',action:'跟踪版本差异，预留产品与审核改造时间。'},
- {id:'pending',name:'已定案待实施',meaning:'文本已确定，适用日期尚未到来。',start:'按条款适用日或合规截止日落实；分期要求分别排期。',action:'完成规则、培训、产品配置与验收。'},
- {id:'effective',name:'已生效',meaning:'相关条款已经进入法律效力阶段。',start:'核对本服务的适用范围、合规期限及法院暂停安排。',action:'检查现有控制，修补缺口并留存证据。'},
- {id:'guidance',name:'监管指引',meaning:'监管机构解释要求或推荐做法。',start:'约束力取决于法律依据；具体通知可另设截止日。',action:'对照现行义务，评估措施差距。'},
+ {id:'agenda',name:'① 提出政策方向',meaning:'政府提出方向、开展研究或征集初步意见，尚无正式规则草案。',start:'正式文本公布后评估新增要求；现行义务继续执行。',action:'识别风险，建立场景清单。'},
+ {id:'draft',name:'② 草案及意见征集',meaning:'草案已公开，或已开始征集意见、证据；最终规则仍可调整。',start:'征求意见截止后进入审阅；实施时间以最终文本为准。',action:'提交意见，准备规则选项和影响评估。'},
+ {id:'debate',name:'③ 法案审议',meaning:'议会审议、修订或表决。',start:'完成当地成法程序，再核对启动条款与过渡期。',action:'跟踪版本差异，预留产品与审核改造时间。'},
+ {id:'pending',name:'④ 规则确定、等待实施',meaning:'文本已确定，适用日期尚未到来。',start:'按条款适用日或合规截止日落实；分期要求分别排期。',action:'完成规则、培训、产品配置与验收。'},
+ {id:'effective',name:'⑤ 已生效',meaning:'相关条款已经进入法律效力阶段。',start:'核对本服务的适用范围、合规期限及法院暂停安排。',action:'检查现有控制，修补缺口并留存证据。'},
+ {id:'guidance',name:'监管指导',meaning:'监管机构解释要求或推荐做法。',start:'约束力取决于法律依据；具体通知可另设截止日。',action:'对照现行义务，评估措施差距。'},
  {id:'case',name:'诉讼 / 执法',meaning:'针对个案的调查、起诉、裁判或命令。',start:'按可执行命令的对象、期限及暂停状态落实。',action:'核对裁判正文，区分指控、认定和整改要求。'},
 ];
-export function stageKey(e:PolicyEvent){
- if(/酝酿|征询预告/.test(e.stage))return 'agenda';
+export function stageKey(e:Pick<PolicyEvent,'stage'>){
+ if(/酝酿|征询预告|提出政策方向/.test(e.stage))return 'agenda';
  if(/和解|诉讼|调查|裁判/.test(e.stage))return 'case';
  if(/^已生效|^已适用/.test(e.stage))return 'effective';
- return /酝酿|征询预告/.test(e.stage)?'agenda':/草案|征询|证据征集/.test(e.stage)?'draft':/审议|委员会|谈判授权/.test(e.stage)?'debate':/待实施/.test(e.stage)?'pending':/执法/.test(e.stage)?'case':/指南|指引/.test(e.stage)?'guidance':'effective';
+ return /酝酿|征询预告|提出政策方向/.test(e.stage)?'agenda':/草案|征询|证据征集/.test(e.stage)?'draft':/审议|委员会|谈判授权/.test(e.stage)?'debate':/待实施/.test(e.stage)?'pending':/执法/.test(e.stage)?'case':/指南|指引|监管指导/.test(e.stage)?'guidance':'effective';
 }
+
+// Keep stored stages and evidence intact; use the same ordered wording in the UI.
+export function stageDisplay(stage:string){
+ const key=stageKey({stage});
+ const index=legalStages.findIndex(s=>s.id===key);
+ const readable=stage
+  .replace(/政策酝酿/g,'提出政策方向')
+  .replace(/立法审议/g,'法案审议')
+  .replace(/征询期已届满/g,'征求意见已结束')
+  .replace(/征询已截止/g,'征求意见已结束')
+  .replace(/征询预告/g,'即将征求意见')
+  .replace(/征询/g,'征求意见')
+  .replace(/待提案/g,'等待正式提案')
+  .replace(/待法规/g,'等待法规草案')
+  .replace(/待实施/g,'等待实施')
+  .replace(/后续待核/g,'后续待核实')
+  .replace(/非约束性/g,'不具强制约束力');
+ return index<5?`${['①','②','③','④','⑤'][index]} ${readable}`:readable;
+}
+
 export const processSteps=[
  {name:'识别风险',question:'什么伤害值得改变规则？',body:'结合用户举报、风险研究、监管进展和新功能，判断伤害的严重度、发生概率与现有控制。',output:'建议产物：风险说明、受影响人群、LIVE 场景。',gate:'触发条件：新风险出现，或现有措施效果不足。'},
  {name:'听取意见',question:'不同地区与群体如何受影响？',body:'TikTok 公开披露会征求创作者、外部专家和地区顾问委员会意见，并考虑人权与当地语境。',output:'建议产物：意见摘要、地区差异、表达与安全权衡。',gate:'进入起草：问题、目标和主要分歧已明确。'},
