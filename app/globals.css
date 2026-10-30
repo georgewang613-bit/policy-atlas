@@ -30,3 +30,31 @@ h2,.sectionhead h2,.technology .sectionhead h2,.lab>h2,.method>h2{font-size:24px
 @media(max-width:700px){header{padding:14px 18px}.brand b{font-size:16px}header nav{justify-content:flex-start;gap:4px}header nav button{padding:8px 10px;font-size:13px;min-height:44px}main{padding:24px 16px 0}.intro{margin-bottom:24px}.intro h1{font-size:26px}.stamp{margin-top:8px}.technology,.update-detail,.lab,.method{padding:22px 18px;margin-bottom:24px}h2,.sectionhead h2,.technology .sectionhead h2,.lab>h2,.method>h2,.brief h2{font-size:22px}.brief{padding:22px}.stats span{font-size:12px}.workspace{display:block}aside{padding:20px;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px}aside label{min-width:0}input,select{min-width:0;max-width:100%}.filterheading{grid-column:1/-1}.sectionhead{padding:20px;gap:16px;align-items:flex-start}.segmented button,.stagelegend button{font-size:13px}.legend{padding:16px 20px}.event{padding:20px}.event h3,.update-title{font-size:18px}.event footer{font-size:12px}.labgrid{grid-template-columns:1fr;gap:24px}.labgrid h3{font-size:18px}.drawer{padding:64px 20px 28px}.drawer h2,.update-detail h2{font-size:24px}.stage-summary,.policy-timeline,.baseline{padding:18px}.windows{margin:0 20px 20px}.windows>button{align-items:flex-start;flex-wrap:wrap;gap:6px 14px}.windows>button span{flex-basis:100%}.windows strong{display:none}.sourcerow{display:block}.sourcerow small{display:block;margin-top:6px}.bottom{font-size:12px}.health{gap:16px}.update-row .update-meta{gap:6px 14px}.update-conclusion p,.drawer .update-conclusion p{font-size:18px}.timeline-detail{padding:16px}.timeline-track li{flex-basis:160px}}
 @media(max-width:380px){aside{grid-template-columns:1fr}.health{grid-template-columns:1fr}.stats{gap:16px}.stats>div{border:0}.stagelegend{padding:0 20px 16px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important}}
+
+/* One page heading; controls and list rows share a consistent rhythm. */
+input,select{height:48px;line-height:1.5}
+.technology,.lab,.method{max-width:none}
+.tech-filters{display:grid;grid-template-columns:180px minmax(0,360px) 1fr;align-items:center;gap:16px;padding:0 0 24px}
+.tech-filters input,.tech-filters select{height:48px;min-height:48px;margin:0;padding:10px 12px;font-size:16px;line-height:1.5;font-weight:400}
+.tech-filters span{padding:0;text-align:right;white-space:nowrap}
+.update-list{display:grid;grid-auto-rows:1fr}
+.update-row{grid-template-columns:135px minmax(0,1fr);align-items:stretch}
+.update-row:last-child{border-bottom:0}
+.update-row .update-meta{padding-top:9px}
+.update-content{display:flex;flex-direction:column;align-items:flex-start}
+.update-content h2{font-size:18px;line-height:1.5;margin:0}
+.update-content small{margin-top:auto;padding-top:8px}
+.update-takeaway{margin:8px 0 0}
+.detail-meta{display:flex;flex-wrap:wrap;gap:4px 16px}
+.update-detail>p.update-meta{font-size:12px;color:var(--muted);margin:18px 0 8px}
+.rules-grid{margin-top:0}
+.lab-page>.case-heading,.method>.baseline:first-child{margin-top:0}
+@media(max-width:700px){
+ .tech-filters{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px}
+ .tech-filters span{grid-column:1/-1}
+ .update-row{grid-template-columns:minmax(0,1fr);gap:8px}
+ .update-row .update-meta{padding-top:0}
+}
+@media(max-width:520px){
+ .tech-filters{grid-template-columns:minmax(0,1fr)}
+}
