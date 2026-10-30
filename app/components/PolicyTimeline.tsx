@@ -9,6 +9,7 @@ export default function PolicyTimeline({event,asOf}:{event:PolicyEvent;asOf:stri
  const initial=nodes.findIndex(n=>n.date===event.eventDate);
  const [active,setActive]=useState(Math.max(initial,0));
  const track=useRef<HTMLOListElement>(null);
+ const positioned=useRef(false);
  const index=Math.min(active,nodes.length-1),node=nodes[index];
  useEffect(()=>{
   const list=track.current,selected=list?.children[index] as HTMLElement|undefined;
@@ -16,7 +17,9 @@ export default function PolicyTimeline({event,asOf}:{event:PolicyEvent;asOf:stri
    const visible=Math.max(1,Math.floor(list.clientWidth/selected.clientWidth));
    const start=Math.max(0,index-Math.floor(visible/2));
    const first=list.children[start] as HTMLElement;
-   list.scrollTo({left:first.offsetLeft-list.offsetLeft,behavior:'auto'});
+   const reduceMotion=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+   list.scrollTo({left:first.offsetLeft-list.offsetLeft,behavior:positioned.current&&!reduceMotion?'smooth':'auto'});
+   positioned.current=true;
   }
  },[index]);
  const move=(delta:number)=>setActive(Math.max(0,Math.min(nodes.length-1,index+delta)));
@@ -25,7 +28,7 @@ export default function PolicyTimeline({event,asOf}:{event:PolicyEvent;asOf:stri
   <ol ref={track} className="timeline-track" onKeyDown={ev=>{if(ev.key==='ArrowRight'||ev.key==='ArrowLeft'){ev.preventDefault();move(ev.key==='ArrowRight'?1:-1);}}}>
    {nodes.map((n,i)=><li key={`${n.date}-${i}`} className={`${n.kind} ${i===index?'chosen':''}`}><button aria-pressed={index===i} onClick={()=>setActive(i)}><span className="timeline-dot" aria-hidden="true"/><time>{n.date||'日期待定'}</time><strong>{timelineCaption(event.id,n)}</strong><small>{!n.date?'待确认':n.date>asOf?'日期未到':n.kind==='window'?'已到截止日':'已记录'}</small></button></li>)}
   </ol>
-  <div className={`timeline-detail ${node.kind}`} aria-live="polite"><h4>{timelineCaption(event.id,node)}<time>{node.date||'日期待定'}</time></h4><TextPoints text={node.detail}/><a href={node.source} target="_blank" rel="noreferrer">查看来源 ↗</a></div>
+  <div className={`timeline-detail ${node.kind}`} aria-live="polite"><div className="timeline-content" key={index}><h4>{timelineCaption(event.id,node)}<time>{node.date||'日期待定'}</time></h4><TextPoints text={node.detail}/><a href={node.source} target="_blank" rel="noreferrer">查看来源 ↗</a></div></div>
   <details className="timeline-procedure"><summary>当地程序</summary><p>{framework.route}</p></details>
  </section>;
 }

@@ -1,6 +1,7 @@
 import {useEffect,useRef,useState,type CSSProperties} from 'react';
 import data from '../../data/technology.json';
 import TextPoints from './TextPoints';
+import SelectField from './SelectField';
 import {organizationNames} from '../../lib/organizations';
 
 type Update=typeof data.items[number];
@@ -31,7 +32,7 @@ export default function Technology(){
   <section className="update-sources"><h3>参考来源</h3>{selected.sources.map(s=><p key={s.url}><a href={s.url} target="_blank" rel="noreferrer">{organizationNames(s.publisher)} ↗</a><small>{s.locator}</small></p>)}</section>
  </article>;}
  return <section className="technology technology-overview" aria-label="技术动态">
-  <div className="tech-filters"><select aria-label="技术方向" value={category} onChange={e=>setCategory(e.target.value)}>{['全部',...new Set(data.items.map(x=>x.category))].map(x=><option key={x} value={x}>{x==='全部'?'全部方向':x}</option>)}</select><input aria-label="搜索技术" value={query} onChange={e=>setQuery(e.target.value)} placeholder="搜索技术或场景"/><span role="status">{items.length} 条动态</span></div>
+  <div className="tech-filters"><SelectField label="技术方向" value={category} onChange={setCategory} options={[{value:"全部",label:"全部方向"},...Array.from(new Set(data.items.map(x=>x.category)))]}/><input aria-label="搜索技术" value={query} onChange={e=>setQuery(e.target.value)} placeholder="搜索技术或场景"/><span role="status">{items.length} 条动态</span></div>
   <div className="tech-grid">{items.map(x=>{const accent=directions[x.category]||directions['审核模型'];return <article className="tech-card" key={x.id} style={{'--tech-accent':accent.color} as CSSProperties}>
    <div className="tech-card-top"><span className="tech-category"><DirectionIcon kind={accent.icon}/>{x.category}</span><span className="tech-status">{x.status}</span></div>
    <h2><button className="update-title" ref={el=>{if(el)buttons.current.set(x.id,el);else buttons.current.delete(x.id);}} onClick={()=>open(x)}>{x.title}<span aria-hidden="true">↗</span></button></h2>
