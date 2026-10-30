@@ -1,12 +1,12 @@
 import type {PolicyEvent} from './atlas-schema';
 export const legalStages = [
- {id:'agenda',name:'① 尚未起草',meaning:'政府提出方向、开展研究或征集初步意见，尚无正式规则草案。',start:'正式文本公布后评估新增要求；现行义务继续执行。',action:'识别风险，建立场景清单。'},
- {id:'draft',name:'② 已有草案',meaning:'草案已公开，或已开始征集意见、证据；最终规则仍可调整。',start:'征求意见截止后进入审阅；实施时间以最终文本为准。',action:'提交意见，准备规则选项和影响评估。'},
- {id:'debate',name:'③ 正在审议',meaning:'议会审议、修订或表决。',start:'完成当地成法程序，再核对启动条款与过渡期。',action:'跟踪版本差异，预留产品与审核改造时间。'},
- {id:'pending',name:'④ 已通过待生效',meaning:'文本已确定，适用日期尚未到来。',start:'按条款适用日或合规截止日落实；分期要求分别排期。',action:'完成规则、培训、产品配置与验收。'},
- {id:'effective',name:'⑤ 已生效',meaning:'相关条款已经进入法律效力阶段。',start:'核对本服务的适用范围、合规期限及法院暂停安排。',action:'检查现有控制，修补缺口并留存证据。'},
+ {id:'agenda',name:'① 尚未起草',meaning:'政府正在研究或征集初步意见，正式草案尚未公布。',start:'正式文本公布后评估新增要求；现行义务继续执行。',action:'识别风险，建立场景清单。'},
+ {id:'draft',name:'② 已有草案',meaning:'草案已公布，或正在收集意见和证据，内容还可能修改。',start:'征求意见截止后进入审阅；实施时间以最终文本为准。',action:'提交意见，准备规则选项和影响评估。'},
+ {id:'debate',name:'③ 正在审议',meaning:'议会正在讨论、修改或表决，尚未完成通过程序。',start:'完成当地通过法律的程序，再核对生效日期和留给平台的准备时间。',action:'跟踪版本差异，预留产品与审核改造时间。'},
+ {id:'pending',name:'④ 已通过待生效',meaning:'规则已经通过，开始执行的日期还没到。',start:'按每项要求的执行日或完成期限安排工作。',action:'完成规则、培训、产品配置与验收。'},
+ {id:'effective',name:'⑤ 已生效',meaning:'相关条款已经生效；具体功能的执行期限和法院限制仍需核对。',start:'核对本服务的适用范围、合规期限及法院暂停安排。',action:'检查现有措施，补齐不足并保存执行记录。'},
  {id:'guidance',name:'监管指导',meaning:'监管机构解释要求或推荐做法。',start:'约束力取决于法律依据；具体通知可另设截止日。',action:'对照现行义务，评估措施差距。'},
- {id:'case',name:'诉讼 / 执法',meaning:'针对个案的调查、起诉、裁判或命令。',start:'按可执行命令的对象、期限及暂停状态落实。',action:'核对裁判正文，区分指控、认定和整改要求。'},
+ {id:'case',name:'诉讼 / 执法',meaning:'针对具体案件的调查、诉讼、判决或整改要求。',start:'按可执行命令的对象、期限及暂停状态落实。',action:'核对裁判正文，区分指控、认定和整改要求。'},
 ];
 export function stageKey(e:Pick<PolicyEvent,'stage'>){
  if(/酝酿|征询预告|提出政策方向|尚未起草/.test(e.stage))return 'agenda';
