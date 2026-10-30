@@ -31,7 +31,7 @@ export default function Method({data}:{data:Atlas}){
   </div>
   <div className="method-folds">
    <details className="method-fold"><summary><span>阅读说明</span></summary><div className="fold-content">
-    <p>①—⑤ 表示从提出政策方向到生效的先后阶段，具体程序以事件详情为准。监管指导、执法和诉讼可发生在不同阶段。P0–P3 表示行动优先级。实施依据、日期冲突、适用范围和排序理由见事件详情。</p>
+    <p>①—⑤ 表示从尚未起草到已生效的先后阶段，具体程序以事件详情为准。监管指导、执法和诉讼可发生在不同阶段。P0–P3 表示行动优先级。实施依据、日期冲突、适用范围和排序理由见事件详情。</p>
     <p>空白地图区域暂无匹配记录。时间线按节点排列，间距不代表时长。</p>
     <p>独立 LIVE 政策研究。事实来自公开来源，规则建议为项目分析，不代表 TikTok 内部决定或法律签批。实验室案例处于设计、评估阶段。</p>
     <p>执行前复核当地法律、后续修订和司法状态。</p>

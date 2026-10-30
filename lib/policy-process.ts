@@ -1,24 +1,25 @@
 import type {PolicyEvent} from './atlas-schema';
 export const legalStages = [
- {id:'agenda',name:'① 提出政策方向',meaning:'政府提出方向、开展研究或征集初步意见，尚无正式规则草案。',start:'正式文本公布后评估新增要求；现行义务继续执行。',action:'识别风险，建立场景清单。'},
- {id:'draft',name:'② 草案及意见征集',meaning:'草案已公开，或已开始征集意见、证据；最终规则仍可调整。',start:'征求意见截止后进入审阅；实施时间以最终文本为准。',action:'提交意见，准备规则选项和影响评估。'},
- {id:'debate',name:'③ 法案审议',meaning:'议会审议、修订或表决。',start:'完成当地成法程序，再核对启动条款与过渡期。',action:'跟踪版本差异，预留产品与审核改造时间。'},
- {id:'pending',name:'④ 规则确定、等待实施',meaning:'文本已确定，适用日期尚未到来。',start:'按条款适用日或合规截止日落实；分期要求分别排期。',action:'完成规则、培训、产品配置与验收。'},
+ {id:'agenda',name:'① 尚未起草',meaning:'政府提出方向、开展研究或征集初步意见，尚无正式规则草案。',start:'正式文本公布后评估新增要求；现行义务继续执行。',action:'识别风险，建立场景清单。'},
+ {id:'draft',name:'② 已有草案',meaning:'草案已公开，或已开始征集意见、证据；最终规则仍可调整。',start:'征求意见截止后进入审阅；实施时间以最终文本为准。',action:'提交意见，准备规则选项和影响评估。'},
+ {id:'debate',name:'③ 正在审议',meaning:'议会审议、修订或表决。',start:'完成当地成法程序，再核对启动条款与过渡期。',action:'跟踪版本差异，预留产品与审核改造时间。'},
+ {id:'pending',name:'④ 已通过待生效',meaning:'文本已确定，适用日期尚未到来。',start:'按条款适用日或合规截止日落实；分期要求分别排期。',action:'完成规则、培训、产品配置与验收。'},
  {id:'effective',name:'⑤ 已生效',meaning:'相关条款已经进入法律效力阶段。',start:'核对本服务的适用范围、合规期限及法院暂停安排。',action:'检查现有控制，修补缺口并留存证据。'},
  {id:'guidance',name:'监管指导',meaning:'监管机构解释要求或推荐做法。',start:'约束力取决于法律依据；具体通知可另设截止日。',action:'对照现行义务，评估措施差距。'},
  {id:'case',name:'诉讼 / 执法',meaning:'针对个案的调查、起诉、裁判或命令。',start:'按可执行命令的对象、期限及暂停状态落实。',action:'核对裁判正文，区分指控、认定和整改要求。'},
 ];
 export function stageKey(e:Pick<PolicyEvent,'stage'>){
- if(/酝酿|征询预告|提出政策方向/.test(e.stage))return 'agenda';
+ if(/酝酿|征询预告|提出政策方向|尚未起草/.test(e.stage))return 'agenda';
  if(/和解|诉讼|调查|裁判/.test(e.stage))return 'case';
  if(/^已生效|^已适用/.test(e.stage))return 'effective';
- return /酝酿|征询预告|提出政策方向/.test(e.stage)?'agenda':/草案|征询|证据征集/.test(e.stage)?'draft':/审议|委员会|谈判授权/.test(e.stage)?'debate':/待实施/.test(e.stage)?'pending':/执法/.test(e.stage)?'case':/指南|指引|监管指导/.test(e.stage)?'guidance':'effective';
+ return /酝酿|征询预告|提出政策方向|尚未起草/.test(e.stage)?'agenda':/草案|征询|证据征集/.test(e.stage)?'draft':/审议|委员会|谈判授权/.test(e.stage)?'debate':/待实施|已通过待生效/.test(e.stage)?'pending':/执法/.test(e.stage)?'case':/指南|指引|监管指导/.test(e.stage)?'guidance':'effective';
 }
 
 // Keep stored stages and evidence intact; use the same ordered wording in the UI.
 export function stageDisplay(stage:string){
  const key=stageKey({stage});
  const index=legalStages.findIndex(s=>s.id===key);
+ if(index<5)return legalStages[index].name;
  const readable=stage
   .replace(/政策酝酿/g,'提出政策方向')
   .replace(/立法审议/g,'法案审议')
@@ -28,10 +29,10 @@ export function stageDisplay(stage:string){
   .replace(/征询/g,'征求意见')
   .replace(/待提案/g,'等待正式提案')
   .replace(/待法规/g,'等待法规草案')
-  .replace(/待实施/g,'等待实施')
+  .replace(/待实施|已通过待生效/g,'等待实施')
   .replace(/后续待核/g,'后续待核实')
   .replace(/非约束性/g,'不具强制约束力');
- return index<5?`${['①','②','③','④','⑤'][index]} ${readable}`:readable;
+ return readable;
 }
 
 export const processSteps=[
