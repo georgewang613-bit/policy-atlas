@@ -1,0 +1,570 @@
+{
+  "ny-safe|2024-08-01|evidence": {
+    "label": "起草前收集意见",
+    "detail": "OAG发布预先规则制定通知，征集问题与资料。"
+  },
+  "ny-safe|2024-09-30|evidence": {
+    "label": "初步意见截止",
+    "detail": "预先通知意见期截止。"
+  },
+  "ny-safe|2025-09-15|evidence": {
+    "label": "正式草案公布",
+    "detail": "正式拟议规则公开。"
+  },
+  "ny-safe|2025-12-01|evidence": {
+    "label": "草案意见截止",
+    "detail": "正式拟议规则意见期截止。"
+  },
+  "ny-safe|2026-07-28|evidence": {
+    "label": "最终规则公布",
+    "detail": "纽约州发布最终规则，限制未成年人个性化成瘾信息流及未经家长同意的午夜至清晨通知；2027 年 1 月 25 日生效。"
+  },
+  "ny-safe|2027-01-25|impact": {
+    "label": "规则开始执行",
+    "detail": "记录的生效或执行日期。受影响的服务：面向纽约受保护未成年人的适用在线平台"
+  },
+  "ny-safe|None|conditional": {
+    "label": "后续安排待定",
+    "detail": "接下来：2027年1月25日开始落实适用的SAFE for Kids要求；此前检查年龄判断、家长同意、推荐和午夜至清晨通知是否按要求运行。"
+  },
+  "eu-ai|2026-08-02|evidence": {
+    "label": "AI告知要求适用",
+    "detail": "AI Act第50条自8月2日起适用。委员会常见问题说明另列：8月2日前上市的部分旧系统，须在12月2日前落实第50(2)条的标记和检测要求。"
+  },
+  "eu-ai|2026-12-02|window": {
+    "label": "规定期限",
+    "detail": "这是参与程序的截止时间；新要求从何时执行需另行确认。12月2日仅对应FAQ所列旧系统的第50(2)条，不延后全部透明度义务。"
+  },
+  "eu-ai|None|conditional": {
+    "label": "后续指引待定",
+    "detail": "接下来：一般告知和标记要求已于8月2日开始适用；官方常见问题说明列出的部分旧系统，须在12月2日前完成第50(2)条的标记和检测要求。"
+  },
+  "au-age|2025-12-10|evidence": {
+    "label": "账号年龄限制执行",
+    "detail": "自 2025 年 12 月 10 日起，受监管平台须采取合理措施，防止澳大利亚未满 16 岁用户创建或保有账户；eSafety 列出 TikTok。"
+  },
+  "au-age|None|conditional": {
+    "label": "后续指引待定",
+    "detail": "接下来：2025年12月10日起执行未满16岁账号限制；持续检查绕过限制、年龄误判申诉和直播入口。"
+  },
+  "uk-children|2025-04-24|evidence": {
+    "label": "安全守则公布",
+    "detail": "Ofcom公布儿童风险评估指引及安全守则方案。"
+  },
+  "uk-children|2025-07-24|evidence": {
+    "label": "风险评估截止",
+    "detail": "适用服务完成首轮儿童风险评估的期限。"
+  },
+  "uk-children|2025-07-25|evidence": {
+    "label": "儿童安全要求生效",
+    "detail": "Ofcom 确认儿童安全义务于 2025 年 7 月 25 日生效，要求相关服务评估并缓解儿童面临的有害内容风险。"
+  },
+  "uk-children|None|conditional": {
+    "label": "后续指引待定",
+    "detail": "接下来：2025年7月24日前完成首轮儿童风险评估，7月25日起执行安全措施；持续保存评估和检查记录。"
+  },
+  "sg-scams|2026-08-17|impact": {
+    "label": "反诈守则生效",
+    "detail": "记录的生效或执行日期。受影响的服务：被指定的 Facebook、Instagram 和 TikTok 等守则适用服务"
+  },
+  "sg-scams|2026-08-18|evidence": {
+    "label": "反诈守则公布",
+    "detail": "社交媒体反诈骗守则于2026年8月17日生效。警方要求Facebook、Instagram及TikTok于2027年1月31日前落实相应措施。"
+  },
+  "sg-scams|2027-01-31|impact": {
+    "label": "措施完成期限",
+    "detail": "核对哪些条款适用、是否有例外。正文按适用通知计算期限，主管机关可另行通知；90天留存针对警方提供信息涉及的账号，不能扩展为全部用户统一留存。"
+  },
+  "sg-scams|None|conditional": {
+    "label": "后续指引待定",
+    "detail": "接下来：守则已经生效。按警方公布的2027年1月31日期限完成措施，并核对平台收到的正式通知。"
+  },
+  "ca-ai|2025-10-13|evidence": {
+    "label": "州长签署法案",
+    "detail": "州长签署SB 243。"
+  },
+  "ca-ai|2026-01-01|evidence": {
+    "label": "陪伴机器人规则生效",
+    "detail": "加州官方说明 SB 243 对陪伴聊天机器人提出披露及安全协议要求，2026 年 1 月 1 日生效。"
+  },
+  "ca-ai|None|conditional": {
+    "label": "后续指引待定",
+    "detail": "接下来：先判断功能是否属于法律定义的陪伴聊天机器人。属于这一范围的，按2026年1月1日起适用的条款告知身份并建立安全处理流程。"
+  },
+  "us-coppa|2024-01-11|evidence": {
+    "label": "修订草案公布",
+    "detail": "拟议规则发布并征求公众意见。"
+  },
+  "us-coppa|2025-04-22|evidence": {
+    "label": "最终修订公布",
+    "detail": "FTC 修订 COPPA 规则；多数修订要求的合规日期为 2026 年 4 月 22 日。"
+  },
+  "us-coppa|2025-06-23|impact": {
+    "label": "修订规则生效",
+    "detail": "记录的生效或执行日期。受影响的服务：面向13岁以下儿童，或已知道自己正在收集其个人信息的适用服务运营者。"
+  },
+  "us-coppa|2026-04-22|impact": {
+    "label": "措施完成期限",
+    "detail": "核对哪些条款适用、是否有例外。COPPA不是统一的18岁门槛。需区分面向儿童、面向混合年龄用户，以及已知正在收集儿童信息的情况。"
+  },
+  "us-coppa|None|conditional": {
+    "label": "后续安排待定",
+    "detail": "接下来：规则于2025年6月23日生效，多数修订要求在2026年4月22日前完成，部分条款另有期限。先判断服务是否面向儿童，或是否已知正在收集儿童信息。"
+  },
+  "eu-minors|2025-07-14|evidence": {
+    "label": "保护指南公布",
+    "detail": "欧盟委员会发布 DSA 未成年人保护指南，包含有害商业行为与成瘾风险等议题。"
+  },
+  "eu-minors|None|conditional": {
+    "label": "后续指引待定",
+    "detail": "接下来：指南供监管机构评估时参考。平台仍须遵守适用的DSA要求，指南本身没有另设统一执行日期。"
+  },
+  "br-eca|2025-09-17|evidence": {
+    "label": "法律通过",
+    "detail": "已立法 / 配套跟进"
+  },
+  "br-eca|2026-03-17|impact": {
+    "label": "规则开始执行",
+    "detail": "法律要求已生效。监管机构按阶段推进工作，不代表所有要求都可以延期执行。"
+  },
+  "br-eca|2026-10-28|evidence": {
+    "label": "适用指引公布",
+    "detail": "ANPD公布指引，解释哪些服务属于未成年人“可能访问”，并细化预防责任。ECA Digital已于3月17日生效；本次是适用解释。"
+  },
+  "br-eca|None|conditional": {
+    "label": "后续指引待定",
+    "detail": "接下来：现行要求已经适用。按新指引检查仍有哪些措施需要补齐；分阶段要求分别按对应条款完成。"
+  },
+  "us-kosa|2026-08-05|evidence": {
+    "label": "议会审议",
+    "detail": "立法审议中"
+  },
+  "us-kosa|2026-09-30|evidence": {
+    "label": "快速通过受阻",
+    "detail": "9月30日参议院记录显示，对S.1748提出的一致同意通过请求受到反对，主持人确认收到反对。该程序未使法案通过。"
+  },
+  "us-kosa|None|conditional": {
+    "label": "后续审议待定",
+    "detail": "接下来：快速通过请求遭反对，不代表法案永久终止，也没有因此新增要求。成为法律后，还需核对生效条款和后续配套规则。"
+  },
+  "ut-live|2025-02-21|evidence": {
+    "label": "驳回请求被拒",
+    "detail": "犹他州商务部门于2025年2月21日公告，法院拒绝 TikTok 就第二起涉及LIVE诉讼提出的驳回动议。诉讼围绕消费者保护及LIVE相关指控。"
+  },
+  "ut-live|None|conditional": {
+    "label": "后续裁判待定",
+    "detail": "接下来：法院拒绝提前驳回案件，不代表指控已经成立。整改要求要看具体判决或和解涉及谁、要求什么；现有法律仍须遵守。"
+  },
+  "co-chatbot-draft|2026-10-06|evidence": {
+    "label": "中期草案公布",
+    "detail": "可以开始评估草案并准备意见。"
+  },
+  "co-chatbot-draft|2026-10-21|evidence": {
+    "label": "监管分析公布",
+    "detail": "州司法部门于10月6日发布中期规则草案，10月21日发布监管分析；意见期至10月26日，如听证延续则相应延长。"
+  },
+  "co-chatbot-draft|2026-10-26|window": {
+    "label": "意见提交截止",
+    "detail": "这是参与程序的截止时间；新要求从何时执行需另行确认。官方网页将截止时区写为MST；未核实听证是否延续，不能把北京时间日期当作截止时刻。"
+  },
+  "co-chatbot-draft|None|conditional": {
+    "label": "最终文本待定",
+    "detail": "接下来：公告所列意见截止日为10月26日，听证延续时可能延长。作为依据的法律和本次配套规则要分别核对；新规则的最终内容和生效日期仍待确认。"
+  },
+  "eu-dfa-frontier|2026-10-21|evidence": {
+    "label": "咨询意见通过",
+    "detail": "EESC于10月21日通过探索性意见；10月5日欧洲议会研究简报仍把DFA列为委员会准备中的倡议，预计2026年第四季度提出。"
+  },
+  "eu-dfa-frontier|None|conditional": {
+    "label": "最终文本待定",
+    "detail": "接下来：欧洲经济社会委员会（EESC）的意见不会直接新增平台义务。需等正式提案通过，并确认执行日期；最终采用法规还是指令，也会影响各国落实方式。"
+  },
+  "eu-kids-proposal|2026-10-02|evidence": {
+    "label": "提案征集意见",
+    "detail": "委员会10月2日邀请就EU KIDS Act提案反馈；页面10月21日更新。正文列11月26日截止，反馈入口文字列12月3日，存在日期差异。"
+  },
+  "eu-kids-proposal|None|conditional": {
+    "label": "最终文本待定",
+    "detail": "接下来：意见截止日不是生效日。需核对最终文本、哪些服务受影响，以及生效和执行日期；现有DSA要求继续执行。"
+  },
+  "uk-transparency-draft|2026-10-15|evidence": {
+    "label": "征求意见预告",
+    "detail": "Ofcom 10月15日公告计划11月25日启动两项八周程序：透明度通知方法的影响评估公开咨询，以及向分类服务发出通知草稿征求陈述。"
+  },
+  "uk-transparency-draft|2026-11-25|window": {
+    "label": "征求意见开始",
+    "detail": "这是参与程序的截止时间；新要求从何时执行需另行确认。11月25日是计划启动日，不是平台报告提交或新法生效日。"
+  },
+  "uk-transparency-draft|None|conditional": {
+    "label": "最终文本待定",
+    "detail": "接下来：11月25日是计划开始征求意见的日期。哪些报告必须交、何时交，要看具体服务收到的正式通知及法律依据。"
+  },
+  "uk-women-evidence|2026-09-09|evidence": {
+    "label": "收集安全证据",
+    "detail": "Ofcom于9月9日更新女性与女孩网络安全工作，征集体验变化及治理措施证据，截止11月4日下午5点；10月行业公告继续列出这一截止时间。"
+  },
+  "uk-women-evidence|2026-11-04|window": {
+    "label": "意见提交截止",
+    "detail": "这是参与程序的截止时间；新要求从何时执行需另行确认。没有真实平台成效数据，不编造治理改进数字。"
+  },
+  "uk-women-evidence|None|conditional": {
+    "label": "后续指引待定",
+    "detail": "接下来：收集证据本身没有新增统一要求，现行网络安全要求继续执行。后续建议需区分自愿采用的做法和必须遵守的规则。"
+  },
+  "uk-age-forthcoming|2026-09-10|evidence": {
+    "label": "政府公布计划",
+    "detail": "教育委员会9月10日发布政府回应：政府继续制定未成年人社交媒体与高风险功能限制政策，计划2026年底前提交法规。"
+  },
+  "uk-age-forthcoming|2026-10-29|evidence": {
+    "label": "年龄核验评估公布",
+    "detail": "Ofcom公布16岁年龄核验评估，列出证件比对、数字身份、银行信息和人脸年龄估计四类可用方法。评估供议会讨论，正式法规和实施指引仍待出台。"
+  },
+  "uk-age-forthcoming|None|conditional": {
+    "label": "后续安排待定",
+    "detail": "接下来：年底是计划提交法规的时间。开始执行前，仍需核对制定法规的法律依据、议会审查程序和正式执行日期。"
+  },
+  "sg-ai-ip-consult|2026-08-26|evidence": {
+    "label": "版权意见征集",
+    "detail": "MinLaw与IPOS的AI知识产权咨询于8月26日启动，公告意见截止日为10月22日；主题包括训练、部署风险及AI辅助作品中的人类创作。"
+  },
+  "sg-ai-ip-consult|2026-10-22|window": {
+    "label": "意见提交截止",
+    "detail": "这是参与程序的截止时间；新要求从何时执行需另行确认。截止日依据启动公告；未核实是否另有延期，后续回应尚未确认。"
+  },
+  "sg-ai-ip-consult|None|conditional": {
+    "label": "最终文本待定",
+    "detail": "接下来：意见期结束不代表版权法已经修改。AI训练和生成内容仍按现行法律处理，后续采用哪种改革方式尚未确定。"
+  },
+  "au-duty-bill|2026-10-15|evidence": {
+    "label": "法案提交议会",
+    "detail": "澳大利亚政府10月15日宣布向议会提交Digital Duty of Care法案，拟将安全责任前移至平台产品和功能设计。"
+  },
+  "au-duty-bill|2026-10-26|evidence": {
+    "label": "反馈摘要公布",
+    "detail": "主管部门公布草案反馈摘要，讨论义务边界、合理可行措施、基本权利和规则授权；法案仍按议会程序推进。"
+  },
+  "au-duty-bill|None|conditional": {
+    "label": "后续审议待定",
+    "detail": "接下来：目前是法案。平台要做什么、何时开始，需等待最终文本和生效安排；草案中的处罚还不是现行处罚。"
+  },
+  "au-feed-draft|2026-10-15|evidence": {
+    "label": "信息流草案征询",
+    "detail": "澳大利亚正在征求意见用户信息流选择规则，门户列10月15日开启、11月5日23:59 AEDT结束；草案旨在提供仅关注内容的信息流选择。"
+  },
+  "au-feed-draft|2026-11-05|window": {
+    "label": "意见提交截止",
+    "detail": "这是参与程序的截止时间；新要求从何时执行需另行确认。提案内容可能随法案和征求意见意见变化；不得把全部算法使用都称为被禁止。"
+  },
+  "au-feed-draft|None|conditional": {
+    "label": "后续审议待定",
+    "detail": "接下来：须先等Digital Duty of Care法案正式获批，再制定配套规则。11月5日是意见截止日，不是功能必须上线的日期。"
+  },
+  "br-enforcement-draft|2026-09-09|evidence": {
+    "label": "执法程序征询",
+    "detail": "ANPD9月9日启动执法及行政制裁程序修订咨询，公告和参与门户均列10月26日结束；拟适配ECA Digital等新增监管职责。"
+  },
+  "br-enforcement-draft|2026-10-26|evidence": {
+    "label": "意见期结束",
+    "detail": "官方参与门户标记征求意见已结束，列示截止日为10月26日。执法程序修订仍待最终决议。"
+  },
+  "br-enforcement-draft|2026-10-26|window": {
+    "label": "意见期结束",
+    "detail": "这是参与程序的截止时间；新要求从何时执行需另行确认。门户带缓存提示；截止日已和ANPD公告交叉核对，未见延期或最终决议。"
+  },
+  "br-enforcement-draft|None|conditional": {
+    "label": "后续审议待定",
+    "detail": "接下来：ECA Digital已生效，现有要求继续执行。新增执法程序须等正式决议，再按其中的生效条款落实。"
+  },
+  "my-licensing-draft|2026-09-21|evidence": {
+    "label": "许可修订征询",
+    "detail": "马来西亚统一咨询门户列示MCMC许可规则修订咨询为9月21日至10月24日，当前状态Closed；涵盖许可框架、费用和适用海外经营者监管安排。"
+  },
+  "my-licensing-draft|2026-10-24|window": {
+    "label": "规定期限",
+    "detail": "这是参与程序的截止时间；新要求从何时执行需另行确认。部分二手报道写10月20日，官方门户列10月24日；采用门户显示并保留差异，不推断延期原因。"
+  },
+  "my-licensing-draft|None|conditional": {
+    "label": "最终文本待定",
+    "detail": "接下来：征求意见结束不代表修订已通过。先确认经营公司和服务是否需要许可，再核对最终文件、费用及准备期限。"
+  },
+  "id-tunas-review|2026-10-07|evidence": {
+    "label": "安全效果评估",
+    "detail": "印尼政府10月7日评估PP TUNAS实施，强调除账号处置外还需安全功能与教育，并把AI风险纳入后续评估。"
+  },
+  "id-tunas-review|None|conditional": {
+    "label": "最终文本待定",
+    "detail": "接下来：现行规则继续执行。评估结果还不是新法草案；新增AI或安全功能要求，需等正式规则确认。"
+  },
+  "sg-tiered-next|2026-10-23|evidence": {
+    "label": "立法计划公布",
+    "detail": "MDDI10月23日公布家长与青少年参与结果，并确认拟于2027年提出立法，重点为年龄判断和核验及更安全的平台功能。"
+  },
+  "sg-tiered-next|None|conditional": {
+    "label": "后续审议待定",
+    "detail": "接下来：2027年是计划提交法案的年份。年龄核验和功能保护何时开始执行，需等正式法律及实施安排。"
+  },
+  "ca-digital-safety-bill|2026-06-10|evidence": {
+    "label": "法案首次宣读",
+    "detail": "法案进入立法程序。之后提交的宪章声明用于解释权利影响，并不是首次提出法案。"
+  },
+  "ca-digital-safety-bill|2026-10-19|evidence": {
+    "label": "权利说明提交",
+    "detail": "司法部于10月19日向众议院提交C-34宪章声明，说明拟议儿童保护要求可能如何影响表达、隐私等权利。法案一读文本日期为6月10日。"
+  },
+  "ca-digital-safety-bill|None|conditional": {
+    "label": "后续审议待定",
+    "detail": "接下来：宪章声明解释法案可能怎样影响权利，不代表法案已获批。需等法案成为法律，再核对开始日期、服务范围和配套要求。"
+  },
+  "sa-pdpl-draft|2026-10-08|evidence": {
+    "label": "修订草案征询",
+    "detail": "10月8日官方公报确认修订草案征求意见至11月5日。条文拟调整境内存储、隐私告知及监管请求响应；第38条拟规定正式公布后60日施行。"
+  },
+  "sa-pdpl-draft|2026-11-05|window": {
+    "label": "意见提交截止",
+    "detail": "这是参与程序的截止时间；新要求从何时执行需另行确认。境内存储与合法跨境传输如何衔接仍需解释；最终决议、正式公布日及适用例外待确认。"
+  },
+  "sa-pdpl-draft|None|conditional": {
+    "label": "最终文本待定",
+    "detail": "接下来：公布后60天执行仍是草案中的安排。需等待最终决定及正式公布日；现行PDPL要求继续执行。"
+  },
+  "jp-election-guidance|2026-07-13|evidence": {
+    "label": "修正法通过",
+    "detail": "修正法要求指定大规模服务减少选举相关风险，并每年公开报告。"
+  },
+  "jp-election-guidance|2026-10-24|evidence": {
+    "label": "指引草案征询",
+    "detail": "总务省10月24日启动选举信息治理指引及配套省令征求意见，11月24日23:59（日本时间）截止。指引拟与修正法于2027年3月1日同步施行。"
+  },
+  "jp-election-guidance|2026-11-24|window": {
+    "label": "意见提交截止",
+    "detail": "这是参与程序的截止时间；新要求从何时执行需另行确认。指引及省令最终文本待公布；逐项措施属于推荐示例，具体措施由平台判断。"
+  },
+  "jp-election-guidance|2027-03-01|impact": {
+    "label": "规则开始执行",
+    "detail": "草案所列的修正法执行日期。指定服务需准备降低风险的措施和年度报告；指引计划同日执行，最终文本尚未公布。"
+  },
+  "jp-election-guidance|None|conditional": {
+    "label": "最终文本待定",
+    "detail": "接下来：修正法要求指定服务减少选举相关风险并每年公开报告。指引草案列出建议做法，由平台结合服务选择；措施也要保护政治表达，避免限制过度。"
+  },
+  "ng-sales-promotion-draft|2026-09-30|evidence": {
+    "label": "促销草案征询",
+    "detail": "FCCPC于9月30日发布促销规则修订草案，官方意见截止日为10月20日。草案覆盖数字促销、网红与AI营销；启动条款拟以联邦公报公布日为施行日。"
+  },
+  "ng-sales-promotion-draft|2026-10-20|window": {
+    "label": "意见提交截止",
+    "detail": "这是参与程序的截止时间；新要求从何时执行需另行确认。最终规则及公报公布日待确认；AI条款的登记对象表述仍需明确，涉及抽奖的州级规则需另行核对。"
+  },
+  "ng-sales-promotion-draft|None|conditional": {
+    "label": "最终文本待定",
+    "detail": "接下来：草案计划从联邦公报公布当天执行。需等待最终规则，确认公布日期和哪些促销活动受约束，再调整直播商业合作流程。"
+  },
+  "uk-ncii-enforcement|2026-09-09|evidence": {
+    "label": "执法项目启动",
+    "detail": "启动NCII执法项目。"
+  },
+  "uk-ncii-enforcement|2026-09-30|evidence": {
+    "label": "匹配措施实施",
+    "detail": "守则中的新增匹配措施进入实施阶段。"
+  },
+  "uk-ncii-enforcement|2026-10-26|evidence": {
+    "label": "两家服务受查",
+    "detail": "Ofcom于10月26日调查两家未具名成人服务，核查非自愿私密影像的预防、风险管理与快速移除措施。"
+  },
+  "uk-ncii-enforcement|None|conditional": {
+    "label": "后续安排待定",
+    "detail": "接下来：确认现行英国要求涉及哪些功能；个案命令按指定对象和期限执行。"
+  },
+  "al-tiktok-settlement|2026-09-25|evidence": {
+    "label": "和解方案公布",
+    "detail": "州总检察长公布TikTok和解，列明两小时时限、使用暂停、夜间限制、年龄保障、默认非个性化信息流及家长控制。"
+  },
+  "al-tiktok-settlement|None|conditional": {
+    "label": "后续安排待定",
+    "detail": "接下来：按和解协议分别确认涉及哪些用户和功能、何时完成；公告日不是所有功能必须上线的日期。"
+  },
+  "us-tiktok-coppa-settlement|2026-08-21|evidence": {
+    "label": "和解协议公布",
+    "detail": "司法部公布4亿美元和解：3亿美元即时支付，另1亿美元以撤销此前Musical.ly同意令的法院命令为条件；案件未作责任认定。"
+  },
+  "us-tiktok-coppa-settlement|None|conditional": {
+    "label": "后续安排待定",
+    "detail": "接下来：付款按协议及法院命令规定的条件完成。现行COPPA要求继续执行，和解公告没有新增统一的直播功能上线日。"
+  },
+  "eu-data-omnibus|2026-10-21|evidence": {
+    "label": "谈判立场形成",
+    "detail": "理事会同意数据保护、Cookie和事件报告改革的谈判立场；待欧洲议会形成其立场后展开谈判。"
+  },
+  "eu-data-omnibus|2026-10-22|evidence": {
+    "label": "谈判文本公布",
+    "detail": "公布ST 14756/26谈判授权文本。"
+  },
+  "eu-data-omnibus|None|conditional": {
+    "label": "后续审议待定",
+    "detail": "接下来：议会和理事会达成相同文本并正式通过、公布后，按各条款的执行日期调整；目前继续遵守现行规则。"
+  },
+  "kr-ai-transparency|2026-01-22|evidence": {
+    "label": "AI基本法生效",
+    "detail": "AI基本法生效，MSIT发布透明度指引；透明度条款的调查与处罚设置至少一年宽限。"
+  },
+  "kr-ai-transparency|None|conditional": {
+    "label": "后续指引待定",
+    "detail": "接下来：法律已生效。先确认是否属于受约束的AI经营者及功能，落实告知和标记；调查处罚何时启动，要继续查看宽限期的后续公告。"
+  },
+  "eu-tiktok-addictive-design|2024-02-19|evidence": {
+    "label": "正式调查启动",
+    "detail": "委员会启动TikTok DSA正式程序。"
+  },
+  "eu-tiktok-addictive-design|2026-02-06|evidence": {
+    "label": "初步调查结论",
+    "detail": "委员会初步认为TikTok对无限滚动、自动播放、推送和个性化推荐的风险评估与缓解不足；案件仍有答辩程序。"
+  },
+  "eu-tiktok-addictive-design|None|conditional": {
+    "label": "后续安排待定",
+    "detail": "接下来：继续执行现行DSA风险管理要求。具体整改按最终决定、承诺或其他可执行要求中的期限完成。"
+  },
+  "no-social-age-draft|2026-04-24|evidence": {
+    "label": "年龄方案公布",
+    "detail": "政府公布按满16岁年份1月1日划线的政策方案。"
+  },
+  "no-social-age-draft|2026-05-08|evidence": {
+    "label": "EEA收到草案",
+    "detail": "EEA通知2026/9007/NO提出社交媒体年龄限制，保留有无“有害性条件”的两个方案；暂停期于8月11日结束。"
+  },
+  "no-social-age-draft|2026-08-11|evidence": {
+    "label": "法定等待期结束",
+    "detail": "TRIS登记的暂停期结束；不等于法律生效。"
+  },
+  "no-social-age-draft|None|conditional": {
+    "label": "最终文本待定",
+    "detail": "接下来：EEA规定的等待期结束后，仍需完成挪威国内立法和生效程序；也要核对DSA在当地如何落实。"
+  },
+  "se-social-age-inquiry|2026-06-02|evidence": {
+    "label": "阶段报告公布",
+    "detail": "公布SOU 2026:35阶段报告。"
+  },
+  "se-social-age-inquiry|2026-10-16|evidence": {
+    "label": "报告意见截止",
+    "detail": "阶段报告征询意见截止。"
+  },
+  "se-social-age-inquiry|2026-10-23|evidence": {
+    "label": "报告期限延长",
+    "detail": "政府将社交媒体年龄调查的报告期限延至12月31日；前期SOU 2026:35提出按满15岁年份限制登录访问。"
+  },
+  "se-social-age-inquiry|2026-12-31|window": {
+    "label": "报告提交截止",
+    "detail": "这是参与程序的截止时间；新要求从何时执行需另行确认。尚未确认法律最终通过或执行日期，目前只展示已核实的程序进展。"
+  },
+  "se-social-age-inquiry|None|conditional": {
+    "label": "最终文本待定",
+    "detail": "接下来：12月31日是研究报告提交期限。新增要求需等政府提出法案、议会通过，并确定执行日期。"
+  },
+  "nz-online-safety-bill|2026-08-24|evidence": {
+    "label": "法案提出公告",
+    "detail": "政府宣布提出Online Safety Bill，拟要求高风险平台实施16岁年龄检查、儿童风险评估，并纳入AI陪伴平台。"
+  },
+  "nz-online-safety-bill|None|conditional": {
+    "label": "后续审议待定",
+    "detail": "接下来：完成议会审议、正式批准和生效程序后执行；先核实选举后是否继续审议这项法案。"
+  },
+  "ae-advertiser-permit|2025-12-09|evidence": {
+    "label": "许可安排公布",
+    "detail": "2025年12月9日，媒体主管机构公布访客广告许可代理安排；现行官方服务页覆盖有偿与无偿推广，访客许可为3个月，延期后总计不超过6个月。"
+  },
+  "ae-advertiser-permit|None|conditional": {
+    "label": "后续指引待定",
+    "detail": "接下来：属于许可范围的广告活动，开始前先核验许可；访客续期按自己的许可证到期日办理。"
+  },
+  "vn-livestream-commerce|2025-12-10|evidence": {
+    "label": "国会通过法律",
+    "detail": "国会通过电子商务法。"
+  },
+  "vn-livestream-commerce|2026-07-01|evidence": {
+    "label": "直播电商法生效",
+    "detail": "电子商务法于2026年7月1日生效，第22–24条分别规定平台、商家与带货主播责任。"
+  },
+  "vn-livestream-commerce|2027-06-30|window": {
+    "label": "规定期限",
+    "detail": "这是参与程序的截止时间；新要求从何时执行需另行确认。政府英文译本供参考；配套规则和具体平台类型需核对越文正式文本。"
+  },
+  "vn-livestream-commerce|None|conditional": {
+    "label": "后续指引待定",
+    "detail": "接下来：直播销售要求已于2026年7月1日开始执行。既有登记资料可延续至2027年6月30日，这不延后直播销售要求。"
+  },
+  "vn-ai-transparency|2025-12-10|evidence": {
+    "label": "国会通过AI法",
+    "detail": "国会通过AI法。"
+  },
+  "vn-ai-transparency|2026-03-01|impact": {
+    "label": "AI法开始执行",
+    "detail": "记录的生效或执行日期。受影响的服务：在越南开展AI活动的境内外主体；按提供者、商业部署者及用户角色判断。"
+  },
+  "vn-ai-transparency|2026-05-01|evidence": {
+    "label": "配套法令生效",
+    "detail": "AI法于3月1日生效；第142/2026号配套法令自5月1日起实施，细化风险分类和AI内容披露。"
+  },
+  "vn-ai-transparency|None|conditional": {
+    "label": "后续指引待定",
+    "detail": "接下来：新系统遵守现行要求。法律生效前已运行的系统通常有12个月准备期，医疗、教育和金融系统为18个月；存在严重风险时仍可被要求停用。"
+  },
+  "us-platform-impersonation-anprm|2026-10-01|evidence": {
+    "label": "广告责任征询",
+    "detail": "FTC就平台广告优化助长政府与企业冒充诈骗征求意见，截止2026年11月30日；尚未形成最终规则。"
+  },
+  "us-platform-impersonation-anprm|2026-11-30|window": {
+    "label": "意见提交截止",
+    "detail": "这是参与程序的截止时间；新要求从何时执行需另行确认。ANPRM是正式草案前的意见征集。新增要求、服务范围和生效日期都尚未确定。"
+  },
+  "us-platform-impersonation-anprm|None|conditional": {
+    "label": "最终文本待定",
+    "detail": "接下来：11月30日是意见截止日。新增平台要求需等后续规则制定、最终公布和执行日期；现行反欺诈规则继续适用。"
+  },
+  "us-take-it-down|2025-05-19|evidence": {
+    "label": "法律签署",
+    "detail": "法律签署；平台删除机制留出一年建立期。"
+  },
+  "us-take-it-down|2026-05-19|evidence": {
+    "label": "删除义务开始执行",
+    "detail": "第3节平台义务于2026年5月19日开始实施：有效请求触发48小时删除时限，覆盖真实及合成的非自愿私密影像。"
+  },
+  "us-take-it-down|None|conditional": {
+    "label": "后续指引待定",
+    "detail": "接下来：第3节要求已于2026年5月19日开始执行。每次收到有效请求，最多48小时内完成删除；严重伤害按平台安全规则立即处理。"
+  },
+  "ny-ai-companion-minors|2026-01-27|evidence": {
+    "label": "法案提出",
+    "detail": "法案提出。"
+  },
+  "ny-ai-companion-minors|2026-06-04|evidence": {
+    "label": "参议院通过",
+    "detail": "参议院通过B版。"
+  },
+  "ny-ai-companion-minors|2026-06-05|evidence": {
+    "label": "众议院通过",
+    "detail": "众议院通过。"
+  },
+  "ny-ai-companion-minors|2026-10-28|evidence": {
+    "label": "州长签署法案",
+    "detail": "S9051B于10月28日签署成Chapter 368，2027年1月1日实施；限制向未成年人提供列明的不安全AI陪伴功能。"
+  },
+  "ny-ai-companion-minors|2027-01-01|impact": {
+    "label": "规则开始执行",
+    "detail": "记录的生效或执行日期。受影响的服务：向纽约用户提供符合定义的AI陪伴系统的运营者。"
+  },
+  "ny-ai-companion-minors|None|conditional": {
+    "label": "后续安排待定",
+    "detail": "接下来：2027年1月1日开始执行适用要求，此前完成配置和测试。"
+  },
+  "tx-hb18-en-banc|2026-07-24|evidence": {
+    "label": "原意见已撤销",
+    "detail": "小组发布意见；该意见已于10月28日撤销。"
+  },
+  "tx-hb18-en-banc|2026-10-28|evidence": {
+    "label": "全院复审获准",
+    "detail": "第五巡回上诉法院决定对HB18案件进行全院复审，即由更大范围的法官重新审理，并撤销7月24日的审判小组意见；口头辩论和补充书面意见的时间待定。"
+  },
+  "tx-hb18-en-banc|None|conditional": {
+    "label": "后续安排待定",
+    "detail": "接下来：按目前有效的禁令和之后可执行的判决调整功能；本次复审没有设定统一的调整截止日。"
+  }
+}

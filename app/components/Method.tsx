@@ -22,7 +22,7 @@ export default function Method({data}:{data:Atlas}){
    <article className="content-card"><h2>研究方法</h2>
     <p>政策事实核对政府、监管、议会和法院材料，媒体用于发现线索；按地区、法案和版本区分提案、法律效力、法院是否暂停或限制执行及实施日期。</p>
     <p>主题取自 <a href="https://www.tiktok.com/community-guidelines/en/" target="_blank" rel="noreferrer">TikTok 社区准则 ↗</a>，结合 LIVE 打赏、变现场景分类。</p>
-    <p>首页默认展示尚未确定的政策。分别记录事件发生、网页读取和内容核对的日期，内容随项目版本更新。</p>
+    <p>首页默认展示全部事件，可筛选尚未确定的政策。分别记录事件发生、网页读取和内容核对的日期，内容随项目版本更新。</p>
     <div className="source-meta"><span>复核 · 北京时间 {reviewed}</span></div>
    </article>
    <article className="content-card"><h2>行动优先级</h2>

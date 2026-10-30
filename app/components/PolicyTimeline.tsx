@@ -1,8 +1,31 @@
-'use client';
-import {useState} from 'react';
+import {useEffect,useRef,useState} from 'react';
 import type {PolicyEvent} from '../../lib/atlas-schema';
 import {policyTimeline} from '../../lib/policy-timeline';
+import {timelineCaption} from '../../lib/timeline-captions';
+import TextPoints from './TextPoints';
+
 export default function PolicyTimeline({event,asOf}:{event:PolicyEvent;asOf:string}){
- const {framework,nodes}=policyTimeline(event);const [active,setActive]=useState(0);const node=nodes[Math.min(active,nodes.length-1)];
- return <section className="policy-timeline" aria-label="政策时间线"><h3>政策时间线</h3><p className="timeline-route">{framework.route}</p><ol className="timeline-track">{nodes.map((n,i)=><li key={`${n.date}-${i}`} className={`${n.kind} ${i===active?'chosen':''}`}><button aria-pressed={active===i} onClick={()=>setActive(i)}><span className="timeline-dot">{n.kind==='impact'?'⚑':n.kind==='conditional'?'?':i+1}</span><time>{n.date||'日期待定'}</time><strong>{n.label}</strong><small>{!n.date?'待确认':n.date>asOf?'已公布，日期未到':n.kind==='window'?'已公布的截止日':'截至核对日'}</small></button></li>)}</ol><div className="timeline-detail" aria-live="polite"><span className={`timeline-tag ${node.kind}`}>{node.kind==='impact'?'开始执行或完成准备的日期':node.kind==='conditional'?'后续待确认':node.kind==='window'?'截止时间':'已发生的进展'}</span><h4>{node.date||'待确认'} · {node.label}</h4><p>{node.detail}</p><a href={node.source} target="_blank" rel="noreferrer">来源 ↗</a></div><details><summary>完整时间线</summary>{nodes.map((n,i)=><p key={i}><b>{n.date||'待定'} · {n.label}</b><br/>{n.detail} <a href={n.source} target="_blank" rel="noreferrer">来源 ↗</a></p>)}</details></section>;
+ const {framework,nodes}=policyTimeline(event);
+ const initial=nodes.findIndex(n=>n.date===event.eventDate);
+ const [active,setActive]=useState(Math.max(initial,0));
+ const track=useRef<HTMLOListElement>(null);
+ const index=Math.min(active,nodes.length-1),node=nodes[index];
+ useEffect(()=>{
+  const list=track.current,selected=list?.children[index] as HTMLElement|undefined;
+  if(list&&selected){
+   const visible=Math.max(1,Math.floor(list.clientWidth/selected.clientWidth));
+   const start=Math.max(0,index-Math.floor(visible/2));
+   const first=list.children[start] as HTMLElement;
+   list.scrollTo({left:first.offsetLeft-list.offsetLeft,behavior:'auto'});
+  }
+ },[index]);
+ const move=(delta:number)=>setActive(Math.max(0,Math.min(nodes.length-1,index+delta)));
+ return <section className="policy-timeline detail-section" aria-label="政策时间线">
+  <div className="timeline-heading"><h3>政策时间线</h3><div className="timeline-controls"><button aria-label="上一时间节点" disabled={index===0} onClick={()=>move(-1)}>←</button><span>{index+1} / {nodes.length}</span><button aria-label="下一时间节点" disabled={index===nodes.length-1} onClick={()=>move(1)}>→</button></div></div>
+  <ol ref={track} className="timeline-track" onKeyDown={ev=>{if(ev.key==='ArrowRight'||ev.key==='ArrowLeft'){ev.preventDefault();move(ev.key==='ArrowRight'?1:-1);}}}>
+   {nodes.map((n,i)=><li key={`${n.date}-${i}`} className={`${n.kind} ${i===index?'chosen':''}`}><button aria-pressed={index===i} onClick={()=>setActive(i)}><span className="timeline-dot" aria-hidden="true"/><time>{n.date||'日期待定'}</time><strong>{timelineCaption(event.id,n)}</strong><small>{!n.date?'待确认':n.date>asOf?'日期未到':n.kind==='window'?'已到截止日':'已记录'}</small></button></li>)}
+  </ol>
+  <div className={`timeline-detail ${node.kind}`} aria-live="polite"><h4>{timelineCaption(event.id,node)}<time>{node.date||'日期待定'}</time></h4><TextPoints text={node.detail}/><a href={node.source} target="_blank" rel="noreferrer">查看来源 ↗</a></div>
+  <details className="timeline-procedure"><summary>当地程序</summary><p>{framework.route}</p></details>
+ </section>;
 }

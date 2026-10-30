@@ -1,5 +1,5 @@
 import type {PolicyEvent} from './atlas-schema';
-import {stageKey} from './policy-process';
+import {stageKey} from './policy-process.ts';
 type Framework={route:string;gate:string;next:string;url?:string};
 const eu='https://commission.europa.eu/law/law-making-process/adopting-eu-law_en';
 const uk='https://www.parliament.uk/about/how/laws/acts/';
@@ -40,7 +40,7 @@ export function policyTimeline(e:PolicyEvent){
  if(e.id==='co-chatbot-draft')nodes.unshift({date:'2026-10-06',label:'中期草案发布',detail:'可以开始评估草案并准备意见。',kind:'evidence',source:e.source});
  if(e.id==='ca-digital-safety-bill')nodes.unshift({date:'2026-06-10',label:'法案一读文本',detail:'法案进入立法程序。之后提交的宪章声明用于解释权利影响，并不是首次提出法案。',kind:'evidence',source:'https://www.parl.ca/DocumentViewer/en/45-1/bill/C-34/first-reading'});
  if(e.id==='br-eca')nodes.push({date:'2026-03-17',label:'法律生效',detail:'法律要求已生效。监管机构按阶段推进工作，不代表所有要求都可以延期执行。',kind:'impact',source:e.source});
- if(e.effectiveDate&&e.id!=='br-eca')nodes.push({date:e.effectiveDate,label:'生效或开始执行',detail:`记录的生效或执行日期。受影响的服务：${e.appliesTo}`,kind:'impact',source:e.source});
+ if(e.effectiveDate&&e.effectiveDate!==e.eventDate&&e.id!=='br-eca')nodes.push({date:e.effectiveDate,label:'生效或开始执行',detail:`记录的生效或执行日期。受影响的服务：${e.appliesTo}`,kind:'impact',source:e.source});
  if(e.deadline&&e.deadline!==e.effectiveDate)nodes.push({date:e.deadline,label:e.deadlineType,detail:/合规|实施/.test(e.deadlineType)?`核对哪些条款适用、是否有例外。${e.uncertainty}`:`这是参与程序的截止时间；新要求从何时执行需另行确认。${e.uncertainty}`,kind:/合规|实施/.test(e.deadlineType)?'impact':'window',source:e.source});
  const explicitDates=new Set(nodes.filter(n=>n.label!=='此前进展').map(n=>n.date));
  for(let i=nodes.length-1;i>=0;i--)if(nodes[i].label==='此前进展'&&explicitDates.has(nodes[i].date))nodes.splice(i,1);
