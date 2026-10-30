@@ -1,5 +1,7 @@
+import {displayTitle} from '../../lib/display-title';
 import type {Atlas} from '../../lib/atlas-schema';
 import technology from '../../data/technology.json';
+import {organizationNames} from '../../lib/organizations';
 
 const flowSources=[
  {title:'TikTok 2025 更新公告',url:'https://newsroom.tiktok.com/create-discover-and-connect-on-tiktok-with-simpler-and-stronger-community-guidelines?lang=en',note:'创作者和专家意见、审核培训、通知及生效安排。'},
@@ -31,7 +33,7 @@ export default function Method({data}:{data:Atlas}){
   </div>
   <div className="method-folds">
    <details className="method-fold"><summary><span>阅读说明</span></summary><div className="fold-content">
-    <p>①—⑤ 表示从尚未起草到已生效的先后阶段，具体程序以事件详情为准。监管指导、执法和诉讼可发生在不同阶段。P0–P3 表示行动优先级。实施依据、日期冲突、适用范围和排序理由见事件详情。</p>
+    <p>①—⑤ 表示从尚未起草到已生效的先后阶段，具体程序以事件详情为准。监管指导、执法和诉讼可发生在不同阶段。P0–P3 表示行动优先级。实施日期、后续安排和关注理由见事件详情。</p>
     <p>空白地图区域暂无匹配记录。时间线按先后步骤排列，间距不代表时长。</p>
     <p>独立 LIVE 政策研究。事实来自公开来源，规则建议为项目分析，不是TikTok内部决定，也没有经过法律审批。实验室案例处于设计、评估阶段。</p>
     <p>执行前复核当地法律、后续修订和法院是否暂停或限制执行。</p>
@@ -46,8 +48,8 @@ export default function Method({data}:{data:Atlas}){
     <p>流程按公开材料归纳。LIVE 单项规则的审批人、固定顺序和上线周期未公开；团队分工、准备材料和推进条件为项目建议。</p>
    </div></details>
    <details className="method-fold"><summary><span>流程参考来源</span><small>{flowSources.length}</small></summary><div className="fold-content source-list">{flowSources.map(s=><a className="sourcerow" key={s.url} href={s.url} target="_blank" rel="noreferrer"><span>{s.title} ↗<small>{s.note}</small></span></a>)}</div></details>
-   <details className="method-fold"><summary><span>技术来源</span><small>{technology.items.reduce((n,x)=>n+x.sources.length,0)}</small></summary><div className="fold-content source-list">{technology.items.flatMap(item=>item.sources.map(source=><a className="sourcerow" key={item.id+source.url} href={source.url} target="_blank" rel="noreferrer"><span>{item.title}</span><small>{source.publisher} ↗</small></a>))}</div></details>
-   <details className="method-fold"><summary><span>政策来源</span><small>{data.events.length}</small></summary><div className="fold-content source-list">{data.events.map(e=><a className="sourcerow" key={e.id} href={e.source} target="_blank" rel="noreferrer"><span>{e.region} / {e.title}</span><small>{new URL(e.source).hostname} ↗</small></a>)}</div></details>
+   <details className="method-fold"><summary><span>技术来源</span><small>{technology.items.reduce((n,x)=>n+x.sources.length,0)}</small></summary><div className="fold-content source-list">{technology.items.flatMap(item=>item.sources.map(source=><a className="sourcerow" key={item.id+source.url} href={source.url} target="_blank" rel="noreferrer"><span>{item.title}</span><small>{organizationNames(source.publisher)} ↗</small></a>))}</div></details>
+   <details className="method-fold"><summary><span>政策来源</span><small>{data.events.length}</small></summary><div className="fold-content source-list">{data.events.map(e=><a className="sourcerow" key={e.id} href={e.source} target="_blank" rel="noreferrer"><span>{e.region} / {displayTitle(e.title)}</span><small>{new URL(e.source).hostname} ↗</small></a>)}</div></details>
   </div>
  </section>;
 }

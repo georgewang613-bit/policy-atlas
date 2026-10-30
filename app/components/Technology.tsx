@@ -1,6 +1,7 @@
 import {useEffect,useRef,useState,type CSSProperties} from 'react';
 import data from '../../data/technology.json';
 import TextPoints from './TextPoints';
+import {organizationNames} from '../../lib/organizations';
 
 type Update=typeof data.items[number];
 const directions:Record<string,{color:string;icon:string}>={
@@ -17,27 +18,27 @@ export default function Technology(){
  useEffect(()=>{if(selected)heading.current?.focus();else if(previous.current)buttons.current.get(previous.current)?.focus();},[selected]);
  useEffect(()=>{const key=(e:KeyboardEvent)=>{if(e.key==='Escape')setSelected(null);};document.addEventListener('keydown',key);return()=>document.removeEventListener('keydown',key);},[]);
  const open=(item:Update)=>{previous.current=item.id;setSelected(item);};
- const items=data.items.filter(x=>(category==='全部'||x.category===category)&&JSON.stringify(x).toLowerCase().includes(query.toLowerCase())).sort((a,b)=>(b.publishedAt||'').localeCompare(a.publishedAt||''));
+ const items=data.items.filter(x=>(category==='全部'||x.category===category)&&(JSON.stringify(x)+organizationNames(JSON.stringify(x),false)).toLowerCase().includes(query.toLowerCase())).sort((a,b)=>(b.publishedAt||'').localeCompare(a.publishedAt||''));
  if(selected){const accent=directions[selected.category]||directions['审核模型'];return <article className="update-detail tech-detail" style={{'--tech-accent':accent.color} as CSSProperties}>
   <button className="text-button" onClick={()=>setSelected(null)}>← 返回列表</button>
   <div className="tech-detail-heading"><span className="tech-category">{selected.category}</span><h2 ref={heading} tabIndex={-1}>{selected.title}</h2><p className="tech-status">{selected.status}</p><div className="detail-meta"><span>{selected.publishedAt?'发布 / 修订 '+selected.publishedAt:'发布日期未列'}</span><span>核对 {selected.checkedAt}</span></div><p className="tech-version">{selected.version}</p></div>
-  <p className="tech-detail-conclusion">{selected.conclusion}</p>
+  <p className="tech-detail-conclusion">{organizationNames(selected.conclusion)}</p>
   <section><h3>研究进展</h3><TextPoints text={selected.fact}/></section>
   <section><h3>直播应用</h3><TextPoints text={selected.liveUse}/></section>
   <section><h3>试用建议</h3><TextPoints text={selected.nextStep}/></section>
   <section><h3>评估指标</h3><TextPoints text={selected.measure}/></section>
   <section><h3>使用限制</h3><TextPoints text={selected.limits}/></section>
-  <section className="update-sources"><h3>参考来源</h3>{selected.sources.map(s=><p key={s.url}><a href={s.url} target="_blank" rel="noreferrer">{s.publisher} ↗</a><small>{s.locator}</small></p>)}</section>
+  <section className="update-sources"><h3>参考来源</h3>{selected.sources.map(s=><p key={s.url}><a href={s.url} target="_blank" rel="noreferrer">{organizationNames(s.publisher)} ↗</a><small>{s.locator}</small></p>)}</section>
  </article>;}
  return <section className="technology technology-overview" aria-label="技术动态">
   <div className="tech-filters"><select aria-label="技术方向" value={category} onChange={e=>setCategory(e.target.value)}>{['全部',...new Set(data.items.map(x=>x.category))].map(x=><option key={x} value={x}>{x==='全部'?'全部方向':x}</option>)}</select><input aria-label="搜索技术" value={query} onChange={e=>setQuery(e.target.value)} placeholder="搜索技术或场景"/><span role="status">{items.length} 条动态</span></div>
   <div className="tech-grid">{items.map(x=>{const accent=directions[x.category]||directions['审核模型'];return <article className="tech-card" key={x.id} style={{'--tech-accent':accent.color} as CSSProperties}>
    <div className="tech-card-top"><span className="tech-category"><DirectionIcon kind={accent.icon}/>{x.category}</span><span className="tech-status">{x.status}</span></div>
    <h2><button className="update-title" ref={el=>{if(el)buttons.current.set(x.id,el);else buttons.current.delete(x.id);}} onClick={()=>open(x)}>{x.title}<span aria-hidden="true">↗</span></button></h2>
-   <p className="tech-card-conclusion">{x.conclusion}</p>
+   <p className="tech-card-conclusion">{organizationNames(x.conclusion)}</p>
    <TextPoints className="tech-card-facts" text={x.fact}/>
-   <div className="tech-use"><span>直播应用</span><p>{x.liveUse}</p></div>
-   <div className="tech-card-footer"><time dateTime={x.publishedAt||undefined}>{x.publishedAt||'发布日期未列'}</time><span>{x.sources[0].publisher} · {x.sources.length} 项来源</span></div>
+   <div className="tech-use"><span>直播应用</span><p>{organizationNames(x.liveUse)}</p></div>
+   <div className="tech-card-footer"><time dateTime={x.publishedAt||undefined}>{x.publishedAt||'发布日期未列'}</time><span>{organizationNames(x.sources[0].publisher,false)} · {x.sources.length} 项来源</span></div>
   </article>;})}</div>
   {items.length===0&&<div className="empty"><p>没有匹配结果</p><button onClick={()=>{setCategory('全部');setQuery('');}}>清除筛选</button></div>}
  </section>;
