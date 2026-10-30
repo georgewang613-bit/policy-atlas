@@ -18,7 +18,7 @@ export default function PolicyTimeline({event,asOf}:{event:PolicyEvent;asOf:stri
    const start=Math.max(0,index-Math.floor(visible/2));
    const first=list.children[start] as HTMLElement;
    const reduceMotion=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-   list.scrollTo({left:first.offsetLeft-list.offsetLeft,behavior:positioned.current&&!reduceMotion?'smooth':'auto'});
+   list.scrollTo({left:first.offsetLeft,behavior:positioned.current&&!reduceMotion?'smooth':'auto'});
    positioned.current=true;
   }
  },[index]);
