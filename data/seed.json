@@ -1,15 +1,17 @@
 {
   "schemaVersion": 2,
   "updatedAt": "2026-11-01",
-  "reviewedAt": "2026-11-01T12:41:30.888795+00:00",
+  "reviewedAt": "2026-11-01T13:07:34Z",
   "briefTitle": "今日重点",
   "briefEventIds": [
+    "tr-child-social-age-rules",
+    "ny-ai-companion-minors",
     "uk-ofcom-information-judgment",
     "uk-women-evidence",
     "au-feed-draft"
   ],
-  "runStatus": "45条政策 · 14条技术动态 · 云端补漏，部分来源待核实",
-  "brief": "补录10月30日英国Ofcom信息通知判决。英国11月4日证据征集、澳大利亚11月5日信息流规则征询仍开放。土耳其公报仍超时，科罗拉多已确认10月26日举行听证，最终规则待核对；本轮未完成全部政策来源复核。",
+  "runStatus": "46条政策 · 14条技术动态 · 新增土耳其生效规则，修正纽约实施日",
+  "brief": "P0：土耳其儿童社交网络规则11月1日生效，新账号立即执行年龄核验和未成年人分层；现有账号须在2027年3月31日前完成核验。纽约AI陪伴限制的chaptered version把实施日改为2027年6月1日，已纠正旧记录。英国11月4日证据征集、澳大利亚11月5日信息流规则征询仍开放；过去24小时未发现其他经官方证实的重大变化，本轮不声称完整覆盖全球。",
   "events": [
     {
       "id": "ny-safe",
@@ -3575,17 +3577,17 @@
         43
       ],
       "topic": "AI 与真实性",
-      "title": "AI陪伴限制：2027年1月1日开始执行",
+      "title": "AI陪伴限制：实施日改为2027年6月1日",
       "stage": "已通过 / 待实施",
       "eventDate": "2026-10-28",
-      "deadline": "2027-01-01",
+      "deadline": "2027-06-01",
       "priority": "P1",
-      "fact": "S9051B于10月28日签署成Chapter 368，2027年1月1日实施；限制向未成年人提供列明的不安全AI陪伴功能。",
+      "fact": "S9051B于10月28日签署成Chapter 368。州参议员办公室10月30日确认，州长签署的chaptered version把实施日从2027年1月1日改为2027年6月1日；法律限制向未成年人提供列明的不安全AI陪伴功能。",
       "impact": "会持续对话的AI主播或陪伴角色，需要检查情感诱导、模仿真人的表达，以及不同对话之间保留的记忆。",
-      "action": "核对功能定义、年龄判断和记忆设置，准备未成年人交互测试。",
+      "action": "先核对功能定义、年龄判断和记忆设置，完成未成年人交互测试；按2027年6月1日倒排法务确认、产品配置和上线验收。",
       "scope": "适用于纽约用户的受监管AI陪伴系统；限定用途的客服等有例外。",
-      "source": "https://www.nysenate.gov/legislation/bills/2025/S9051/amendment/B",
-      "checkedAt": "2026-10-29",
+      "source": "https://www.nysenate.gov/newsroom/press-releases/2026/kristen-gonzalez/senator-kristen-gonzalez-bans-unsafe-chatbot-feature",
+      "checkedAt": "2026-11-01",
       "confidence": "官方一手来源",
       "history": [
         {
@@ -3603,6 +3605,10 @@
         {
           "date": "2026-10-28",
           "event": "州长签署Chapter 368。"
+        },
+        {
+          "date": "2026-10-30",
+          "event": "州参议员办公室确认chaptered version把实施日从2027年1月1日调整为2027年6月1日。"
         }
       ],
       "review": "按最终B版核对适用功能。",
@@ -3629,15 +3635,15 @@
       "deliverable": "功能清单、年龄流程及未成年人对话测试结果。",
       "uncertainty": "后续实施规则和司法限制仍需跟踪。",
       "titleEn": "New York unsafe AI companion features law",
-      "reviewStatus": "公开来源已复核",
-      "sourceCheckedAt": "2026-10-29T13:20:13.612425+00:00",
-      "effectiveDate": "2027-01-01",
+      "reviewStatus": "签署状态与chaptered version实施日已复核",
+      "sourceCheckedAt": "2026-11-01T13:07:34Z",
+      "effectiveDate": "2027-06-01",
       "deadlineType": "实施日期",
-      "statusEvidence": "官方Actions确认10月28日签署；B版第3节列2027年1月1日实施。",
+      "statusEvidence": "官方Actions确认10月28日签署为Chapter 368；州参议员办公室10月30日说明chaptered version把实施日改为2027年6月1日。",
       "policyImplication": {
         "direction": "先判断AI功能是否落入定义。",
         "proposal": "对照第1800、1801及1804节检查产品。",
-        "trigger": "2027年1月1日开始执行适用要求，此前完成配置和测试。",
+        "trigger": "2027年6月1日开始执行适用要求，此前完成配置和测试。",
         "tradeoff": "年龄判断应兼顾隐私、能否顺利使用和防绕过。",
         "validation": "抽查未成年人交互及年龄判断失败路径。"
       },
@@ -3649,6 +3655,14 @@
           "checkedAt": "2026-10-29T13:20:13.612425+00:00",
           "supports": "签署、功能范围、年龄要求和实施日期。",
           "access": "官方正文"
+        },
+        {
+          "url": "https://www.nysenate.gov/newsroom/press-releases/2026/kristen-gonzalez/senator-kristen-gonzalez-bans-unsafe-chatbot-feature",
+          "publisher": "New York State Senate · Senator Kristen Gonzalez",
+          "locator": "2026-10-30；chaptered version effective date",
+          "checkedAt": "2026-11-01T13:07:34Z",
+          "supports": "州长签署的chaptered version把实施日从2027年1月1日调整为2027年6月1日。",
+          "access": "官方网页正文"
         }
       ]
     },
@@ -3734,6 +3748,106 @@
           "checkedAt": "2026-10-29T13:20:13.612425+00:00",
           "supports": "仅用于识别争议条款和程序背景，不作现行裁判依据。",
           "access": "法院PDF"
+        }
+      ]
+    },
+    {
+      "id": "tr-child-social-age-rules",
+      "region": "土耳其",
+      "code": "Turkey",
+      "xy": [
+        35,
+        39
+      ],
+      "topic": "未成年人保护",
+      "title": "儿童社交网络规则：新账号立即核验",
+      "stage": "已生效 / 现有账号过渡期",
+      "eventDate": "2026-11-01",
+      "deadline": "2027-03-31",
+      "priority": "P0",
+      "fact": "土耳其《社会网络提供者向儿童提供隔离服务及年龄核验条例》于11月1日生效。社会网络提供者不得向未满15岁的儿童提供服务；新账号开户时须核验年龄。已满15岁但未满18岁的儿童进入隔离服务：账号默认私密，只允许其关注的账号发消息，不提供开直播功能，不得按行为个性化或投放定向广告，并须提供购买、付费会员、使用时长和位置等家长控制工具。既有账号须在2027年3月31日前至少完成一次年龄核验。",
+      "impact": "土耳其新注册流程需立即分流未满15岁和15至17岁用户。对LIVE而言，15至17岁账号不得开播，但原文没有禁止其观看所有直播；礼物、订阅等付费功能需要纳入家长控制与限额设计。",
+      "action": "立即核对土耳其新账号年龄核验和未满15岁拒绝开户是否生效；为15至17岁账号关闭开播并检查私密默认、消息、推荐广告及家长控制。对既有账号建立迁移清单，在2027年3月31日前完成核验、关停或转入隔离服务。",
+      "scope": "适用于可从土耳其访问的境内外社会网络提供者及用户。条例区分新账号的即时义务和既有账号的过渡期；不得把15至17岁禁止开播扩大解释为全面禁止观看直播或使用全部社交功能。",
+      "source": "https://www.resmigazete.gov.tr/eskiler/2026/10/20261010-15.pdf",
+      "checkedAt": "2026-11-01",
+      "confidence": "土耳其官方公报原文",
+      "history": [
+        {
+          "date": "2026-05-01",
+          "event": "5651号法修订，加入未满15岁服务限制、儿童隔离服务和家长控制授权。"
+        },
+        {
+          "date": "2026-10-10",
+          "event": "实施条例刊载于第33396号《官方公报》。"
+        },
+        {
+          "date": "2026-11-01",
+          "event": "条例生效；新账号开始执行年龄核验和分层要求。"
+        },
+        {
+          "date": "2027-03-31",
+          "event": "既有账号完成至少一次年龄核验的过渡期截止。"
+        }
+      ],
+      "review": "已逐页核对官方公报第1至6页；独立研究建议，非法律签批。",
+      "lawId": "Sosyal Ağ Sağlayıcı Tarafından Çocuklara Özgü Ayrıştırılmış Hizmet Sunulmasına ve Yaş Doğrulamaya İlişkin Yönetmelik / RG 33396",
+      "instrument": "行政条例",
+      "topics": [
+        "未成年人保护",
+        "隐私与数据",
+        "打赏与变现",
+        "有害内容与身心健康"
+      ],
+      "scenarios": [
+        "账号注册",
+        "直播开播",
+        "私信互动",
+        "礼物与付费会员",
+        "推荐与广告",
+        "家长控制"
+      ],
+      "appliesTo": "可从土耳其访问的境内外社会网络提供者；具体产品边界和5651号法下的主体认定需由土耳其法务确认。",
+      "priorityReason": "新账号义务已于11月1日生效，直接涉及年龄核验、未满15岁准入和15至17岁LIVE功能；既有账号另有明确过渡期。",
+      "owners": [
+        "Turkey Legal",
+        "Policy",
+        "未成年人安全",
+        "LIVE产品",
+        "Privacy",
+        "Monetization"
+      ],
+      "deliverable": "土耳其年龄与功能矩阵、新账号核验测试、15至17岁开播限制及家长控制验收、既有账号迁移计划。",
+      "uncertainty": "条例未在本条中列明各产品的具体技术实现；处罚、例外及个别功能适用需结合5651号法、主管机关后续标准和具体业务进一步确认。",
+      "titleEn": "Turkey child-specific social network and age-verification rules",
+      "reviewStatus": "官方公报原文已复核 / 产品适用性待本地法务确认",
+      "sourceCheckedAt": "2026-11-01T13:07:34Z",
+      "effectiveDate": "2026-11-01",
+      "deadlineType": "既有账号年龄核验过渡期截止",
+      "statusEvidence": "官方公报第13条规定2026年11月1日生效；临时第1条规定既有账号最迟于2027年3月31日完成一次年龄核验。",
+      "policyImplication": {
+        "direction": "按年龄和账号状态拆分土耳其准入、LIVE、消息、推荐、广告和付费功能。",
+        "proposal": "新账号先执行年龄核验；未满15岁拒绝服务，15至17岁进入隔离服务。既有账号按风险和活跃度分批迁移，并提供清晰申诉。",
+        "trigger": "新账号义务立即执行；既有账号在2027年3月31日前完成核验、关停或转入隔离服务。",
+        "tradeoff": "同时控制儿童风险、年龄误判、隐私最小化、合法使用、付费体验和申诉可达性。",
+        "validation": "以未满15岁、15至17岁、成年人、外国用户及年龄误判账号测试注册、开播、私信、推荐广告、礼物订阅、家长控制和申诉路径。"
+      },
+      "evidence": [
+        {
+          "url": "https://www.resmigazete.gov.tr/eskiler/2026/10/20261010-15.pdf",
+          "publisher": "T.C. Resmî Gazete",
+          "locator": "10 Ekim 2026 · Sayı 33396；第5至10条、临时第1条、第13条",
+          "checkedAt": "2026-11-01T13:07:34Z",
+          "supports": "适用范围、未满15岁服务限制、新账号年龄核验、15至17岁隔离服务、开直播限制、家长控制、既有账号过渡期及生效日。",
+          "access": "官方公报PDF原文"
+        },
+        {
+          "url": "https://www.resmigazete.gov.tr/eskiler/2026/05/20260501-1.htm",
+          "publisher": "T.C. Resmî Gazete",
+          "locator": "5651 sayılı Kanun ek madde 4(7)、(20)",
+          "checkedAt": "2026-11-01T13:07:34Z",
+          "supports": "实施条例所依据的未满15岁限制、儿童隔离服务和家长控制授权。",
+          "access": "官方网页正文"
         }
       ]
     },
@@ -3824,8 +3938,7 @@
       "2026-10-29 EU KIDS Act反馈门户：返回空正文；新闻页仍列两个截止日，未设硬截止。",
       "2026-10-29 Ofcom新闻页：直接读取失败；已改用同日官方评估页和PDF核实。",
       "2026-10-29 ICO年龄核验声明：读取失败；未作为新增事实依据。",
-      "2026-10-29 Apple年龄核验支持页：HTTP 429；未新增条目。",
-      "2026-11-01 土耳其年龄规则：官方公报PDF读取超时；未将媒体所述生效安排新增为已核实事件。"
+      "2026-10-29 Apple年龄核验支持页：HTTP 429；未新增条目。"
     ]
   }
 }
