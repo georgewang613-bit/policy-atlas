@@ -1,16 +1,15 @@
 {
   "schemaVersion": 2,
   "updatedAt": "2026-11-01",
-  "reviewedAt": "2026-11-01T12:28:05.710638+00:00",
+  "reviewedAt": "2026-11-01T12:39:44.909106+00:00",
   "briefTitle": "今日重点",
   "briefEventIds": [
-    "uk-age-forthcoming",
-    "ny-ai-companion-minors",
-    "tx-hb18-en-banc",
-    "br-eca"
+    "uk-ofcom-information-judgment",
+    "uk-women-evidence",
+    "au-feed-draft"
   ],
-  "runStatus": "44条政策 · 14条技术动态 · 11月1日复核",
-  "brief": "本轮未核实到过去24小时内的政策实质变化。欧盟KIDS Act意见截止日仍有冲突。技术动态补充10月29—30日的多语言安全评测研究和AI青少年防护措施。",
+  "runStatus": "45条政策 · 14条技术动态 · 云端补漏，部分来源待核实",
+  "brief": "补录10月30日英国Ofcom信息通知判决。英国11月4日证据征集、澳大利亚11月5日信息流规则征询仍开放。土耳其公报仍超时，科罗拉多听证未独立核实；本轮未完成全部政策来源复核。",
   "events": [
     {
       "id": "ny-safe",
@@ -1325,7 +1324,7 @@
       "action": "去掉可识别个人的信息后，整理风险案例和现有措施的效果，形成可核查的材料。",
       "scope": "这是监管证据征集，不是新法案；既有法律义务与自愿最佳实践应分别判断。",
       "source": "https://www.ofcom.org.uk/online-safety/illegal-and-harmful-content/the-online-safety-act-a-safer-life-online-for-women-and-girls2",
-      "checkedAt": "2026-10-26",
+      "checkedAt": "2026-11-01",
       "confidence": "官方一手来源",
       "history": [
         {
@@ -1355,7 +1354,7 @@
       "uncertainty": "没有真实平台成效数据，不编造治理改进数字。",
       "titleEn": "女性与女孩网络体验：征集证据仍开放",
       "reviewStatus": "原文核对 / 尚未定案",
-      "sourceCheckedAt": "2026-10-26T14:00:48Z",
+      "sourceCheckedAt": "2026-11-01T12:39:44.909106+00:00",
       "effectiveDate": null,
       "deadlineType": "征求意见截止（当地日期）",
       "statusEvidence": "已核对下列官方证据；不把政策意向或规则草案当作最终义务。",
@@ -1382,6 +1381,14 @@
           "checkedAt": "2026-10-26T14:00:48Z",
           "supports": "截至公告仍列示11月4日证据征集窗口",
           "access": "官方网页正文"
+        },
+        {
+          "url": "https://www.ofcom.org.uk/online-safety/illegal-and-harmful-content/the-online-safety-act-a-safer-life-online-for-women-and-girls2",
+          "publisher": "Ofcom",
+          "locator": "Call for Evidence",
+          "checkedAt": "2026-11-01T12:39:44.909106+00:00",
+          "supports": "证据征集截至2026-11-04 17:00；不是统一产品整改期限。",
+          "access": "官方正文"
         }
       ]
     },
@@ -1650,7 +1657,7 @@
       "action": "比较推荐直播和只看关注主播两种模式，检查默认选择是什么、用户能否容易找到切换入口。",
       "scope": "拟议附属规则依赖Digital Duty of Care法案获正式批准；不是已经施行的算法退出义务。",
       "source": "https://www.infrastructure.gov.au/have-your-say/choice-feeds-social-media",
-      "checkedAt": "2026-10-26",
+      "checkedAt": "2026-11-01",
       "confidence": "官方一手来源",
       "history": [
         {
@@ -1680,7 +1687,7 @@
       "uncertainty": "提案内容可能随法案和征求意见意见变化；不得把全部算法使用都称为被禁止。",
       "titleEn": "My Feed, My Way：推荐信息流规则征询",
       "reviewStatus": "原文核对 / 尚未定案",
-      "sourceCheckedAt": "2026-10-26T14:15:01Z",
+      "sourceCheckedAt": "2026-11-01T12:39:44.909106+00:00",
       "effectiveDate": null,
       "deadlineType": "意见截止：23:59 AEDT",
       "statusEvidence": "已核对下列官方证据；不把政策意向或规则草案当作最终义务。",
@@ -1699,6 +1706,14 @@
           "checkedAt": "2026-10-26T14:15:01Z",
           "supports": "本条事实、阶段及日期",
           "access": "官方网页正文"
+        },
+        {
+          "url": "https://www.infrastructure.gov.au/have-your-say/choice-feeds-social-media",
+          "publisher": "Australian Government",
+          "locator": "Participate / The issue",
+          "checkedAt": "2026-11-01T12:39:44.909106+00:00",
+          "supports": "征询截至2026-11-05 23:59 AEDT；草案仍待立法前提。",
+          "access": "官方正文"
         }
       ]
     },
@@ -3709,6 +3724,79 @@
           "access": "法院PDF"
         }
       ]
+    },
+    {
+      "id": "uk-ofcom-information-judgment",
+      "region": "英国",
+      "code": "UK",
+      "xy": [
+        -0.12,
+        51.5
+      ],
+      "topic": "平台治理",
+      "title": "Ofcom信息通知获法院支持",
+      "stage": "司法审查 / 本次请求驳回",
+      "eventDate": "2026-10-30",
+      "deadline": null,
+      "priority": "P1",
+      "fact": "高等法院拒绝第1至7项司法审查许可；准许第8、9项但实体驳回，未撤销涉案信息通知。",
+      "impact": "LIVE业务需准备可追溯的数据口径和监管回复材料。",
+      "action": "建议梳理数据来源、统计口径及提取成本，按具体通知要求落实。",
+      "scope": "涉及Meta/WhatsApp、X及TikTok UK的信息通知；不等于认定实体内容义务违规。",
+      "source": "https://caselaw.nationalarchives.gov.uk/ewhc/admin/2026/2779",
+      "checkedAt": "2026-11-01",
+      "confidence": "法院原文",
+      "history": [
+        {
+          "date": "2026-02-10",
+          "event": "Ofcom发出涉案信息通知。"
+        },
+        {
+          "date": "2026-10-30",
+          "event": "法院发布本次司法审查判决。"
+        }
+      ],
+      "review": "已核对正文第1、170段。",
+      "lawId": "[2026] EWHC 2779 (Admin)",
+      "instrument": "高等法院判决",
+      "topics": [
+        "平台治理"
+      ],
+      "scenarios": [
+        "直播数据留存",
+        "监管信息回复"
+      ],
+      "appliesTo": "涉案信息通知收件人；其他服务需按自身通知判断。",
+      "priorityReason": "直接涉及TikTok UK监管回复。",
+      "owners": [
+        "Legal",
+        "UK Policy"
+      ],
+      "deliverable": "数据口径及证据清单。",
+      "uncertainty": "后续上诉或暂缓安排尚未核实；具体回复期限不能从本判决推定。",
+      "titleEn": "Ofcom information notices: judicial review dismissed",
+      "reviewStatus": "法院正文已复核",
+      "sourceCheckedAt": "2026-11-01T12:39:44.909106+00:00",
+      "effectiveDate": null,
+      "deadlineType": "具体通知期限待核对",
+      "statusEvidence": "判决第170段记载程序及实体处理结果。",
+      "policyImplication": {
+        "direction": "提高监管回复准备程度。",
+        "proposal": "建议保留数据口径与提取记录。",
+        "trigger": "收到具体通知时核对期限和要求。",
+        "tradeoff": "兼顾数据准确性与最小必要访问。",
+        "validation": "复核数据来源及权限记录。"
+      },
+      "evidence": [
+        {
+          "url": "https://caselaw.nationalarchives.gov.uk/ewhc/admin/2026/2779",
+          "publisher": "The National Archives / High Court",
+          "locator": "第1、170段；2026-10-30",
+          "checkedAt": "2026-11-01T12:39:44.909106+00:00",
+          "supports": "信息通知背景及司法审查处理结果。",
+          "access": "官方裁判全文"
+        }
+      ]
     }
   ],
   "collection": {
@@ -3726,7 +3814,7 @@
       "2026-10-29 ICO年龄核验声明：读取失败；未作为新增事实依据。",
       "2026-10-29 Apple年龄核验支持页：HTTP 429；未新增条目。",
       "2026-11-01 土耳其年龄规则：官方公报PDF读取超时；未将媒体所述生效安排新增为已核实事件。",
-      "2026-11-01 英国R (Meta, X, TikTok) v Ofcom：法院页可读，但未取得判决正文；未新增实体裁判结论。"
+      "2026-11-01 云端：科罗拉多10月26日听证线索未独立核实；技术检索未发现可核实的过去24小时新增项。"
     ]
   }
 }
