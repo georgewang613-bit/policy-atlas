@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-29",
-  "reviewedAt": "2026-10-29T13:20:13.612425+00:00",
+  "updatedAt": "2026-11-01",
+  "reviewedAt": "2026-11-01T12:28:05.710638+00:00",
   "briefTitle": "今日重点",
   "briefEventIds": [
     "uk-age-forthcoming",
@@ -9,8 +9,8 @@
     "tx-hb18-en-banc",
     "br-eca"
   ],
-  "runStatus": "44条政策 · 12条技术动态 · 10月29日复核",
-  "brief": "英国公布16岁年龄核验评估，正式法规仍待出台。纽约AI陪伴功能限制已通过，2027年1月1日开始执行。得州HB18将由更大范围的法官重新审理，原审判小组意见已撤销。巴西新指引进一步解释哪些服务属于未成年人可能访问的服务。",
+  "runStatus": "44条政策 · 14条技术动态 · 11月1日复核",
+  "brief": "本轮未核实到过去24小时内的政策实质变化。欧盟KIDS Act意见截止日仍有冲突。技术动态补充10月29—30日的多语言安全评测研究和AI青少年防护措施。",
   "events": [
     {
       "id": "ny-safe",
@@ -1158,7 +1158,7 @@
       "action": "先核对意见截止日，再分别检查注册、观看、互动、开播和送礼的年龄要求。",
       "scope": "委员会采纳提案不等于议会和理事会完成立法；本条尚非已生效义务。",
       "source": "https://digital-strategy.ec.europa.eu/en/news/commission-seeks-feedback-eu-kids-act",
-      "checkedAt": "2026-10-29",
+      "checkedAt": "2026-11-01",
       "confidence": "官方一手来源",
       "history": [
         {
@@ -1189,7 +1189,7 @@
       "uncertainty": "官方新闻页出现11月26日与12月3日两个日期，反馈门户正文未成功读取；暂不设明确截止日。",
       "titleEn": "EU KIDS Act：提案反馈正在进行",
       "reviewStatus": "公开来源已复核",
-      "sourceCheckedAt": "2026-10-29T13:20:13.612425+00:00",
+      "sourceCheckedAt": "2026-11-01T12:28:05.710638+00:00",
       "effectiveDate": null,
       "deadlineType": "截止日冲突：11/26 与 12/03，待核实",
       "statusEvidence": "已核对下列官方证据；不把政策意向或规则草案当作最终义务。",
@@ -1223,6 +1223,14 @@
           "locator": "反馈正文及入口文字；2026-10-29复核",
           "checkedAt": "2026-10-29T13:20:13.612425+00:00",
           "supports": "仍同时列11月26日及12月3日；门户正文为空，维持日期待核实。",
+          "access": "官方正文"
+        },
+        {
+          "url": "https://digital-strategy.ec.europa.eu/en/news/commission-seeks-feedback-eu-kids-act",
+          "publisher": "European Commission",
+          "locator": "反馈截止日期两段文字；11月1日复核",
+          "checkedAt": "2026-11-01T12:28:05.710638+00:00",
+          "supports": "新闻页仍同时列11月26日和12月3日，继续保留截止日待核实。",
           "access": "官方正文"
         }
       ]
@@ -3704,7 +3712,7 @@
     }
   ],
   "collection": {
-    "lastSuccess": "2026-10-29",
+    "lastSuccess": "2026-11-01",
     "schedule": "每天北京时间21:00研究更新",
     "failedSources": [
       "TikTok LIVE Monetization Guidelines：页面可定位但正文未由检索工具获取",
@@ -3716,7 +3724,9 @@
       "2026-10-29 EU KIDS Act反馈门户：返回空正文；新闻页仍列两个截止日，未设硬截止。",
       "2026-10-29 Ofcom新闻页：直接读取失败；已改用同日官方评估页和PDF核实。",
       "2026-10-29 ICO年龄核验声明：读取失败；未作为新增事实依据。",
-      "2026-10-29 Apple年龄核验支持页：HTTP 429；未新增条目。"
+      "2026-10-29 Apple年龄核验支持页：HTTP 429；未新增条目。",
+      "2026-11-01 土耳其年龄规则：官方公报PDF读取超时；未将媒体所述生效安排新增为已核实事件。",
+      "2026-11-01 英国R (Meta, X, TikTok) v Ofcom：法院页可读，但未取得判决正文；未新增实体裁判结论。"
     ]
   }
 }

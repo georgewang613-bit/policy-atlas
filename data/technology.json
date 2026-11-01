@@ -1,5 +1,5 @@
 {
-  "reviewedAt": "2026-10-29",
+  "reviewedAt": "2026-11-01",
   "items": [
     {
       "id": "hybrid-live-moderation",
@@ -267,6 +267,50 @@
           "url": "https://arxiv.org/html/2610.36574v1",
           "publisher": "论文作者 / arXiv",
           "locator": "第3节、第4.1–4.4节；实验基座和接入条件"
+        }
+      ]
+    },
+    {
+      "id": "openai-teen-violence-safeguards",
+      "title": "结合前文识别暴力风险",
+      "category": "平台实践",
+      "publishedAt": "2026-10-30",
+      "version": "10月30日官方公告",
+      "status": "宣布措施，未来几周陆续推出",
+      "checkedAt": "2026-11-01",
+      "conclusion": "可借鉴多轮风险识别和分级干预。",
+      "fact": "OpenAI宣布收紧青少年可获取的武器信息，并结合近期对话中的风险信号调整回答。自动结束高风险对话、重复触发后暂停账号等措施仍在推进；首份社区安全报告计划2027年初发布。",
+      "liveUse": "项目建议：AI主播和陪伴功能结合前文识别持续升级的风险，必要时停止生成并转交人工。",
+      "limits": "公告涉及ChatGPT；尚无可直接套用到直播音视频的效果数据。新措施计划在未来几周推出。",
+      "nextStep": "用脱敏多轮对话测试普通讨论、模糊信号和明确威胁，检查何时提醒、停止回答或转人工。",
+      "measure": "比较漏检、误停、响应时间和人工复核量；单独检查未成年人及申诉结果。",
+      "sources": [
+        {
+          "url": "https://openai.com/index/community-safety-report-and-new-protections-for-teens/",
+          "publisher": "OpenAI",
+          "locator": "Responding to warning signs / More protections for teens / Looking ahead；2026-10-30"
+        }
+      ]
+    },
+    {
+      "id": "msafetemp-multilingual",
+      "title": "用本地语境测试安全性",
+      "category": "评测研究",
+      "publishedAt": "2026-10-29",
+      "version": "MSafeTemp · 论文 v1",
+      "status": "研究数据集",
+      "checkedAt": "2026-11-01",
+      "conclusion": "只测英语或逐字翻译，可能漏掉其他语言的风险。",
+      "fact": "论文提出覆盖60种语言的MSafeTemp语料：先提取模板，再翻译并填入当地文化相关内容。作者发现，部分英语测试未暴露的问题会在翻译或本地化后出现。",
+      "liveUse": "项目建议：为AI主播、聊天助手和弹幕审核补充本地表达，重点检查低资源语言。",
+      "limits": "研究针对文本模型安全训练和评测；直播音视频、方言及语音转写效果需另测。",
+      "nextStep": "选两个目标市场，对照英语、直接翻译和本地改写三组样本；由当地审核员检查风险含义。",
+      "measure": "按语言和风险类型统计漏检、误拒及正常请求通过率，避免只看总分。",
+      "sources": [
+        {
+          "url": "https://arxiv.org/abs/2610.40516v1",
+          "publisher": "Neuwinger 等 / arXiv",
+          "locator": "摘要及提交历史；v1：2026-10-29 17:26 UTC"
         }
       ]
     }
