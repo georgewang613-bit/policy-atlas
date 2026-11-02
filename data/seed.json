@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-11-01",
-  "reviewedAt": "2026-11-01T13:07:34Z",
+  "updatedAt": "2026-11-02",
+  "reviewedAt": "2026-11-02T10:12:23Z",
   "briefTitle": "今日重点",
   "briefEventIds": [
     "tr-child-social-age-rules",
@@ -10,8 +10,8 @@
     "uk-women-evidence",
     "au-feed-draft"
   ],
-  "runStatus": "46条政策 · 14条技术动态 · 新增土耳其生效规则，修正纽约实施日",
-  "brief": "P0：土耳其儿童社交网络规则11月1日生效，新账号立即执行年龄核验和未成年人分层；现有账号须在2027年3月31日前完成核验。纽约AI陪伴限制的chaptered version把实施日改为2027年6月1日，已纠正旧记录。英国11月4日证据征集、澳大利亚11月5日信息流规则征询仍开放；过去24小时未发现其他经官方证实的重大变化，本轮不声称完整覆盖全球。",
+  "runStatus": "46条政策 · 14条技术动态 · 本轮未核实到重大新变化",
+  "brief": "过去24小时，在本轮查到的政策与技术来源中无重大新变化。近期仍需关注两场征询：英国女性与女孩网络安全证据征集原定11月4日截止，澳大利亚信息流规则草案原定11月5日截止。两者均为意见提交窗口。",
   "events": [
     {
       "id": "ny-safe",
@@ -3926,7 +3926,7 @@
     }
   ],
   "collection": {
-    "lastSuccess": "2026-11-01",
+    "lastSuccess": "2026-11-02",
     "schedule": "每天北京时间21:00研究更新",
     "failedSources": [
       "TikTok LIVE Monetization Guidelines：页面可定位但正文未由检索工具获取",
