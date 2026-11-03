@@ -1,17 +1,17 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-11-02",
-  "reviewedAt": "2026-11-02T12:57:52Z",
+  "updatedAt": "2026-11-03",
+  "reviewedAt": "2026-11-03T13:05:34Z",
   "briefTitle": "今日重点",
   "briefEventIds": [
-    "tr-child-social-age-rules",
-    "ny-ai-companion-minors",
-    "uk-ofcom-information-judgment",
+    "uk-age-forthcoming",
+    "au-age",
     "uk-women-evidence",
-    "au-feed-draft"
+    "au-feed-draft",
+    "tr-child-social-age-rules"
   ],
-  "runStatus": "46条政策 · 14条技术动态 · 本轮未核实到重大新变化",
-  "brief": "过去24小时，在本轮查到的政策与技术来源中无重大新变化。近期仍需关注两场征询：英国女性与女孩网络安全证据征集原定11月4日截止，澳大利亚信息流规则草案原定11月5日截止。两者均为意见提交窗口。",
+  "runStatus": "46条政策 · 14条技术动态 · 英国细化LIVE年龄范围，澳洲年龄法进入庭审",
+  "brief": "P0：英国女性与女孩网络安全证据征集将于11月4日17:00截止；澳大利亚信息流选择规则征询将于11月5日23:59 AEDT截止。P1：英国议会11月2日进一步说明，拟议规则将禁止未满16岁用户在多类服务中开播或与陌生人互动，并对16至17岁用户默认关闭这些功能，首批法规预计圣诞休会前提交、限制拟于2027年春实施。澳大利亚High Court于11月3日至4日审理未满16岁社交媒体账号限制的宪法挑战，尚无裁决，现行义务继续有效。",
   "events": [
     {
       "id": "ny-safe",
@@ -203,21 +203,25 @@
       ],
       "topic": "未成年人保护",
       "title": "未满16岁用户的社交账号限制",
-      "stage": "已生效",
+      "stage": "已生效 / High Court审理中",
       "eventDate": "2025-12-10",
       "deadline": "2025-12-10",
       "priority": "P1",
-      "fact": "自 2025 年 12 月 10 日起，受监管平台须采取合理措施，防止澳大利亚未满 16 岁用户创建或保有账户；eSafety 列出 TikTok。",
-      "impact": "账号资格直接影响直播观看、互动和变现入口。",
-      "action": "先检查年龄判断和误判申诉，再检查开播、送礼权限；记录绕过年龄限制的方法和误判率。",
-      "scope": "账户最低年龄不等于 LIVE 开播及赠礼年龄；应分别判断。",
-      "source": "https://www.esafety.gov.au/about-us/industry-regulation/social-media-age-restrictions",
-      "checkedAt": "2026-10-27",
+      "fact": "自 2025 年 12 月 10 日起，受监管平台须采取合理措施，防止澳大利亚未满 16 岁用户创建或保有账户；High Court于2026年11月3日至4日审理两起宪法挑战，尚未作出裁决。",
+      "impact": "账号资格直接影响直播观看、互动和变现入口；诉讼可能改变法律效力或适用边界。",
+      "action": "继续执行现行年龄限制和申诉流程；单独跟踪High Court裁决，再评估是否调整账号、开播和送礼入口。",
+      "scope": "诉讼审理不等于法律失效；账户最低年龄也不等于 LIVE 开播及赠礼年龄。",
+      "source": "https://www.hcourt.gov.au/cases-and-judgments/cases/current/case-no-s1662025",
+      "checkedAt": "2026-11-03",
       "confidence": "官方来源",
       "history": [
         {
           "date": "2025-12-10",
           "event": "已生效"
+        },
+        {
+          "date": "2026-11-03",
+          "event": "High Court Full Court开始审理S166/2025与S163/2025，争议包括Part 4A是否不当限制政治交流自由；11月4日继续开庭，尚无裁决。"
         }
       ],
       "review": "跟踪适用范围与后续修订。",
@@ -232,27 +236,27 @@
         "年龄核验"
       ],
       "appliesTo": "受年龄限制的社交媒体平台，包括 eSafety 列出的 TikTok",
-      "priorityReason": "账号限制已执行，会影响澳大利亚用户能否使用直播；还需检查被误判用户的申诉流程。",
+      "priorityReason": "账号限制已执行并影响直播入口，High Court审理可能改变其法律效力或适用边界。",
       "owners": [
         "Legal",
         "账号产品",
         "未成年人安全",
         "隐私"
       ],
-      "deliverable": "检查未满16岁账号创建/保有与恢复流程；分别验证开播、送礼入口。",
-      "uncertainty": "年龄判断和核验应兼顾隐私与申诉；不能将16岁账户年龄等同于18岁LIVE开播年龄。",
+      "deliverable": "维持现行账号限制与申诉监控，准备High Court裁决后的法律与产品影响对照表。",
+      "uncertainty": "High Court尚未裁决；年龄判断和核验仍应兼顾隐私与申诉。",
       "titleEn": "Australia: social media minimum age",
       "reviewStatus": "公开来源已复核",
-      "sourceCheckedAt": "2026-10-27T11:37:08.510681+00:00",
+      "sourceCheckedAt": "2026-11-03T13:05:34Z",
       "effectiveDate": "2025-12-10",
       "deadlineType": "实施 / 合规日期",
-      "statusEvidence": "官方页面已核实；后续修法与司法限制仍需持续监测",
+      "statusEvidence": "High Court官方案件页列明11月3日至4日Full Court审理；尚无判决，现行义务未被暂停。",
       "policyImplication": {
-        "direction": "账号资格直接影响直播观看、互动和变现入口。",
-        "proposal": "先检查年龄判断和误判申诉，再检查开播、送礼权限；记录绕过年龄限制的方法和误判率。",
-        "trigger": "2025年12月10日起执行未满16岁账号限制；持续检查绕过限制、年龄误判申诉和直播入口。",
+        "direction": "账号资格直接影响直播观看、互动和变现入口；诉讼可能改变法律效力或适用边界。",
+        "proposal": "继续执行现行年龄限制和申诉流程；单独跟踪High Court裁决，再评估是否调整账号、开播和送礼入口。",
+        "trigger": "High Court作出裁决或发布相关命令后，立即复核法律效力、适用平台和实施安排。",
         "tradeoff": "既要减少伤害，也要保护正常表达和隐私；年龄判断出错时，用户应能方便地申诉。",
-        "validation": "检查未满16岁账号创建/保有与恢复流程；分别验证开播、送礼入口。"
+        "validation": "维持现行账号限制与申诉监控，准备High Court裁决后的法律与产品影响对照表。"
       },
       "evidence": [
         {
@@ -262,6 +266,22 @@
           "checkedAt": "2026-10-26T13:40:00Z",
           "supports": "事件及日期；适用边界见分析",
           "access": "官方页面检索"
+        },
+        {
+          "url": "https://www.hcourt.gov.au/cases-and-judgments/cases/current/case-no-s1662025",
+          "publisher": "High Court of Australia",
+          "locator": "Case S166/2025；3–4 November 2026 Full Court hearings",
+          "checkedAt": "2026-11-03T13:05:34Z",
+          "supports": "Reddit挑战的争点、案件编号和开庭日期；案件页未列判决。",
+          "access": "官方案件页"
+        },
+        {
+          "url": "https://www.hcourt.gov.au/cases-and-judgments/cases/current/case-no-s1632025",
+          "publisher": "High Court of Australia",
+          "locator": "Case S163/2025；3–4 November 2026 Full Court hearings",
+          "checkedAt": "2026-11-03T13:05:34Z",
+          "supports": "Digital Freedom Project挑战的争点、standing问题和开庭日期。",
+          "access": "官方案件页"
         }
       ]
     },
@@ -1332,13 +1352,13 @@
       "stage": "草案 / 证据征集",
       "eventDate": "2026-09-09",
       "deadline": "2026-11-04",
-      "priority": "P1",
+      "priority": "P0",
       "fact": "Ofcom于9月9日更新女性与女孩网络安全工作，征集体验变化及治理措施证据，截止11月4日下午5点；10月行业公告继续列出这一截止时间。",
       "impact": "针对连麦围攻、性别骚扰和未经同意传播的影像，检查能否及时处理，并保存效果记录。",
       "action": "去掉可识别个人的信息后，整理风险案例和现有措施的效果，形成可核查的材料。",
       "scope": "这是监管证据征集，不是新法案；既有法律义务与自愿最佳实践应分别判断。",
       "source": "https://www.ofcom.org.uk/online-safety/illegal-and-harmful-content/the-online-safety-act-a-safer-life-online-for-women-and-girls2",
-      "checkedAt": "2026-11-01",
+      "checkedAt": "2026-11-03",
       "confidence": "官方一手来源",
       "history": [
         {
@@ -1358,7 +1378,7 @@
         "危机内容"
       ],
       "appliesTo": "这是监管证据征集，不是新法案；既有法律义务与自愿最佳实践应分别判断。",
-      "priorityReason": "征求意见期限仍开放，且直接关联直播互动伤害。",
+      "priorityReason": "证据征集将于11月4日17:00截止，仍需提交材料的团队只剩最后窗口。",
       "owners": [
         "Policy",
         "Legal",
@@ -1368,7 +1388,7 @@
       "uncertainty": "没有真实平台成效数据，不编造治理改进数字。",
       "titleEn": "女性与女孩网络体验：征集证据仍开放",
       "reviewStatus": "原文核对 / 尚未定案",
-      "sourceCheckedAt": "2026-11-01T12:39:44.909106+00:00",
+      "sourceCheckedAt": "2026-11-03T13:05:34Z",
       "effectiveDate": null,
       "deadlineType": "征求意见截止（当地日期）",
       "statusEvidence": "已核对下列官方证据；不把政策意向或规则草案当作最终义务。",
@@ -1403,6 +1423,14 @@
           "checkedAt": "2026-11-01T12:39:44.909106+00:00",
           "supports": "证据征集截至2026-11-04 17:00；不是统一产品整改期限。",
           "access": "官方正文"
+        },
+        {
+          "url": "https://www.ofcom.org.uk/online-safety/illegal-and-harmful-content/a-safer-life-online-for-women-and-girls-report-call-for-evidence",
+          "publisher": "Ofcom",
+          "locator": "Call for Evidence closes at 5pm on 4 November 2026",
+          "checkedAt": "2026-11-03T13:05:34Z",
+          "supports": "截止时间仍为2026-11-04 17:00。",
+          "access": "官方正文"
         }
       ]
     },
@@ -1415,17 +1443,17 @@
         54
       ],
       "topic": "未成年人保护",
-      "title": "16岁年龄核验评估公布",
+      "title": "未成年人社交媒体与LIVE限制：实施范围进一步说明",
       "stage": "政策酝酿 / 待法规",
       "eventDate": "2026-10-29",
       "deadline": null,
       "priority": "P1",
-      "fact": "Ofcom公布16岁年龄核验评估，列出证件比对、数字身份、银行信息和人脸年龄估计四类可用方法。评估供议会讨论，正式法规和实施指引仍待出台。",
-      "impact": "需分别评估直播观看、开播和陌生人互动入口，不能只检查主播年龄。",
-      "action": "比较四类方法的年龄误判、隐私影响和被绕过的风险；为没有证件的用户准备其他核验方式。",
-      "scope": "这是前期评估，不是最终实施指引；现有在线安全义务继续适用。",
-      "source": "https://www.ofcom.org.uk/online-safety/protecting-children/rapid-assessment-of-highly-effective-age-assurance-at-16",
-      "checkedAt": "2026-10-29",
+      "fact": "Ofcom已列出四类16岁年龄核验方法。英国政府11月2日在议会进一步说明，拟禁止未满16岁用户在多类服务中开播或与陌生人互动，并对16至17岁用户默认关闭这些功能；首批法规预计圣诞休会前提交，限制拟于2027年春实施。",
+      "impact": "直播产品需分别评估账号准入、开播、陌生人连麦或私信，以及16至17岁用户的默认设置。",
+      "action": "先建立按年龄和功能拆分的控制矩阵，比较四类核验方法的误判、隐私和绕过风险；等待最终法规确认服务范围和精确日期。",
+      "scope": "议会发言说明政府拟议方案与时间线，不是已生效法规；最终服务清单、豁免和实施日期仍待法规确认。",
+      "source": "https://hansard.parliament.uk/Commons/2026-11-02/debates/CBE0092E-4F0B-4B55-A2D4-BBE6980198AE/SocialMediaBanForUnder-16S",
+      "checkedAt": "2026-11-03",
       "confidence": "官方一手来源",
       "history": [
         {
@@ -1435,6 +1463,10 @@
         {
           "date": "2026-10-29",
           "event": "Ofcom公布16岁年龄核验评估；下一步为法规及指引征询。"
+        },
+        {
+          "date": "2026-11-02",
+          "event": "政府在议会说明拟议功能范围：未满16岁不得在多类服务中开播或与陌生人互动，16至17岁默认关闭相关功能；首批法规预计圣诞休会前提交，拟于2027年春实施。"
         }
       ],
       "review": "独立研究建议 · 非法律签批",
@@ -1449,26 +1481,26 @@
         "连麦与评论"
       ],
       "appliesTo": "英国拟议社交媒体限制及高风险功能；具体服务范围待法规确认。",
-      "priorityReason": "拟议的16岁年龄门槛可能影响账号和功能，需要提前比较核验方案。",
+      "priorityReason": "政府已细化直播和陌生人互动范围，并给出2027年春的实施目标，需要提前完成产品控制矩阵。",
       "owners": [
         "Policy",
         "Legal",
         "相关产品团队"
       ],
-      "deliverable": "按观看、开播和陌生人互动列出年龄判断方式、失败后续步骤和申诉入口。",
-      "uncertainty": "正式法规、服务范围和具体实施日待确认。",
+      "deliverable": "按未满16岁、16至17岁和成年人拆分账号、观看、开播、连麦、私信与推荐功能，列出核验失败和申诉路径。",
+      "uncertainty": "正式法规、受监管服务清单、豁免和精确实施日待确认。",
       "titleEn": "Ofcom assessment of highly effective age assurance at 16",
       "reviewStatus": "公开来源已复核",
-      "sourceCheckedAt": "2026-10-29T13:20:13.612425+00:00",
+      "sourceCheckedAt": "2026-11-03T13:05:34Z",
       "effectiveDate": null,
       "deadlineType": "后续法规及实施日待公布",
-      "statusEvidence": "10月29日Ofcom报告明确：评估供议会讨论，法规提交后另行征询实施指引。",
+      "statusEvidence": "11月2日Hansard记录政府说明功能范围和目标时间线；正式法规尚未提交。",
       "policyImplication": {
-        "direction": "需分别评估直播观看、开播和陌生人互动入口，不能只检查主播年龄。",
-        "proposal": "比较四类方法的年龄误判、隐私影响和被绕过的风险；为没有证件的用户准备其他核验方式。",
-        "trigger": "法规提交议会后，继续跟踪Ofcom的指引意见征集；按最终确认的服务范围和执行日期落实限制。",
+        "direction": "直播产品需分别评估账号准入、开播、陌生人连麦或私信，以及16至17岁用户的默认设置。",
+        "proposal": "先建立按年龄和功能拆分的控制矩阵，比较四类核验方法的误判、隐私和绕过风险；等待最终法规确认服务范围和精确日期。",
+        "trigger": "首批法规提交议会或Ofcom发布实施指引征询后，复核服务清单、默认设置和实施日期。",
         "tradeoff": "比较误判、无证件用户能否顺利使用、隐私数据和绕过风险。",
-        "validation": "按观看、开播和陌生人互动列出年龄判断方式、失败后续步骤和申诉入口。"
+        "validation": "按未满16岁、16至17岁和成年人拆分账号、观看、开播、连麦、私信与推荐功能，列出核验失败和申诉路径。"
       },
       "evidence": [
         {
@@ -1494,6 +1526,14 @@
           "checkedAt": "2026-10-29T13:20:13.612425+00:00",
           "supports": "直播功能相关背景；评估不是最终实施指引。",
           "access": "官方PDF"
+        },
+        {
+          "url": "https://hansard.parliament.uk/Commons/2026-11-02/debates/CBE0092E-4F0B-4B55-A2D4-BBE6980198AE/SocialMediaBanForUnder-16S",
+          "publisher": "UK Parliament Hansard",
+          "locator": "2 November 2026 debate；ministerial response",
+          "checkedAt": "2026-11-03T13:05:34Z",
+          "supports": "未满16岁开播与陌生人互动限制、16至17岁默认保护、法规及实施目标时间。",
+          "access": "官方议会记录"
         }
       ]
     },
@@ -1665,13 +1705,13 @@
       "stage": "草案 / 征求意见",
       "eventDate": "2026-10-15",
       "deadline": "2026-11-05",
-      "priority": "P1",
+      "priority": "P0",
       "fact": "澳大利亚正在征求意见用户信息流选择规则，门户列10月15日开启、11月5日23:59 AEDT结束；草案旨在提供仅关注内容的信息流选择。",
       "impact": "直播推荐和只看关注主播能否切换、是否记住选择、能否再改回来，需要提前设计。",
       "action": "比较推荐直播和只看关注主播两种模式，检查默认选择是什么、用户能否容易找到切换入口。",
       "scope": "拟议附属规则依赖Digital Duty of Care法案获正式批准；不是已经施行的算法退出义务。",
       "source": "https://www.infrastructure.gov.au/have-your-say/choice-feeds-social-media",
-      "checkedAt": "2026-11-01",
+      "checkedAt": "2026-11-03",
       "confidence": "官方一手来源",
       "history": [
         {
@@ -1691,7 +1731,7 @@
         "开播通知"
       ],
       "appliesTo": "拟议附属规则依赖Digital Duty of Care法案获正式批准；不是已经施行的算法退出义务。",
-      "priorityReason": "明确开放的提交意见的时间，且与直播分发产品直接相关。",
+      "priorityReason": "征询将于11月5日23:59 AEDT截止，且与直播分发产品直接相关。",
       "owners": [
         "Policy",
         "Legal",
@@ -1701,7 +1741,7 @@
       "uncertainty": "提案内容可能随法案和征求意见意见变化；不得把全部算法使用都称为被禁止。",
       "titleEn": "My Feed, My Way：推荐信息流规则征询",
       "reviewStatus": "原文核对 / 尚未定案",
-      "sourceCheckedAt": "2026-11-01T12:39:44.909106+00:00",
+      "sourceCheckedAt": "2026-11-03T13:05:34Z",
       "effectiveDate": null,
       "deadlineType": "意见截止：23:59 AEDT",
       "statusEvidence": "已核对下列官方证据；不把政策意向或规则草案当作最终义务。",
@@ -1727,6 +1767,14 @@
           "locator": "Participate / The issue",
           "checkedAt": "2026-11-01T12:39:44.909106+00:00",
           "supports": "征询截至2026-11-05 23:59 AEDT；草案仍待立法前提。",
+          "access": "官方正文"
+        },
+        {
+          "url": "https://www.infrastructure.gov.au/department/media/news/have-your-say-rules-giving-australian-users-choice-over-their-social-media-feeds",
+          "publisher": "Australian Department of Infrastructure",
+          "locator": "Submissions before 11:59pm AEDT on 5 November 2026",
+          "checkedAt": "2026-11-03T13:05:34Z",
+          "supports": "征询截止时间和拟议的信息流选择要求。",
           "access": "官方正文"
         }
       ]
@@ -3926,7 +3974,7 @@
     }
   ],
   "collection": {
-    "lastSuccess": "2026-11-02",
+    "lastSuccess": "2026-11-03",
     "schedule": "每天北京时间21:00研究更新",
     "failedSources": [
       "TikTok LIVE Monetization Guidelines：页面可定位但正文未由检索工具获取",
