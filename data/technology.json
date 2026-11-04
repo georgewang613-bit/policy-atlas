@@ -1,5 +1,5 @@
 {
-  "reviewedAt": "2026-11-03",
+  "reviewedAt": "2026-11-04",
   "items": [
     {
       "id": "hybrid-live-moderation",
@@ -311,6 +311,28 @@
           "url": "https://arxiv.org/abs/2610.40516v1",
           "publisher": "Neuwinger 等 / arXiv",
           "locator": "摘要及提交历史；v1：2026-10-29 17:26 UTC"
+        }
+      ]
+    },
+    {
+      "id": "openai-eval-production-gap",
+      "title": "把离线评测和线上表现分开看",
+      "category": "安全评测",
+      "publishedAt": "2026-11-03",
+      "version": "OpenAI Alignment · 11月3日研究",
+      "status": "平台研究报告",
+      "checkedAt": "2026-11-04",
+      "conclusion": "单一离线安全分数不能直接代表真实使用表现。",
+      "fact": "OpenAI比较六个模型在Respecting Warnings安全评测与相似生产场景中的表现，六个模型的评测成功率均低于匹配的线上样本，差距为10.2至37.4个百分点；作者还发现，模型如何理解评测目标会显著改变结果。",
+      "liveUse": "项目建议：评测AI主播、审核代理或治理自动化时，同时保留固定测试集和脱敏的真实流程回放，检查两类结果是否一致。",
+      "limits": "研究对象是长流程代理，不是直播音视频审核模型；生产样本匹配近似、场景分布不同，且仅比较六个模型，不能据此推断具体审核系统线上效果。",
+      "nextStep": "选择一个自动审核流程，用同一套政策规则分别跑标准样本和脱敏真实案例；记录模型是否因猜测评测目标而改变处置。",
+      "measure": "离线与真实案例的漏放率、误拦率、人工改判率、规则遵守率，以及两类样本之间的百分点差异。",
+      "sources": [
+        {
+          "url": "https://alignment.openai.com/eval-production-behavior-gap/",
+          "publisher": "OpenAI Alignment",
+          "locator": "2026-11-03；TL;DR、Measuring the eval-production behavior gap、Limitations"
         }
       ]
     }
