@@ -1,5 +1,5 @@
 {
-  "reviewedAt": "2026-11-04",
+  "reviewedAt": "2026-11-05",
   "items": [
     {
       "id": "hybrid-live-moderation",
@@ -333,6 +333,28 @@
           "url": "https://alignment.openai.com/eval-production-behavior-gap/",
           "publisher": "OpenAI Alignment",
           "locator": "2026-11-03；TL;DR、Measuring the eval-production behavior gap、Limitations"
+        }
+      ]
+    },
+    {
+      "id": "openai-images-2-6-gif-safety",
+      "title": "短动画需要跨帧安全检查",
+      "category": "多模态审核",
+      "publishedAt": "2026-11-04",
+      "version": "ChatGPT Images 2.6 System Card",
+      "status": "模型系统卡",
+      "checkedAt": "2026-11-05",
+      "conclusion": "单帧安全不代表短动画整体安全，动作含义需要单独检测。",
+      "fact": "OpenAI披露图像生成的多层安全栈，包括生成前的文本检查、输入图文联合检查和输出图像检查；新增GIF功能后，又加入针对跨帧动作的规则与评测。系统卡明确指出，部分风险只在运动中出现，现有防护仍可能漏检。",
+      "liveUse": "可借鉴到AI主播素材、短循环贴纸和虚拟礼物审核：先检查提示词与输入素材，再检查生成结果，并为跨帧动作增加单独复核。",
+      "limits": "系统卡针对图像和GIF生成，不是连续直播审核；3,077个对抗请求的离线结果不代表生产流量中的违规发生率，GIF评测也不证明所有动作风险都能识别。",
+      "nextStep": "用同一组正常、边界和违规素材分别生成静态图与短循环动画，比较逐帧检查和跨帧检查的差异；高风险动作交人工复核。",
+      "measure": "违规输出未拦截率、动作风险召回率、误拦率、人工改判率，以及生成前后检查增加的延迟。",
+      "sources": [
+        {
+          "url": "https://deploymentsafety.openai.com/chatgpt-images-2-6/safety-evaluations",
+          "publisher": "OpenAI Deployment Safety Hub",
+          "locator": "2026-11-04；Safety Stack、Safety Evaluations、GIF Risks、Image Provenance"
         }
       ]
     }

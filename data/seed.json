@@ -1,17 +1,18 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-11-04",
-  "reviewedAt": "2026-11-04T13:04:10Z",
+  "updatedAt": "2026-11-05",
+  "reviewedAt": "2026-11-05T13:01:03Z",
   "briefTitle": "今日重点",
   "briefEventIds": [
-    "uk-women-evidence",
-    "au-feed-draft",
     "au-age",
+    "us-kosa",
+    "au-feed-draft",
+    "sa-pdpl-draft",
     "uk-age-forthcoming",
-    "tr-child-social-age-rules"
+    "uk-women-evidence"
   ],
-  "runStatus": "46条政策 · 15条技术动态 · 澳洲年龄法庭审结束，等待High Court裁决",
-  "brief": "P0：英国女性与女孩网络安全证据征集今天17:00截止；澳大利亚信息流选择规则征询将于11月5日23:59 AEDT截止。P1：澳大利亚High Court已于11月3日至4日完成两起未满16岁社交媒体账号限制案的Full Court庭审，官方案件页尚未发布裁决，现行义务继续有效。过去24小时未核实到其他重大政策状态变化；本轮并非完整全球覆盖。技术动态新增一项安全评测研究：离线评测结果不能直接当作线上表现，应同时比较真实使用场景并检查评测目标是否被模型误解。",
+  "runStatus": "46条政策 · 16条技术动态 · 三项征询到期，KOSA获45名总检察长联合支持",
+  "brief": "无新增P0。P1：澳大利亚High Court尚未发布未满16岁社交媒体账号限制案裁决，现行义务继续有效。P2：美国45名州及地区总检察长联合支持参议院版KOSA，但这没有改变法案尚未通过的状态；澳大利亚信息流选择规则与沙特PDPL实施条例修订的意见期已到期，等待最终文本。英国女性与女孩网络安全证据征集也已到期，下一步关注Ofcom计划于2027年第二季度发布的报告。技术动态新增图像与GIF安全系统卡：短循环动作可能产生单帧看不出的风险，应单独评测跨帧审核。过去24小时未核实到其他重大政策状态变化；本轮并非完整全球覆盖。",
   "events": [
     {
       "id": "ny-safe",
@@ -212,7 +213,7 @@
       "action": "继续执行现行年龄限制和申诉流程；单独跟踪High Court裁决，再评估是否调整账号、开播和送礼入口。",
       "scope": "诉讼审理不等于法律失效；账户最低年龄也不等于 LIVE 开播及赠礼年龄。",
       "source": "https://www.hcourt.gov.au/cases-and-judgments/cases/current/case-no-s1662025",
-      "checkedAt": "2026-11-04",
+      "checkedAt": "2026-11-05",
       "confidence": "官方来源",
       "history": [
         {
@@ -251,7 +252,7 @@
       "uncertainty": "High Court尚未裁决；年龄判断和核验仍应兼顾隐私与申诉。",
       "titleEn": "Australia: social media minimum age",
       "reviewStatus": "公开来源已复核",
-      "sourceCheckedAt": "2026-11-04T13:04:10Z",
+      "sourceCheckedAt": "2026-11-05T13:01:03Z",
       "effectiveDate": "2025-12-10",
       "deadlineType": "实施 / 合规日期",
       "statusEvidence": "High Court官方案件页已列出11月3日与4日两次Full Court hearing；案件仍在current cases中且未列判决，现行义务未被暂停。",
@@ -291,8 +292,8 @@
           "url": "https://www.hcourt.gov.au/cases-and-judgments/cases/current/case-no-s1662025",
           "publisher": "High Court of Australia",
           "locator": "Case S166/2025；3–4 November 2026 hearings",
-          "checkedAt": "2026-11-04T13:04:10Z",
-          "supports": "两日Full Court庭审均已列入案件记录；官方案件页尚未列出判决。",
+          "checkedAt": "2026-11-05T13:01:03Z",
+          "supports": "两日Full Court庭审均已列入案件记录；截至11月5日官方案件页尚未列出判决。",
           "access": "官方案件页"
         }
       ]
@@ -848,17 +849,17 @@
         39
       ],
       "topic": "未成年人保护",
-      "title": "KOSA：快速通过请求遭到反对",
+      "title": "KOSA：45名总检察长支持参议院版本",
       "stage": "立法审议 / 程序受阻",
       "eventDate": "2026-09-30",
       "deadline": null,
       "priority": "P2",
-      "fact": "9月30日参议院记录显示，对S.1748提出的一致同意通过请求受到反对，主持人确认收到反对。该程序未使法案通过。",
+      "fact": "9月30日对S.1748的一致同意通过请求遭到反对；11月4日，45名州及地区总检察长联合支持保留州权力与照护义务的参议院版本。支持信没有使法案通过。",
       "impact": "可能改变未成年人默认安全、推荐与家长控制要求。",
       "action": "跟踪Congress.gov上的版本和后续表决，列出产品目前还不满足草案的地方。",
       "scope": "已核实的是9月30日参议院的程序事件，尚不能据此认定法案已成为法律；后续立法进展仍需核对。",
       "source": "https://www.govinfo.gov/content/pkg/CREC-2026-09-30/html/CREC-2026-09-30-pt1-PgS5207-2.htm",
-      "checkedAt": "2026-10-26",
+      "checkedAt": "2026-11-05",
       "confidence": "官方来源",
       "history": [
         {
@@ -868,6 +869,10 @@
         {
           "date": "2026-09-30",
           "event": "一致同意通过请求遭反对，程序未通过"
+        },
+        {
+          "date": "2026-11-04",
+          "event": "45名州及地区总检察长致信国会，支持包含照护义务且保留州级更强保护空间的参议院版S.1748；立法阶段未改变。"
         }
       ],
       "review": "跟踪适用范围与后续修订。",
@@ -883,7 +888,7 @@
         "账号准入"
       ],
       "appliesTo": "若通过，按最终文本定义的适用平台；目前不能作为既定义务",
-      "priorityReason": "法案通过程序近期受阻，目前可以提前研究，没有因此新增立即执行的期限。",
+      "priorityReason": "多州总检察长支持提高了政策关注度，但法案仍未通过，目前适合研究准备，没有新增立即执行的期限。",
       "owners": [
         "US Public Policy",
         "Legal",
@@ -893,10 +898,10 @@
       "uncertainty": "尚未确认此后成为法律；此前一届的91比3投票不代表本届法案已通过。",
       "titleEn": "US KOSA: committee event, current status requires reconciliation",
       "reviewStatus": "议会记录核实 / 后续持续监测",
-      "sourceCheckedAt": "2026-10-26T14:00:48Z",
+      "sourceCheckedAt": "2026-11-05T13:01:03Z",
       "effectiveDate": null,
       "deadlineType": "无明确明确截止日",
-      "statusEvidence": "已补充9月30日官方议会记录；较此前8月委员会公告更新。",
+      "statusEvidence": "9月30日官方议会记录确认一致同意请求受阻；11月4日夏威夷州政府公告确认45名总检察长支持参议院版本，但没有新的通过或签署记录。",
       "policyImplication": {
         "direction": "可能改变未成年人默认安全、推荐与家长控制要求。",
         "proposal": "跟踪Congress.gov上的版本和后续表决，列出产品目前还不满足草案的地方。",
@@ -928,6 +933,14 @@
           "checkedAt": "2026-10-26T14:00:48Z",
           "supports": "一致同意请求、反对及主持人确认；不支持已成法",
           "access": "官方网页正文"
+        },
+        {
+          "url": "https://governor.hawaii.gov/newsroom/ag-lopez-leads-multistate-effort-urging-congress-to-pass-u-s-senate-version-of-kids-online-safety-act/",
+          "publisher": "State of Hawaii Department of the Attorney General",
+          "locator": "News Release 2026-60 · 4 November 2026",
+          "checkedAt": "2026-11-05T13:01:03Z",
+          "supports": "45名总检察长支持参议院版S.1748及其照护义务和州权力安排；不支持法案已通过。",
+          "access": "州政府官方公告"
         }
       ]
     },
@@ -1360,22 +1373,26 @@
         54
       ],
       "topic": "仇恨与骚扰",
-      "title": "女性和女孩网络安全：正在收集证据",
-      "stage": "草案 / 证据征集",
+      "title": "女性和女孩网络安全：证据征集已到期",
+      "stage": "证据征集已到期 / 等待报告",
       "eventDate": "2026-09-09",
       "deadline": "2026-11-04",
-      "priority": "P0",
-      "fact": "Ofcom于9月9日更新女性与女孩网络安全工作，征集体验变化及治理措施证据，截止11月4日下午5点；10月行业公告继续列出这一截止时间。",
+      "priority": "P3",
+      "fact": "Ofcom于9月9日启动女性与女孩网络安全证据征集，官方截止时间为11月4日17:00，现已到期；Ofcom计划于2027年第二季度发布后续报告。",
       "impact": "针对连麦围攻、性别骚扰和未经同意传播的影像，检查能否及时处理，并保存效果记录。",
-      "action": "去掉可识别个人的信息后，整理风险案例和现有措施的效果，形成可核查的材料。",
+      "action": "保留连麦围攻、性别骚扰和未经同意传播影像的措施效果记录，等待Ofcom报告及后续监管动作。",
       "scope": "这是监管证据征集，不是新法案；既有法律义务与自愿最佳实践应分别判断。",
       "source": "https://www.ofcom.org.uk/online-safety/illegal-and-harmful-content/the-online-safety-act-a-safer-life-online-for-women-and-girls2",
-      "checkedAt": "2026-11-04",
+      "checkedAt": "2026-11-05",
       "confidence": "官方一手来源",
       "history": [
         {
           "date": "2026-09-09",
           "event": "Ofcom于9月9日更新女性与女孩网络安全工作，征集体验变化及治理措施证据，截止11月4日下午5点；10月行业公告继续列示该窗口。"
+        },
+        {
+          "date": "2026-11-04",
+          "event": "官方列示的17:00证据提交期限已到；Ofcom计划于2027年第二季度发布后续报告。"
         }
       ],
       "review": "独立研究建议 · 非法律签批",
@@ -1390,7 +1407,7 @@
         "危机内容"
       ],
       "appliesTo": "这是监管证据征集，不是新法案；既有法律义务与自愿最佳实践应分别判断。",
-      "priorityReason": "证据征集将于11月4日17:00截止，仍需提交材料的团队只剩最后窗口。",
+      "priorityReason": "提交窗口已到期，当前没有新增硬期限；继续观察2027年第二季度报告及后续监管动作。",
       "owners": [
         "Policy",
         "Legal",
@@ -1398,16 +1415,16 @@
       ],
       "deliverable": "场景分类、措施覆盖与效果证据清单；无真实运营数据时只给评估设计。",
       "uncertainty": "没有真实平台成效数据，不编造治理改进数字。",
-      "titleEn": "女性与女孩网络体验：征集证据仍开放",
-      "reviewStatus": "原文核对 / 尚未定案",
-      "sourceCheckedAt": "2026-11-04T13:04:10Z",
+      "titleEn": "UK women and girls online safety: evidence window elapsed",
+      "reviewStatus": "官方期限已核对 / 等待报告",
+      "sourceCheckedAt": "2026-11-05T13:01:03Z",
       "effectiveDate": null,
       "deadlineType": "征求意见截止（当地日期）",
-      "statusEvidence": "已核对下列官方证据；不把政策意向或规则草案当作最终义务。",
+      "statusEvidence": "Ofcom页面列明11月4日17:00截止及2027年第二季度报告计划；11月5日页面仍显示Open，因此不据此推断已发布新规则。",
       "policyImplication": {
         "direction": "针对连麦围攻、性别骚扰和未经同意传播的影像，检查能否及时处理，并保存效果记录。",
-        "proposal": "去掉可识别个人的信息后，整理风险案例和现有措施的效果，形成可核查的材料。",
-        "trigger": "确认最终规则、生效安排和受影响的产品后，再落实当地强制要求；此前可先研究和做小范围测试。",
+        "proposal": "保留连麦围攻、性别骚扰和未经同意传播影像的措施效果记录，等待Ofcom报告及后续监管动作。",
+        "trigger": "Ofcom发布2027年第二季度报告、更新指导或启动具体执法后，再复核是否需要调整政策和产品。",
         "tradeoff": "既要减少伤害，也要保护正常表达和隐私；年龄判断出错时，用户应能方便地申诉。",
         "validation": "场景分类、措施覆盖与效果证据清单；无真实运营数据时只给评估设计。"
       },
@@ -1440,8 +1457,8 @@
           "url": "https://www.ofcom.org.uk/online-safety/illegal-and-harmful-content/a-safer-life-online-for-women-and-girls-report-call-for-evidence",
           "publisher": "Ofcom",
           "locator": "Call for Evidence closes at 5pm on 4 November 2026",
-          "checkedAt": "2026-11-04T13:04:10Z",
-          "supports": "截止时间仍为2026-11-04 17:00。",
+          "checkedAt": "2026-11-05T13:01:03Z",
+          "supports": "官方截止时间为2026-11-04 17:00，并计划于2027年第二季度发布报告；页面状态标签仍显示Open。",
           "access": "官方正文"
         }
       ]
@@ -1713,22 +1730,26 @@
         -25
       ],
       "topic": "隐私与数据",
-      "title": "My Feed, My Way：只看关注内容的规则草案",
-      "stage": "草案 / 征求意见",
+      "title": "My Feed, My Way：意见期已到期",
+      "stage": "草案 / 意见期已到期",
       "eventDate": "2026-10-15",
       "deadline": "2026-11-05",
-      "priority": "P0",
-      "fact": "澳大利亚正在征求意见用户信息流选择规则，门户列10月15日开启、11月5日23:59 AEDT结束；草案旨在提供仅关注内容的信息流选择。",
+      "priority": "P2",
+      "fact": "澳大利亚用户信息流选择规则草案的官方提交期限为11月5日23:59 AEDT，现已到期；草案旨在提供只看关注内容的信息流选择，但最终规则仍取决于Digital Duty of Care法案及后续程序。",
       "impact": "直播推荐和只看关注主播能否切换、是否记住选择、能否再改回来，需要提前设计。",
-      "action": "比较推荐直播和只看关注主播两种模式，检查默认选择是什么、用户能否容易找到切换入口。",
+      "action": "继续比较推荐直播和只看关注主播两种模式，等待最终规则确认默认选择、切换入口及实施日期。",
       "scope": "拟议附属规则依赖Digital Duty of Care法案获正式批准；不是已经施行的算法退出义务。",
       "source": "https://www.infrastructure.gov.au/have-your-say/choice-feeds-social-media",
-      "checkedAt": "2026-11-04",
+      "checkedAt": "2026-11-05",
       "confidence": "官方一手来源",
       "history": [
         {
           "date": "2026-10-15",
           "event": "澳大利亚正在征询用户信息流选择规则，门户列10月15日开启、11月5日23:59 AEDT结束；草案旨在提供仅关注内容的信息流选择。"
+        },
+        {
+          "date": "2026-11-05",
+          "event": "官方列示的23:59 AEDT提交期限已到；门户状态尚未同步更新，最终规则仍待后续立法与制定程序。"
         }
       ],
       "review": "独立研究建议 · 非法律签批",
@@ -1743,7 +1764,7 @@
         "开播通知"
       ],
       "appliesTo": "拟议附属规则依赖Digital Duty of Care法案获正式批准；不是已经施行的算法退出义务。",
-      "priorityReason": "征询将于11月5日23:59 AEDT截止，且与直播分发产品直接相关。",
+      "priorityReason": "意见期已到期，最终规则和实施窗口尚未确定；与直播分发直接相关，继续研究准备。",
       "owners": [
         "Policy",
         "Legal",
@@ -1753,13 +1774,13 @@
       "uncertainty": "提案内容可能随法案和征求意见意见变化；不得把全部算法使用都称为被禁止。",
       "titleEn": "My Feed, My Way：推荐信息流规则征询",
       "reviewStatus": "原文核对 / 尚未定案",
-      "sourceCheckedAt": "2026-11-04T13:04:10Z",
+      "sourceCheckedAt": "2026-11-05T13:01:03Z",
       "effectiveDate": null,
       "deadlineType": "意见截止：23:59 AEDT",
-      "statusEvidence": "已核对下列官方证据；不把政策意向或规则草案当作最终义务。",
+      "statusEvidence": "官方门户列明11月5日23:59 AEDT截止；截止刚过时仍显示Open，因此仅确认提交期限已到，不推断最终规则已经公布。",
       "policyImplication": {
         "direction": "直播推荐和只看关注主播能否切换、是否记住选择、能否再改回来，需要提前设计。",
-        "proposal": "比较推荐直播和只看关注主播两种模式，检查默认选择是什么、用户能否容易找到切换入口。",
+        "proposal": "继续比较推荐直播和只看关注主播两种模式，等待最终规则确认默认选择、切换入口及实施日期。",
         "trigger": "确认最终规则、生效安排和受影响的产品后，再落实当地强制要求；此前可先研究和做小范围测试。",
         "tradeoff": "既要减少伤害，也要保护正常表达和隐私；年龄判断出错时，用户应能方便地申诉。",
         "validation": "选择提示、偏好保存和跨端一致性的测试方案。"
@@ -1785,8 +1806,8 @@
           "url": "https://www.infrastructure.gov.au/department/media/news/have-your-say-rules-giving-australian-users-choice-over-their-social-media-feeds",
           "publisher": "Australian Department of Infrastructure",
           "locator": "Submissions before 11:59pm AEDT on 5 November 2026",
-          "checkedAt": "2026-11-04T13:04:10Z",
-          "supports": "征询截止时间和拟议的信息流选择要求。",
+          "checkedAt": "2026-11-05T13:01:03Z",
+          "supports": "官方提交期限为2026-11-05 23:59 AEDT；草案仍依赖Digital Duty of Care法案。",
           "access": "官方正文"
         }
       ]
@@ -2197,22 +2218,26 @@
         24
       ],
       "topic": "隐私与数据",
-      "title": "PDPL实施条例修订：11月5日意见截止",
-      "stage": "草案 / 征求意见",
+      "title": "PDPL实施条例修订：意见期已结束",
+      "stage": "草案 / 意见期已结束",
       "eventDate": "2026-10-08",
       "deadline": "2026-11-05",
-      "priority": "P1",
-      "fact": "10月8日官方公报确认修订草案征求意见至11月5日。条文拟调整境内存储、隐私告知及监管请求响应；第38条拟规定正式公布后60日施行。",
+      "priority": "P2",
+      "fact": "沙特官方咨询平台已将PDPL实施条例修订列为已结束；草案拟调整境内存储、隐私告知及监管请求响应，第38条拟规定正式公布后60日施行。最终文本和正式公布日尚未确定。",
       "impact": "LIVE年龄核验、举报证据、主播与礼物记录需要梳理存储地点、跨境访问和用户告知。",
       "action": "列出沙特用户数据存在哪里、谁能跨境访问；比较本地存储和跨境审核方案，准备易懂的阿拉伯语隐私提示及监管请求处理流程。",
       "scope": "适用于落入沙特PDPL范围的数据控制者及相关处理活动；逐项核对平台实体、处理目的与跨境安排。",
       "source": "https://istitlaa.scbc.gov.sa/ar/Transportation/NDMO/IRofPDPLAmendments2/Pages/default.aspx",
-      "checkedAt": "2026-10-26",
+      "checkedAt": "2026-11-05",
       "confidence": "官方条文及官方公报交叉核对",
       "history": [
         {
           "date": "2026-10-08",
           "event": "官方公报公布本轮征询及11月5日截止日期"
+        },
+        {
+          "date": "2026-11-05",
+          "event": "Istitlaa官方平台将该项目列入已结束项目；最终修订文本和正式公布日待确认。"
         }
       ],
       "review": "官方阿拉伯语原文核对；中文为研究归纳",
@@ -2228,7 +2253,7 @@
         "礼物与变现"
       ],
       "appliesTo": "PDPL现行要求继续执行；本条跟踪实施条例修订草案。",
-      "priorityReason": "11月5日征求意见期限临近，拟议存储安排影响数据与审核架构，需提前评估。",
+      "priorityReason": "意见期已结束，最终文本及正式公布后的60日实施安排待确认；继续准备数据和审核架构差距分析。",
       "owners": [
         "Policy",
         "Privacy Legal",
@@ -2239,10 +2264,10 @@
       "uncertainty": "境内存储与合法跨境传输如何衔接仍需解释；最终决议、正式公布日及适用例外待确认。",
       "titleEn": "Saudi PDPL implementing regulation amendments consultation",
       "reviewStatus": "官方草案及公报已核对",
-      "sourceCheckedAt": "2026-10-26T14:44:12.497998Z",
+      "sourceCheckedAt": "2026-11-05T13:01:03Z",
       "effectiveDate": null,
       "deadlineType": "征求意见截止（当地日期）",
-      "statusEvidence": "Istitlaa列示拟议条文；Umm Al-Qura报道列示征询截止。",
+      "statusEvidence": "Istitlaa官方平台首页将该修订项目列入已结束项目；Umm Al-Qura此前列明11月5日截止。",
       "policyImplication": {
         "direction": "地区数据治理嵌入LIVE规则设计",
         "proposal": "将年龄与内容治理证据分层存储，按处理目的控制跨境访问，并提供清晰的阿拉伯语告知。",
@@ -2266,6 +2291,14 @@
           "checkedAt": "2026-10-26T14:44:12.497998Z",
           "supports": "本轮征询及2026-11-05截止日期",
           "access": "官方阿拉伯语网页正文"
+        },
+        {
+          "url": "https://istitlaa.scbc.gov.sa/ar/Pages/default.aspx",
+          "publisher": "Saudi Public Consultation Platform Istitlaa",
+          "locator": "الأكثر شيوعاً · منتهية",
+          "checkedAt": "2026-11-05T13:01:03Z",
+          "supports": "PDPL实施条例修订项目已列为结束；不支持最终文本已正式公布。",
+          "access": "官方阿拉伯语门户"
         }
       ]
     },
@@ -3986,7 +4019,7 @@
     }
   ],
   "collection": {
-    "lastSuccess": "2026-11-04",
+    "lastSuccess": "2026-11-05",
     "schedule": "每天北京时间21:00研究更新",
     "failedSources": [
       "TikTok LIVE Monetization Guidelines：页面可定位但正文未由检索工具获取",
@@ -3998,7 +4031,8 @@
       "2026-10-29 EU KIDS Act反馈门户：返回空正文；新闻页仍列两个截止日，未设硬截止。",
       "2026-10-29 Ofcom新闻页：直接读取失败；已改用同日官方评估页和PDF核实。",
       "2026-10-29 ICO年龄核验声明：读取失败；未作为新增事实依据。",
-      "2026-10-29 Apple年龄核验支持页：HTTP 429；未新增条目。"
+      "2026-10-29 Apple年龄核验支持页：HTTP 429；未新增条目。",
+      "2026-11-05 澳大利亚议会aph.gov.au：robots.txt阻止读取；未据此更新Digital Duty of Care法案阶段。"
     ]
   }
 }
