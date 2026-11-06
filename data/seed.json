@@ -1,18 +1,16 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-11-05",
-  "reviewedAt": "2026-11-05T13:01:03Z",
+  "updatedAt": "2026-11-06",
+  "reviewedAt": "2026-11-06T13:06:48Z",
   "briefTitle": "今日重点",
   "briefEventIds": [
+    "eu-tiktok-addictive-design",
+    "ca-ab1709",
     "au-age",
-    "us-kosa",
-    "au-feed-draft",
-    "sa-pdpl-draft",
-    "uk-age-forthcoming",
-    "uk-women-evidence"
+    "us-kosa"
   ],
-  "runStatus": "46条政策 · 16条技术动态 · 三项征询到期，KOSA获45名总检察长联合支持",
-  "brief": "无新增P0。P1：澳大利亚High Court尚未发布未满16岁社交媒体账号限制案裁决，现行义务继续有效。P2：美国45名州及地区总检察长联合支持参议院版KOSA，但这没有改变法案尚未通过的状态；澳大利亚信息流选择规则与沙特PDPL实施条例修订的意见期已到期，等待最终文本。英国女性与女孩网络安全证据征集也已到期，下一步关注Ofcom计划于2027年第二季度发布的报告。技术动态新增图像与GIF安全系统卡：短循环动作可能产生单帧看不出的风险，应单独评测跨帧审核。过去24小时未核实到其他重大政策状态变化；本轮并非完整全球覆盖。",
+  "runStatus": "47条政策 · 16条技术动态 · 欧盟扩大TikTok推荐系统初步调查结论，加州未成年人信息流法遭诉",
+  "brief": "无新增P0。P1：欧盟委员会就TikTok“为你推荐”信息流的有害内容“兔子洞”效应发布新的初步结论，仍处答辩与调查阶段，不是最终违法决定；应把连续观看、观看时长信号、主动降权和未成年人分层纳入推荐风险测试。加州AB 1709计划于2027年1月1日生效，Google、Meta和TikTok已分别起诉，Meta并申请初步禁令；截至本轮未见法院暂停执行，不能据起诉推定法律失效，也不据此判断任何平台已违规。澳大利亚High Court未发布未满16岁账号限制案裁决，现行义务继续有效。技术侧过去24小时未核实到需要新增的LIVE相关动态。本轮覆盖主要市场与美国州级重点线索，但不代表完整全球复核。",
   "events": [
     {
       "id": "ny-safe",
@@ -2906,17 +2904,17 @@
         50
       ],
       "topic": "未成年人保护",
-      "title": "TikTok成瘾设计：欧盟公布初步调查意见",
+      "title": "TikTok推荐系统：欧盟追加“兔子洞”初步结论",
       "stage": "执法调查 / 初步结论",
-      "eventDate": "2026-02-06",
+      "eventDate": "2026-11-06",
       "deadline": null,
       "priority": "P1",
-      "fact": "委员会初步认为TikTok对无限滚动、自动播放、推送和个性化推荐的风险评估与缓解不足；案件仍有答辩程序。",
+      "fact": "委员会继2月的成瘾设计初步意见后，又初步认为TikTok未充分评估和缓解“为你推荐”信息流把用户持续推向心理健康、身体形象等同类内容的“兔子洞”风险；案件仍有答辩程序。",
       "impact": "检查直播推荐、连续观看和召回用户的推送，是否增加夜间使用和反复打开；也要看休息提示是否有效。",
       "action": "检查连续观看和召回推送，测试休息提示是否很容易跳过，再结合夜间使用、退出和投诉数据判断效果。",
       "scope": "TikTok的DSA个案；对直播的影响是本项目的分析，公告未单独认定全部直播功能违法。",
-      "source": "https://digital-strategy.ec.europa.eu/en/news/commission-preliminarily-finds-tiktoks-addictive-design-breach-digital-services-act",
-      "checkedAt": "2026-10-27",
+      "source": "https://digital-strategy.ec.europa.eu/es/news/commission-preliminarily-finds-tiktoks-you-feed-breach-digital-services-act-harmful-rabbit-holes",
+      "checkedAt": "2026-11-06",
       "confidence": "欧盟委员会初步结论公告",
       "history": [
         {
@@ -2926,10 +2924,14 @@
         {
           "date": "2026-02-06",
           "event": "发布成瘾设计初步结论，保留答辩与后续决定程序。"
+        },
+        {
+          "date": "2026-11-06",
+          "event": "就“为你推荐”信息流的有害内容“兔子洞”效应发布新的初步结论；TikTok仍可查阅卷宗并书面答辩。"
         }
       ],
       "review": "跟踪答辩、最终决定及具体整改期限。",
-      "lawId": "DSA / Commission IP/26/312",
+      "lawId": "DSA / Commission IP/26/312 and IP/26/2361",
       "instrument": "现行法个案调查",
       "topics": [
         "未成年人保护",
@@ -2954,10 +2956,10 @@
       "uncertainty": "本轮未找到最终决定；初步意见不等于最终违法认定或统一整改期限。",
       "titleEn": "TikTok addictive design: DSA preliminary findings",
       "reviewStatus": "官方公告核实 / 初步结论",
-      "sourceCheckedAt": "2026-10-27T11:12:15.753679+00:00",
+      "sourceCheckedAt": "2026-11-06T13:06:48Z",
       "effectiveDate": null,
       "deadlineType": "最终决定及整改期限待公布",
-      "statusEvidence": "官方Next steps明确TikTok可答辩，委员会可在确认结论后作出不合规决定。",
+      "statusEvidence": "11月6日官方公告明确这是初步结论，TikTok可查阅调查文件并书面答辩；是否构成最终不合规及具体整改要求仍待后续决定。",
       "policyImplication": {
         "direction": "从内容处置扩展至产品设计风险",
         "proposal": "以连续观看、夜间推送和可跳过提示为样本测试控制效果。",
@@ -2981,6 +2983,14 @@
           "checkedAt": "2026-10-27T11:12:15.753679+00:00",
           "supports": "2024程序起点、答辩权及后续决定路径。",
           "access": "官方PDF正文"
+        },
+        {
+          "url": "https://digital-strategy.ec.europa.eu/es/news/commission-preliminarily-finds-tiktoks-you-feed-breach-digital-services-act-harmful-rabbit-holes",
+          "publisher": "European Commission",
+          "locator": "2026-11-06；risk assessment and mitigation；next steps",
+          "checkedAt": "2026-11-06T13:06:48Z",
+          "supports": "“为你推荐”信息流的兔子洞风险、新初步结论及答辩程序。",
+          "access": "欧盟委员会官方网页（机器翻译页，英文正文）"
         }
       ]
     },
@@ -4016,10 +4026,110 @@
           "access": "官方裁判全文"
         }
       ]
+    },
+    {
+      "id": "ca-ab1709",
+      "region": "美国 · 加利福尼亚州",
+      "code": "California",
+      "xy": [
+        -119.5,
+        37.2
+      ],
+      "topic": "未成年人保护",
+      "title": "AB 1709：未成年人信息流限制遭司法挑战",
+      "stage": "已签署 / 待实施 / 诉讼中",
+      "eventDate": "2026-11-05",
+      "deadline": "2027-01-01",
+      "priority": "P1",
+      "fact": "加州已签署AB 1709，限制适用平台向未满16岁用户提供基于历史或画像的个性化信息流、自动播放等特征。Google、Meta和TikTok已分别提起联邦诉讼；Meta于11月5日申请初步禁令。本轮未见法院发布暂停执行命令。",
+      "impact": "加州未成年人账号的直播推荐、连续播放和年龄判断需要单独配置；诉讼会影响2027年1月1日前的上线范围与节奏。",
+      "action": "先按现行生效安排准备年龄判断、非个性化信息流和自动播放开关；由法务每日跟踪三案的禁令与合并审理进展，只有法院命令或修法改变状态时才调整落实计划。",
+      "scope": "仅适用于AB 1709定义的covered platform及加州未满16岁用户。起诉和禁令申请本身不暂停法律，也不证明TikTok或其他平台已违规。",
+      "source": "https://www.gov.ca.gov/2026/09/10/governor-newsom-signs-the-strongest-child-safety-chatbot-and-social-media-laws-in-the-nation/",
+      "checkedAt": "2026-11-06",
+      "confidence": "官方立法公告与联邦法院公开案卷索引核实",
+      "history": [
+        {
+          "date": "2026-09-10",
+          "event": "州长签署AB 1709；官方公告将其概括为限制未满16岁用户的成瘾性功能。"
+        },
+        {
+          "date": "2026-11-04",
+          "event": "Google、Meta和TikTok分别向联邦法院起诉加州总检察长，主张该法违反第一修正案等。"
+        },
+        {
+          "date": "2026-11-05",
+          "event": "加州北区联邦法院公开索引显示Meta案提交初步禁令申请；截至本轮未见法院作出暂停执行裁定。"
+        }
+      ],
+      "review": "跟踪三案禁令、实体裁定、上诉及州法修订；不把诉状主张写成法院结论。",
+      "lawId": "California AB 1709 (2025–2026); Meta Platforms, Inc. v. Bonta, No. 3:26-cv-13201",
+      "instrument": "州法及联邦宪法诉讼",
+      "topics": [
+        "未成年人保护",
+        "推荐与产品设计",
+        "隐私与数据"
+      ],
+      "scenarios": [
+        "直播推荐",
+        "连续播放",
+        "年龄判断",
+        "未成年人账号"
+      ],
+      "appliesTo": "AB 1709定义的covered platform及加州未满16岁用户；具体豁免和产品边界需按法条核对。",
+      "priorityReason": "法定实施日临近且已有三起司法挑战，产品准备与诉讼监测必须并行，不能等待最终判决后再开始。",
+      "owners": [
+        "Policy",
+        "US Legal",
+        "推荐产品",
+        "未成年人安全",
+        "隐私"
+      ],
+      "deliverable": "加州未成年人信息流与自动播放控制清单、年龄判断测试、三案禁令跟踪表及上线/回滚决策点。",
+      "uncertainty": "三案尚处早期阶段；本轮只确认案件与Meta的初步禁令申请，未核实法院对申请的审理日期或结果。",
+      "titleEn": "California AB 1709: youth feed limits challenged in federal court",
+      "reviewStatus": "官方立法公告及法院案卷索引已核对 / 诉讼进行中",
+      "sourceCheckedAt": "2026-11-06T13:06:48Z",
+      "effectiveDate": "2027-01-01",
+      "deadlineType": "法律实施日期；可能受法院命令影响",
+      "statusEvidence": "州长官方公告确认签署与核心限制；加州北区联邦法院公开索引确认Meta案及11月5日初步禁令申请。未见已签发禁令。",
+      "policyImplication": {
+        "direction": "按年龄限制个性化推荐与连续播放，同时保留诉讼变化的快速切换能力。",
+        "proposal": "为加州未满16岁账号准备非个性化信息流、关闭自动播放和可审计的年龄判断；将法律状态作为配置开关，不把诉状主张写入产品规则。",
+        "trigger": "按2027年1月1日实施日准备；若法院签发禁令、州修法或出现可执行和解，再依据正式文本调整。",
+        "tradeoff": "减少强迫性使用风险，同时控制年龄误判、隐私收集和正常内容发现受损。",
+        "validation": "用加州边界年龄测试账号验证推荐信号、自动播放、年龄申诉和配置回滚；记录误拦、绕过及申诉改判率。"
+      },
+      "evidence": [
+        {
+          "url": "https://www.gov.ca.gov/2026/09/10/governor-newsom-signs-the-strongest-child-safety-chatbot-and-social-media-laws-in-the-nation/",
+          "publisher": "California Governor",
+          "locator": "AB 1709；banning addictive features on social media",
+          "checkedAt": "2026-11-06T13:06:48Z",
+          "supports": "签署状态、法案编号及对未满16岁用户限制自动播放和个性化信息流的官方概括。",
+          "access": "州政府官方网页"
+        },
+        {
+          "url": "https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=202520260AB1709",
+          "publisher": "California Legislative Information",
+          "locator": "AB 1709 enrolled text",
+          "checkedAt": "2026-11-06T13:06:48Z",
+          "supports": "法条范围、定义和2027年1月1日实施安排；本轮自动读取被403阻止，未用于新增超出州长公告的细节。",
+          "access": "官方链接可定位，自动读取失败"
+        },
+        {
+          "url": "https://apps.cand.uscourts.gov/acf/",
+          "publisher": "U.S. District Court, Northern District of California",
+          "locator": "3:26-cv-13201-AGT Meta Platforms, Inc. v. Bonta；Preliminary Injunction；2026-11-05",
+          "checkedAt": "2026-11-06T13:06:48Z",
+          "supports": "案件存在及Meta提交初步禁令申请；不支持法院已批准申请。",
+          "access": "联邦法院公开新提交索引"
+        }
+      ]
     }
   ],
   "collection": {
-    "lastSuccess": "2026-11-05",
+    "lastSuccess": "2026-11-06",
     "schedule": "每天北京时间21:00研究更新",
     "failedSources": [
       "TikTok LIVE Monetization Guidelines：页面可定位但正文未由检索工具获取",
@@ -4032,7 +4142,9 @@
       "2026-10-29 Ofcom新闻页：直接读取失败；已改用同日官方评估页和PDF核实。",
       "2026-10-29 ICO年龄核验声明：读取失败；未作为新增事实依据。",
       "2026-10-29 Apple年龄核验支持页：HTTP 429；未新增条目。",
-      "2026-11-05 澳大利亚议会aph.gov.au：robots.txt阻止读取；未据此更新Digital Duty of Care法案阶段。"
+      "2026-11-05 澳大利亚议会aph.gov.au：robots.txt阻止读取；未据此更新Digital Duty of Care法案阶段。",
+      "2026-11-06 Congress.gov与aph.gov.au检索被robots.txt阻止；KOSA阶段仅沿用已核实官方材料，澳大利亚Digital Duty of Care未据此更新。",
+      "2026-11-06 California Legislative Information的AB 1709正文自动读取返回403；仅使用州长官方签署公告概括核心限制，未写入无法复核的细节。"
     ]
   }
 }
