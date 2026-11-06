@@ -1,6 +1,7 @@
 import { readFileSync } from 'node:fs';
 import { atlasSchema, date } from '../lib/atlas-schema.ts';
 import { z } from 'zod/v4';
+import './test-lab-metrics.mjs';
 
 const read = name => JSON.parse(readFileSync(new URL(`../data/${name}`, import.meta.url), 'utf8'));
 atlasSchema.parse(read('seed.json'));

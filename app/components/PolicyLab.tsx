@@ -1,7 +1,10 @@
 import TextPoints from './TextPoints';
+import PolicyPractice from './PolicyPractice';
 
 export default function PolicyLab(){
  return <section className="lab-page" aria-label="政策实验室">
+  <PolicyPractice/>
+  <details className="practice-fold lab-existing"><summary>原有场景笔记：AI 主播、PK 和连麦</summary><div>
   <section className="lab-baseline">
    <h2>AI 主播打赏</h2>
    <TextPoints items={[
@@ -61,5 +64,6 @@ export default function PolicyLab(){
     ]}/></details>
    </article>
   </div>
+  </div></details>
  </section>;
 }
