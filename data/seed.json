@@ -1,16 +1,16 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-11-06",
-  "reviewedAt": "2026-11-06T13:06:48Z",
+  "updatedAt": "2026-11-07",
+  "reviewedAt": "2026-11-07T13:01:40Z",
   "briefTitle": "今日重点",
   "briefEventIds": [
+    "uk-children",
     "eu-tiktok-addictive-design",
     "ca-ab1709",
-    "au-age",
-    "us-kosa"
+    "au-age"
   ],
-  "runStatus": "47条政策 · 16条技术动态 · 欧盟扩大TikTok推荐系统初步调查结论，加州未成年人信息流法遭诉",
-  "brief": "无新增P0。P1：欧盟委员会就TikTok“为你推荐”信息流的有害内容“兔子洞”效应发布新的初步结论，仍处答辩与调查阶段，不是最终违法决定；应把连续观看、观看时长信号、主动降权和未成年人分层纳入推荐风险测试。加州AB 1709计划于2027年1月1日生效，Google、Meta和TikTok已分别起诉，Meta并申请初步禁令；截至本轮未见法院暂停执行，不能据起诉推定法律失效，也不据此判断任何平台已违规。澳大利亚High Court未发布未满16岁账号限制案裁决，现行义务继续有效。技术侧过去24小时未核实到需要新增的LIVE相关动态。本轮覆盖主要市场与美国州级重点线索，但不代表完整全球复核。",
+  "runStatus": "47条政策 · 16条技术动态 · 英国开始落实儿童陌生人联系保护",
+  "brief": "无新增P0。P1：Ofcom确认Snapchat已开始为英国儿童默认关闭“Find Friends”，要求在11月内完成推出，并表示Snapchat计划在年底前让未满18岁用户接受高有效性年龄核验。该变化是平台在现行儿童安全义务下的具体落实，不是新的普遍法定功能禁令；LIVE应同步检查陌生人发现、连麦邀请和年龄判断能否覆盖未成年人。欧盟TikTok推荐系统初步结论、加州AB 1709诉讼和澳大利亚High Court案件均未核实到新的法律状态变化。技术侧过去24小时未发现需要新增的LIVE相关动态。本轮覆盖主要市场与美国州级重点线索，但不代表完整全球复核。",
   "events": [
     {
       "id": "ny-safe",
@@ -305,18 +305,18 @@
         54
       ],
       "topic": "有害内容与身心健康",
-      "title": "儿童网络安全要求已生效",
-      "stage": "已生效",
-      "eventDate": "2025-07-25",
-      "deadline": "2025-07-25",
+      "title": "儿童安全义务：Snapchat开始关闭儿童找朋友功能",
+      "stage": "已生效 / 监管跟踪落实",
+      "eventDate": "2026-11-06",
+      "deadline": null,
       "priority": "P1",
-      "fact": "Ofcom 确认儿童安全义务于 2025 年 7 月 25 日生效，要求相关服务评估并缓解儿童面临的有害内容风险。",
-      "impact": "评估儿童风险时，要分别检查直播推荐、评论和连麦。",
-      "action": "分别保存儿童安全和违法内容的风险评估；检查推荐、连麦和评论，区分鼓励自伤和单纯求助。",
-      "scope": "具体措施取决于服务范围与风险；守则措施或其他有效措施需要证据支持。",
-      "source": "https://www.ofcom.org.uk/online-safety/illegal-and-harmful-content/protecting-people-from-online-suicide-and-self-harm-material",
-      "checkedAt": "2026-10-27",
-      "confidence": "官方来源",
+      "fact": "英国儿童安全义务已于2025年7月25日生效。Ofcom于2026年11月6日确认，Snapchat已开始为儿童用户默认关闭“Find Friends”，要求11月内完成推出；Snapchat并向Ofcom确认，计划在年底前为未满18岁用户应用高有效性年龄核验。",
+      "impact": "LIVE需把陌生人发现、连麦邀请、评论和推荐分别纳入儿童风险评估，并检查年龄判断是否真正覆盖受保护用户。",
+      "action": "核对未成年人默认设置和年龄信号；用陌生人搜索、关注、私信与连麦邀请测试绕过路径，保存按年龄分层的曝光、拦截和申诉数据。",
+      "scope": "“Find Friends”变化是Snapchat在Ofcom监管推动下的具体落实，不等于所有平台已有相同法定产品设置；其他服务仍按自身风险评估及适用守则确定措施。",
+      "source": "https://www.ofcom.org.uk/online-safety/protecting-children/ofcom-provides-update-following-its-call-to-action-on-tech-industry-to-improve-protections-for-children",
+      "checkedAt": "2026-11-07",
+      "confidence": "Ofcom官方监管更新",
       "history": [
         {
           "date": "2025-04-24",
@@ -329,9 +329,13 @@
         {
           "date": "2025-07-25",
           "event": "已生效"
+        },
+        {
+          "date": "2026-11-06",
+          "event": "Ofcom确认Snapchat开始为儿童默认关闭“Find Friends”，要求11月内完成推出；平台计划年底前为未满18岁用户应用高有效性年龄核验。"
         }
       ],
-      "review": "检查功能变更是否需要更新风险评估。",
+      "review": "跟踪Snapchat推出完成情况、年龄核验覆盖及Ofcom对其他服务的后续执法。",
       "lawId": "Online Safety Act 2023 / Protection of Children",
       "instrument": "法律与监管守则",
       "topics": [
@@ -341,30 +345,31 @@
       "scenarios": [
         "直播推荐",
         "连麦与评论",
+        "陌生人发现与联系",
         "危机内容"
       ],
       "appliesTo": "英国范围内、可能被儿童访问的相关用户对用户服务",
-      "priorityReason": "已适用义务覆盖实时内容风险；风险评估和缓解效果应有记录，不能仅以删帖量证明安全。",
+      "priorityReason": "已适用义务正在转化为具体产品控制，且Ofcom给出11月推出及年底年龄核验的实施窗口。",
       "owners": [
         "Policy",
         "Legal",
         "Safety Ops",
         "推荐产品"
       ],
-      "deliverable": "分年龄、语言和LIVE功能的风险表；对应控制、举报投诉流程及效果证据。",
-      "uncertainty": "守则措施与其他有效措施须区分；平台是否违反义务不能从一条新闻推出。",
+      "deliverable": "未成年人陌生人发现、私信与连麦控制矩阵；年龄核验覆盖、绕过、误拦和申诉数据。",
+      "uncertainty": "Ofcom未在本次更新中给出Snapchat推出完成的精确日期，也未据此认定其他平台应采用完全相同的产品设置。",
       "titleEn": "UK: child safety duties and LIVE risk assessment",
       "reviewStatus": "公开来源已复核",
-      "sourceCheckedAt": "2026-10-27T11:27:46.825297+00:00",
+      "sourceCheckedAt": "2026-11-07T13:01:40Z",
       "effectiveDate": "2025-07-25",
-      "deadlineType": "实施 / 合规日期",
-      "statusEvidence": "官方页面已核实；后续修法与司法限制仍需持续监测",
+      "deadlineType": "平台推出与年龄核验窗口；官方未给精确日期",
+      "statusEvidence": "Ofcom官方更新确认Snapchat已开始推出，并称将监测11月内完成情况及年底前年龄核验覆盖；未发布新的普遍功能禁令。",
       "policyImplication": {
-        "direction": "评估儿童风险时，要分别检查直播推荐、评论和连麦。",
-        "proposal": "分别保存儿童安全和违法内容的风险评估；检查推荐、连麦和评论，区分鼓励自伤和单纯求助。",
-        "trigger": "2025年7月24日前完成首轮儿童风险评估，7月25日起执行安全措施；持续保存评估和检查记录。",
+        "direction": "从风险评估进一步落实到陌生人发现、联系和年龄判断的默认控制。",
+        "proposal": "按年龄测试陌生人搜索、关注、私信和连麦邀请；将年龄核验失败、补充核验和申诉纳入同一控制矩阵。",
+        "trigger": "Snapchat在11月完成“Find Friends”推出并于年底前推进未满18岁年龄核验；其他服务在功能或风险变化时更新儿童风险评估。",
         "tradeoff": "既要减少伤害，也要保护正常表达和隐私；年龄判断出错时，用户应能方便地申诉。",
-        "validation": "分年龄、语言和LIVE功能的风险表；对应控制、举报投诉流程及效果证据。"
+        "validation": "按年龄统计陌生人曝光、成功联系、绕过、误拦、申诉改判及人工复核耗时。"
       },
       "evidence": [
         {
@@ -390,6 +395,14 @@
           "checkedAt": "2026-10-27T11:27:46.825297+00:00",
           "supports": "4月24日公布守则与指引；7月24日评估期限，7月25日实施安全措施。",
           "access": "官方页面检索"
+        },
+        {
+          "url": "https://www.ofcom.org.uk/online-safety/protecting-children/ofcom-provides-update-following-its-call-to-action-on-tech-industry-to-improve-protections-for-children",
+          "publisher": "Ofcom",
+          "locator": "2026-11-06；Snapchat Find Friends rollout；under-18 age checks",
+          "checkedAt": "2026-11-07T13:01:40Z",
+          "supports": "Snapchat开始默认关闭儿童“Find Friends”、11月内推出窗口及年底前年龄核验计划。",
+          "access": "官方监管更新正文"
         }
       ]
     },
@@ -4129,7 +4142,7 @@
     }
   ],
   "collection": {
-    "lastSuccess": "2026-11-06",
+    "lastSuccess": "2026-11-07",
     "schedule": "每天北京时间21:00研究更新",
     "failedSources": [
       "TikTok LIVE Monetization Guidelines：页面可定位但正文未由检索工具获取",
