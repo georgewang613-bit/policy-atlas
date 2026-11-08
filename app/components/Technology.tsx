@@ -25,9 +25,9 @@ export default function Technology(){
   <div className="tech-detail-heading"><span className="tech-category">{selected.category}</span><h2 ref={heading} tabIndex={-1}>{selected.title}</h2><p className="tech-status">{selected.status}</p><div className="detail-meta"><span>{selected.publishedAt?'发布 / 修订 '+selected.publishedAt:'发布日期未列'}</span><span>核对 {selected.checkedAt}</span></div><p className="tech-version">{selected.version}</p></div>
   <p className="tech-detail-conclusion">{organizationNames(selected.conclusion)}</p>
   <section><h3>研究进展</h3><TextPoints text={selected.fact}/></section>
-  <section><h3>直播应用</h3><TextPoints text={selected.liveUse}/></section>
-  <section><h3>试用建议</h3><TextPoints text={selected.nextStep}/></section>
-  <section><h3>评估指标</h3><TextPoints text={selected.measure}/></section>
+  <section><h3>对 LIVE 政策的作用</h3>{selected.analysisUpdatedAt&&<p className="practice-muted">分析修订 {selected.analysisUpdatedAt} · 不代表来源重新核对</p>}<TextPoints text={selected.liveUse}/></section>
+  <section><h3>怎么试，边界在哪里</h3><TextPoints text={selected.nextStep}/></section>
+  <section><h3>看什么结果，如何调整</h3><TextPoints text={selected.measure}/></section>
   <section><h3>使用限制</h3><TextPoints text={selected.limits}/></section>
   <section className="update-sources"><h3>参考来源</h3>{selected.sources.map(s=><p key={s.url}><a href={s.url} target="_blank" rel="noreferrer">{organizationNames(s.publisher)} ↗</a><small>{s.locator}</small></p>)}</section>
  </article>;}

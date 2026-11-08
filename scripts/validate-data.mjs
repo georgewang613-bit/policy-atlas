@@ -10,7 +10,7 @@ const source = z.object({ url: z.string().url().refine(value => value.startsWith
 const item = z.object({
   id: text, title: text, category: text, publishedAt: date.nullable(), version: text,
   status: text, checkedAt: date, conclusion: text, fact: text, liveUse: text,
-  limits: text, nextStep: text, measure: text, sources: z.array(source).min(1),
+  limits: text, nextStep: text, measure: text, analysisUpdatedAt: date.optional(), sources: z.array(source).min(1),
 });
 z.object({ reviewedAt: date, items: z.array(item).min(1) }).superRefine((data, ctx) => {
   if (new Set(data.items.map(entry => entry.id)).size !== data.items.length) {

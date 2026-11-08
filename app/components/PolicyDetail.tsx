@@ -22,14 +22,14 @@ export default function PolicyDetail({event:e,onClose}:{event:PolicyEvent;onClos
     <p className="detail-status">{stage.meaning}</p>
    </div>
    <section className="detail-section progress-section"><h3>事件进展</h3><TextPoints text={e.fact}/></section>
-   <section className="detail-section live-impact"><h3>直播影响</h3><TextPoints text={e.impact}/><div className="scenario-tags">{e.scenarios.map(s=><span key={s}>{s}</span>)}</div></section>
+   <section className="detail-section live-impact"><h3>对 LIVE 政策的影响</h3>{e.policyImplication?.analysisUpdatedAt&&<p className="practice-muted">分析修订 {e.policyImplication.analysisUpdatedAt} · 来源核对日期见事件记录</p>}<TextPoints text={e.impact}/><div className="scenario-tags">{e.scenarios.map(s=><span key={s}>{s}</span>)}</div></section>
    <section className="detail-section preparation-section"><h3>当前准备</h3><TextPoints text={e.action}/><div className="detail-checks"><strong>检查重点</strong><TextPoints text={checks}/></div>{checks!==e.deliverable&&<details className="inline-detail"><summary>准备材料</summary><TextPoints text={e.deliverable}/></details>}</section>
    <section className="detail-section implementation-section"><h3>执行安排</h3>
     {(e.effectiveDate||e.deadline)&&<div className="execution-dates">{e.effectiveDate&&<div><span>生效或开始执行</span><strong>{e.effectiveDate}</strong></div>}{e.deadline&&e.deadline!==e.effectiveDate&&<div><span>{e.deadlineType}</span><strong>{e.deadline}</strong></div>}</div>}
     <TextPoints text={framework.gate}/><p className="detail-next"><strong>下一步</strong>{framework.next}</p>
    </section>
    <PolicyTimeline event={e} asOf={e.checkedAt}/>
-   {e.policyImplication&&<section className="detail-section"><h3>实施考虑</h3><TextPoints text={e.policyImplication.tradeoff}/></section>}
+   {e.policyImplication&&<section className="detail-section"><h3>取舍与误伤</h3><TextPoints text={e.policyImplication.tradeoff}/></section>}
    <div className="detail-reference">
     <details><summary>关注理由</summary><TextPoints text={e.priorityReason}/></details>
     <details><summary>来源记录 <span>{e.evidence.length}</span></summary><p className="reference-law">{e.lawId}</p><div className="detail-caveat"><strong>仍需核实</strong><TextPoints text={e.uncertainty}/></div>{e.evidence.map((v,i)=><div className="reference-source" key={i}><a href={v.url} target="_blank" rel="noreferrer">{organizationNames(v.publisher)} ↗</a><p>{v.locator}</p><p>{v.supports}</p><small>{v.access} · 核对 {new Date(v.checkedAt).toLocaleString('zh-CN',{timeZone:'Asia/Shanghai',hour12:false})}</small></div>)}</details>
