@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-11-07",
-  "reviewedAt": "2026-11-07T13:01:40Z",
+  "updatedAt": "2026-11-08",
+  "reviewedAt": "2026-11-08T13:05:41Z",
   "briefTitle": "今日重点",
   "briefEventIds": [
     "uk-children",
@@ -9,8 +9,8 @@
     "ca-ab1709",
     "au-age"
   ],
-  "runStatus": "47条政策 · 16条技术动态 · 英国开始落实儿童陌生人联系保护",
-  "brief": "无新增P0。P1：Ofcom确认Snapchat已开始为英国儿童默认关闭“Find Friends”，要求在11月内完成推出，并表示Snapchat计划在年底前让未满18岁用户接受高有效性年龄核验。该变化是平台在现行儿童安全义务下的具体落实，不是新的普遍法定功能禁令；LIVE应同步检查陌生人发现、连麦邀请和年龄判断能否覆盖未成年人。欧盟TikTok推荐系统初步结论、加州AB 1709诉讼和澳大利亚High Court案件均未核实到新的法律状态变化。技术侧过去24小时未发现需要新增的LIVE相关动态。本轮覆盖主要市场与美国州级重点线索，但不代表完整全球复核。",
+  "runStatus": "47条政策 · 16条技术动态 · 过去24小时无重大已核实变化",
+  "brief": "过去24小时无重大已核实变化。无新增P0；现有P1状态不变。英国Ofcom信息通知判决、科罗拉多AI与聊天机器人规则听证后阶段、澳大利亚Digital Duty of Care法案、欧盟对TikTok推荐系统的初步意见，以及相关美国州级未成年人和AI案件，均未核实到新的法律效力、司法限制或实施日期变化。技术侧未发现需要新增的LIVE审核、音视频处理、来源验证或安全评测动态。土耳其官方公报本轮重读超时，保留11月1日已核实记录及旧checkedAt，不新增结论。本轮为主要市场与美国州级重点复核，不代表完整全球覆盖。",
   "events": [
     {
       "id": "ny-safe",
@@ -4148,7 +4148,7 @@
     }
   ],
   "collection": {
-    "lastSuccess": "2026-11-07",
+    "lastSuccess": "2026-11-08",
     "schedule": "每天北京时间21:00研究更新",
     "failedSources": [
       "TikTok LIVE Monetization Guidelines：页面可定位但正文未由检索工具获取",
@@ -4163,7 +4163,8 @@
       "2026-10-29 Apple年龄核验支持页：HTTP 429；未新增条目。",
       "2026-11-05 澳大利亚议会aph.gov.au：robots.txt阻止读取；未据此更新Digital Duty of Care法案阶段。",
       "2026-11-06 Congress.gov与aph.gov.au检索被robots.txt阻止；KOSA阶段仅沿用已核实官方材料，澳大利亚Digital Duty of Care未据此更新。",
-      "2026-11-06 California Legislative Information的AB 1709正文自动读取返回403；仅使用州长官方签署公告概括核心限制，未写入无法复核的细节。"
+      "2026-11-06 California Legislative Information的AB 1709正文自动读取返回403；仅使用州长官方签署公告概括核心限制，未写入无法复核的细节。",
+      "2026-11-08 土耳其《官方公报》20261010-15.pdf重新读取超时；保留11月1日已核实记录及旧checkedAt，不新增结论。"
     ]
   }
 }
