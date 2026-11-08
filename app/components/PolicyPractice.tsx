@@ -1,7 +1,8 @@
 import {useState} from 'react';
-import {competencies,practiceCases,studyDate,studySources,transferCases} from '../../data/lab-study';
+import {practiceCases,studyDate,studySources,transferCases} from '../../data/lab-study';
 import {classificationMetrics,differenceInDifferences} from '../../lib/lab-metrics';
 import '../policy-practice.css';
+import {StudyOverview,ImplementationGuide,MonthReview} from './ImplementationStudy';
 
 function Evidence({ids}:{ids:string[]}) {return <span className="practice-cites">{ids.map(id=><a key={id} href={'#lab-source-'+id} aria-label={'查看来源 '+id} onClick={()=>{const target=document.getElementById('lab-source-'+id) as HTMLDetailsElement|null;if(target)target.open=true;}}>{id}</a>)}</span>;}
 const format=(value:number|null)=>value===null?'无分母':(value*100).toFixed(1)+'%';
@@ -49,6 +50,7 @@ function MetricSandbox(){
 }
 
 function Evaluation(){return <>
+ <MonthReview/>
  <section className="practice-section"><h2>先固定你要评估的政策</h2><p>“义务感施压”与“欺骗性索礼”可以同时出现，但不是同一类事实。上线前固定规则版本、适用地区、评估单位和严重性分类；否则标签变了，看起来的下降可能只是口径变化。</p>
  <div className="practice-grid"><article><h3>安全结果</h3><p>相关违规曝光是否减少？是否更早阻断？严重个案有没有被平均值掩盖？</p></article><article><h3>创作者损害</h3><p>合规主播被错误限制了多少、持续多久？错误能否在直播结束前纠正？</p></article><article><h3>持续可行</h3><p>高峰时段是否积压？问题是否转移到其他语言、账号或互动形式？</p></article></div><p><Evidence ids={['S1']}/></p></section>
  <MetricSandbox/>
@@ -65,22 +67,16 @@ function Evaluation(){return <>
  </>;}
 
 export default function PolicyPractice(){
- const sections=['判断重点','边界练习','效果评估','举一反三'];
+ const sections=['研究概览','执行指引','首月评估','场景迁移'];
  const [section,setSection]=useState(sections[0]);
  return <div className="policy-practice">
-  <section className="practice-intro"><span className="practice-kicker">案例研究 · {studyDate}</span><h2>把规则讲清，把效果验明</h2><p>从义务感索礼到变现政策评估：一套判断要经得起反例、跨语言执行和数据检验。这里的案例、演算与处置细节是研究建议，供练习使用。</p></section>
+  <section className="practice-intro"><span className="practice-kicker">实施研究 · 2026-11-08</span><h2>让判断一致，让调整有据</h2><p>以义务感索礼为例，展示规则边界、审核分歧和上线后的取舍。案例与演算均为独立研究设计。</p></section>
   <nav className="practice-nav" aria-label="案例研究栏目">{sections.map(s=><button key={s} aria-pressed={section===s} onClick={()=>setSection(s)}>{s}</button>)}</nav>
   <div className="practice-content" key={section}>
-   {section==='判断重点'&&<>
-    <section className="practice-section"><h2>这类问题在考什么？</h2><p>Q1 要求把依赖语境的伤害变成可复核的判断；Q2 要求证明治理有效，并能修正误伤。以下是根据题型及公开治理材料作出的能力推断，不是招聘团队内部评分标准。<Evidence ids={['S1','S5']}/></p>
-    <div className="competency-grid">{competencies.map((c,i)=><article key={c.title}><span className="practice-number">0{i+1}</span><h3>{c.title}</h3><p className="practice-question">{c.question}</p><p><strong>有说服力：</strong>{c.signal}</p><p className="practice-muted"><strong>容易失分：</strong>{c.weak}</p></article>)}</div></section>
-    <section className="practice-section"><h2>回答要连成一条判断链</h2><ol className="practice-reasoning"><li><strong>保护什么</strong><span>减少被施压或误导的付费，同时保留自愿支持。说清风险对象和伤害机制。</span></li><li><strong>凭什么判断</strong><span>法律义务、平台规则、项目建议各自标明；每个要件对应可观察证据，并给出不成立的反例。</span></li><li><strong>现在做什么</strong><span>先说依据和结论，再说比例处置、证据不足时的处理及申诉纠错。</span></li><li><strong>怎样知道做对了</strong><span>用独立抽样检查暴露、漏判、误限时长；验证因果解释后决定是否扩大。</span></li></ol></section>
-    <section className="practice-section"><h2>让现有答案更扎实的五个补充</h2><ul className="practice-list"><li><strong>限定条款。</strong>Q1 的“未构成义务感施压”不等于整场合规；Q2 如果改评估欺骗性索礼，要明确更换了评估范围。</li><li><strong>不要等待付款才行动。</strong>风险行为与实际损失分开证明，礼物到账仅是影响证据之一。</li><li><strong>把数字写成可检查的口径。</strong>说清“误判率”的分母，抽查未标记和未申诉的样本。</li><li><strong>把四周观察改成有条件的设计。</strong>说明对照、样本量、同期变化与伦理约束，不能把前后对比直接当成因果。</li><li><strong>给出会改变结论的事实。</strong>例如主播由认可索礼改为明确制止，或“我欠你的”只是引述；能说明反例，规则才清楚。</li></ul></section>
-    <details className="practice-fold"><summary>英语口述：用简短开头带出判断</summary><div lang="en"><h3>Q1 · Drawing the boundary</h3><p>I would protect voluntary gifting while addressing pressure. I would check who made or endorsed the request, what linked the Gift to repayment or loyalty, and whether the surrounding exchange supports that interpretation. A Gift being sent is not required under this proposed rule. I would then choose a proportionate response and explain what evidence could change my decision.</p><h3>Q2 · Evaluating the policy</h3><p>I would define success as less exposure to the targeted harm, without excessive restrictions on compliant creators. I would use independent samples, including unflagged and unappealed cases, to measure precision, recall and incorrect restriction time. I would check whether the comparison supports a causal claim before attributing the change to the policy.</p></div></details>
-   </>}
-   {section==='边界练习'&&<BoundaryPractice/>}
-   {section==='效果评估'&&<Evaluation/>}
-   {section==='举一反三'&&<section className="practice-section"><h2>同一套方法，换四种场景</h2><p>先找伤害机制，再找成立要件、反例与验证方法。以下均为虚构情景；不推断任何真实平台、主播或用户已违规。</p><div className="transfer-grid">{transferCases.map(c=><article key={c.title}><h3>{c.title}</h3><p className="practice-quote">{c.question}</p><dl><div><dt>判断原则</dt><dd>{c.principle}</dd></div><div><dt>需要证据</dt><dd>{c.evidence}</dd></div><div><dt>处理建议</dt><dd>{c.response}</dd></div><div><dt>效果检查</dt><dd>{c.measure}</dd></div></dl></article>)}</div></section>}
+   {section==='研究概览'&&<StudyOverview/>}
+   {section==='执行指引'&&<><ImplementationGuide/><BoundaryPractice/></>}
+   {section==='首月评估'&&<Evaluation/>}
+   {section==='场景迁移'&&<section className="practice-section"><h2>同一套方法，换四种场景</h2><p>先找伤害机制，再找成立要件、反例与验证方法。以下均为虚构情景；不推断任何真实平台、主播或用户已违规。</p><div className="transfer-grid">{transferCases.map(c=><article key={c.title}><h3>{c.title}</h3><p className="practice-quote">{c.question}</p><dl><div><dt>判断原则</dt><dd>{c.principle}</dd></div><div><dt>需要证据</dt><dd>{c.evidence}</dd></div><div><dt>处理建议</dt><dd>{c.response}</dd></div><div><dt>效果检查</dt><dd>{c.measure}</dd></div></dl></article>)}</div></section>}
   </div>
   <section className="practice-sources" aria-label="案例依据"><h2>依据和边界</h2><p className="practice-source-warning">最新 LIVE Monetization Guidelines 正文尚未取得；本页不把案例细化边界当作已核验的官方条款。公开事实、方法借鉴和项目建议按下列说明使用。</p>{studySources.map(s=><details id={'lab-source-'+s.id} className="practice-fold" key={s.id}><summary>{s.id} · {s.title}<span>{s.status}</span></summary><div><p>{s.note}</p><a href={s.url} target="_blank" rel="noreferrer">{s.publisher} · 查看原文 ↗</a><p className="practice-muted">{s.status==='已核对'?'核对':'尝试读取'}：{studyDate}</p></div></details>)}</section>
  </div>;
