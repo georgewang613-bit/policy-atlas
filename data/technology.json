@@ -1,5 +1,5 @@
 {
-  "reviewedAt": "2026-11-08",
+  "reviewedAt": "2026-11-09",
   "items": [
     {
       "id": "hybrid-live-moderation",
@@ -363,6 +363,34 @@
           "url": "https://deploymentsafety.openai.com/chatgpt-images-2-6/safety-evaluations",
           "publisher": "OpenAI Deployment Safety Hub",
           "locator": "2026-11-04；Safety Stack、Safety Evaluations、GIF Risks、Image Provenance"
+        }
+      ]
+    },
+    {
+      "id": "rtda-escalation",
+      "title": "模型意见分歧何时交给人工",
+      "category": "安全评测",
+      "publishedAt": "2026-10-26",
+      "version": "arXiv:2610.35335 v1",
+      "status": "研究论文；未验证LIVE部署",
+      "checkedAt": "2026-11-09",
+      "conclusion": "不只看模型投票，还可比较判断理由与结论，寻找值得人工复核的案例。",
+      "fact": "RTDA以不同视角的模型生成判断理由，比较理由相似性和结论一致性。在1,000条Measuring Hate Speech测试样本中，作者报告识别人类高分歧案例的F1为0.59，理由差异基线为0.51；目标是识别分歧，不是判定真实违规。",
+      "liveUse": "项目建议：用于发现索礼、引用制止或跨文化表达中的边界案例。相似证据得到不同结论时，保留各方依据交给人工，先区分上下文缺失与规则边界分歧。",
+      "limits": "文本数据不能证明直播音视频效果；模型生成的理由不保证忠实反映内部判断。人类分歧不是违规真值，论文未测多次运行随机波动，也未证明减少直播伤害。",
+      "nextStep": "用固定规则版本和去标识化案例做离线比较，保留正常感谢、玩笑和制止等反例；同一人工容量下与置信度排序比较。严重即时风险另设升级通道，不依赖模型是否分歧。",
+      "measure": "看固定复核预算下的分歧案例召回、严重风险漏检、误升级、每千场人工耗时和延迟，按语言分组。经专家复核后再看误处置率，不能用模型一致率代替准确率。",
+      "analysisUpdatedAt": "2026-11-09",
+      "sources": [
+        {
+          "url": "https://arxiv.org/abs/2610.35335",
+          "publisher": "Wawer & Chudziak / arXiv",
+          "locator": "v1提交2026-10-26；摘要及版本"
+        },
+        {
+          "url": "https://arxiv.org/html/2610.35335v1",
+          "publisher": "Wawer & Chudziak / arXiv",
+          "locator": "§5.1–5.4，Table 1及§6限制；云端取得正文"
         }
       ]
     }

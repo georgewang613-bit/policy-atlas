@@ -1,16 +1,16 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-11-08",
-  "reviewedAt": "2026-11-08T13:05:41Z",
+  "updatedAt": "2026-11-09",
+  "reviewedAt": "2026-11-09T10:43:59.363Z",
   "briefTitle": "今日重点",
   "briefEventIds": [
-    "uk-children",
+    "eu-ai",
     "eu-tiktok-addictive-design",
-    "ca-ab1709",
-    "au-age"
+    "ca-child-privacy-code",
+    "au-feed-draft"
   ],
-  "runStatus": "47条政策 · 16条技术动态 · 过去24小时无重大已核实变化",
-  "brief": "过去24小时无重大已核实变化。无新增P0；现有P1状态不变。英国Ofcom信息通知判决、科罗拉多AI与聊天机器人规则听证后阶段、澳大利亚Digital Duty of Care法案、欧盟对TikTok推荐系统的初步意见，以及相关美国州级未成年人和AI案件，均未核实到新的法律效力、司法限制或实施日期变化。技术侧未发现需要新增的LIVE审核、音视频处理、来源验证或安全评测动态。土耳其官方公报本轮重读超时，保留11月1日已核实记录及旧checkedAt，不新增结论。本轮为主要市场与美国州级重点复核，不代表完整全球覆盖。",
+  "runStatus": "48条政策 · 17条技术动态 · 重点复核及历史补漏",
+  "brief": "过去24小时未核实到新增重大法律效力变化，无新增P0。注意欧盟AI透明度12月2日节点仅适用于限定既有系统，不是全部义务延期。补录加拿大10月20日儿童隐私守则：1月20日是反馈截止，重点准备默认隐私和数据用途评估；技术侧补录10月26日人工升级研究，区分模型分歧与真实违规。澳大利亚11月9日听证媒体线索尚缺可读取的议会记录，不推进法案阶段；土耳其公报仍读取失败。仅更新实际核实条目的复核日期，本轮不代表全部记录或完整全球覆盖。",
   "events": [
     {
       "id": "ny-safe",
@@ -131,7 +131,7 @@
       "action": "建议用明确虚拟角色、身份模糊、主动否认AI身份三组案例细化指引。保留用户进入直播间时能看到的提示、主播原话和付费前后语境；分别核对法律角色及披露义务，不能用水印检测结果替代欺骗证据。",
       "scope": "虚拟形象不一定属于深度伪造。需分别核对系统提供者和使用者的责任、内容类型及例外。",
       "source": "https://digital-strategy.ec.europa.eu/en/policies/guidelines-ai-transparency-obligations",
-      "checkedAt": "2026-10-27",
+      "checkedAt": "2026-11-09",
       "confidence": "官方来源",
       "history": [
         {
@@ -161,8 +161,8 @@
       "deliverable": "用冒充真人、明确的动画角色和艺术表演样本，检查标签、例外和人工复核流程。",
       "uncertainty": "12月2日仅对应FAQ所列旧系统的第50(2)条，不延后全部透明度义务。",
       "titleEn": "AI Act Article 50: transparency for synthetic content",
-      "reviewStatus": "公开来源已复核",
-      "sourceCheckedAt": "2026-10-27T11:05:45.042968+00:00",
+      "reviewStatus": "本轮复核所列官方页面；未声称查全后续程序",
+      "sourceCheckedAt": "2026-11-09T10:43:59.363Z",
       "effectiveDate": "2026-08-02",
       "deadlineType": "部分旧系统第50(2)条完成期限",
       "statusEvidence": "委员会FAQ的适用时间段区分8月2日一般适用与12月2日部分旧系统节点。",
@@ -190,6 +190,14 @@
           "checkedAt": "2026-10-27T11:05:45.042968+00:00",
           "supports": "部分旧系统过渡条件，以及可感知披露与机器可读标记的区别。",
           "access": "官方FAQ正文"
+        },
+        {
+          "url": "https://digital-strategy.ec.europa.eu/en/policies/guidelines-ai-transparency-obligations",
+          "publisher": "European Commission",
+          "locator": "本轮官方页面复核",
+          "checkedAt": "2026-11-09T10:43:59.363Z",
+          "supports": "官方Article 50 FAQ复核：一般8月2日适用，12月2日仅涉及限定既有系统的过渡安排，不是所有透明度义务延期。",
+          "access": "官方正文"
         }
       ]
     },
@@ -1232,7 +1240,7 @@
       "action": "先核对意见截止日，再分别检查注册、观看、互动、开播和送礼的年龄要求。",
       "scope": "委员会采纳提案不等于议会和理事会完成立法；本条尚非已生效义务。",
       "source": "https://digital-strategy.ec.europa.eu/en/news/commission-seeks-feedback-eu-kids-act",
-      "checkedAt": "2026-11-01",
+      "checkedAt": "2026-11-09",
       "confidence": "官方一手来源",
       "history": [
         {
@@ -1262,8 +1270,8 @@
       "deliverable": "提案影响清单、证据缺口和反馈问题；截止日确认后再安排提交。",
       "uncertainty": "官方新闻页出现11月26日与12月3日两个日期，反馈门户正文未成功读取；暂不设明确截止日。",
       "titleEn": "EU KIDS Act：提案反馈正在进行",
-      "reviewStatus": "公开来源已复核",
-      "sourceCheckedAt": "2026-11-01T12:28:05.710638+00:00",
+      "reviewStatus": "本轮复核所列官方页面；未声称查全后续程序",
+      "sourceCheckedAt": "2026-11-09T10:43:59.363Z",
       "effectiveDate": null,
       "deadlineType": "截止日冲突：11/26 与 12/03，待核实",
       "statusEvidence": "已核对下列官方证据；不把政策意向或规则草案当作最终义务。",
@@ -1305,6 +1313,14 @@
           "locator": "反馈截止日期两段文字；11月1日复核",
           "checkedAt": "2026-11-01T12:28:05.710638+00:00",
           "supports": "新闻页仍同时列11月26日和12月3日，继续保留截止日待核实。",
+          "access": "官方正文"
+        },
+        {
+          "url": "https://digital-strategy.ec.europa.eu/en/news/commission-seeks-feedback-eu-kids-act",
+          "publisher": "European Commission",
+          "locator": "本轮官方页面复核",
+          "checkedAt": "2026-11-09T10:43:59.363Z",
+          "supports": "官方新闻页仍同时列11月26日和12月3日，截止冲突未解决，deadline继续为null。",
           "access": "官方正文"
         }
       ]
@@ -1756,7 +1772,7 @@
       "action": "继续比较推荐直播和只看关注主播两种模式，等待最终规则确认默认选择、切换入口及实施日期。",
       "scope": "拟议附属规则依赖Digital Duty of Care法案获正式批准；不是已经施行的算法退出义务。",
       "source": "https://www.infrastructure.gov.au/have-your-say/choice-feeds-social-media",
-      "checkedAt": "2026-11-05",
+      "checkedAt": "2026-11-09",
       "confidence": "官方一手来源",
       "history": [
         {
@@ -1789,8 +1805,8 @@
       "deliverable": "选择提示、偏好保存和跨端一致性的测试方案。",
       "uncertainty": "提案内容可能随法案和征求意见意见变化；不得把全部算法使用都称为被禁止。",
       "titleEn": "My Feed, My Way：推荐信息流规则征询",
-      "reviewStatus": "原文核对 / 尚未定案",
-      "sourceCheckedAt": "2026-11-05T13:01:03Z",
+      "reviewStatus": "本轮复核所列官方页面；未声称查全后续程序",
+      "sourceCheckedAt": "2026-11-09T10:43:59.363Z",
       "effectiveDate": null,
       "deadlineType": "意见截止：23:59 AEDT",
       "statusEvidence": "官方门户列明11月5日23:59 AEDT截止；截止刚过时仍显示Open，因此仅确认提交期限已到，不推断最终规则已经公布。",
@@ -1824,6 +1840,14 @@
           "locator": "Submissions before 11:59pm AEDT on 5 November 2026",
           "checkedAt": "2026-11-05T13:01:03Z",
           "supports": "官方提交期限为2026-11-05 23:59 AEDT；草案仍依赖Digital Duty of Care法案。",
+          "access": "官方正文"
+        },
+        {
+          "url": "https://www.infrastructure.gov.au/have-your-say/choice-feeds-social-media",
+          "publisher": "Australian Government",
+          "locator": "本轮官方页面复核",
+          "checkedAt": "2026-11-09T10:43:59.363Z",
+          "supports": "官方征询页仍列11月5日截止；拟议规则以相关法案获御准为前提，本轮未将其标为已生效。",
           "access": "官方正文"
         }
       ]
@@ -2931,8 +2955,8 @@
       "impact": "检查直播推荐、连续观看和召回用户的推送，是否增加夜间使用和反复打开；也要看休息提示是否有效。",
       "action": "检查连续观看和召回推送，测试休息提示是否很容易跳过，再结合夜间使用、退出和投诉数据判断效果。",
       "scope": "TikTok的DSA个案；对直播的影响是本项目的分析，公告未单独认定全部直播功能违法。",
-      "source": "https://digital-strategy.ec.europa.eu/es/news/commission-preliminarily-finds-tiktoks-you-feed-breach-digital-services-act-harmful-rabbit-holes",
-      "checkedAt": "2026-11-06",
+      "source": "https://digital-strategy.ec.europa.eu/en/news/commission-preliminarily-finds-tiktoks-you-feed-breach-digital-services-act-harmful-rabbit-holes",
+      "checkedAt": "2026-11-09",
       "confidence": "欧盟委员会初步结论公告",
       "history": [
         {
@@ -2973,8 +2997,8 @@
       "deliverable": "功能风险清单、休息机制测试及按年龄分层的效果评估。",
       "uncertainty": "本轮未找到最终决定；初步意见不等于最终违法认定或统一整改期限。",
       "titleEn": "TikTok addictive design: DSA preliminary findings",
-      "reviewStatus": "官方公告核实 / 初步结论",
-      "sourceCheckedAt": "2026-11-06T13:06:48Z",
+      "reviewStatus": "本轮复核所列官方页面；未声称查全后续程序",
+      "sourceCheckedAt": "2026-11-09T10:43:59.363Z",
       "effectiveDate": null,
       "deadlineType": "最终决定及整改期限待公布",
       "statusEvidence": "11月6日官方公告明确这是初步结论，TikTok可查阅调查文件并书面答辩；是否构成最终不合规及具体整改要求仍待后续决定。",
@@ -3009,6 +3033,14 @@
           "checkedAt": "2026-11-06T13:06:48Z",
           "supports": "“为你推荐”信息流的兔子洞风险、新初步结论及答辩程序。",
           "access": "欧盟委员会官方网页（机器翻译页，英文正文）"
+        },
+        {
+          "url": "https://digital-strategy.ec.europa.eu/en/news/commission-preliminarily-finds-tiktoks-you-feed-breach-digital-services-act-harmful-rabbit-holes",
+          "publisher": "European Commission",
+          "locator": "本轮官方页面复核",
+          "checkedAt": "2026-11-09T10:43:59.363Z",
+          "supports": "11月6日官方公告仍为初步意见，涉及推荐系统风险评估与缓解，不等于最终违规决定。",
+          "access": "官方正文"
         }
       ]
     },
@@ -4145,10 +4177,92 @@
           "access": "联邦法院公开新提交索引"
         }
       ]
+    },
+    {
+      "id": "ca-child-privacy-code",
+      "region": "加拿大",
+      "code": "Canada",
+      "xy": [
+        -106,
+        56
+      ],
+      "topic": "隐私与数据",
+      "title": "儿童隐私守则：默认保护与数据用途",
+      "stage": "监管指引 / 接受反馈",
+      "eventDate": "2026-10-20",
+      "deadline": "2027-01-20",
+      "priority": "P2",
+      "fact": "加拿大隐私专员10月20日发布儿童隐私守则，解释PIPEDA下对未满18岁儿童数据的保护期待；适用于受该法约束、面向儿童或很可能被儿童使用的在线商业服务。2027年1月20日是反馈截止日，不是新增法律生效日。",
+      "impact": "LIVE观看、个人资料可见性及推荐所用的数据需分别评估；不能仅以开播或送礼设年龄门槛，就排除儿童观看时的数据风险。",
+      "action": "现在按用途盘点观看、推荐和商业画像数据，检查默认设置、非必要用途同意及撤回；反馈期内整理实际执行难点，持续核对后续指引。",
+      "scope": "须先确认PIPEDA及相关省级法律适用性；守则是监管解释和实践指引，不等同于新立法或认定任何平台违法。",
+      "source": "https://www.priv.gc.ca/en/privacy-topics/privacy-for-businesses/protection-of-children-for-businesses/childrens-privacy-code/children-code-final-report-2026/",
+      "checkedAt": "2026-11-09",
+      "confidence": "官方正文",
+      "history": [
+        {
+          "date": "2026-10-20",
+          "event": "OPC发布守则并开放反馈，截止2027年1月20日。"
+        }
+      ],
+      "review": "补录既有发布；后续关注反馈后的文本修订。",
+      "lawId": "PIPEDA / OPC Children’s Privacy Code",
+      "instrument": "监管指引",
+      "topics": [
+        "隐私与数据",
+        "未成年人保护"
+      ],
+      "scenarios": [
+        "直播推荐",
+        "用户资料",
+        "年龄核验"
+      ],
+      "appliesTo": "受PIPEDA约束且涉及儿童个人信息的适用在线商业服务",
+      "priorityReason": "仍有反馈窗口；需要准备数据用途和默认设置评估，不把反馈截止日误标为硬合规期限。",
+      "owners": [
+        "Policy",
+        "Legal",
+        "隐私",
+        "未成年人安全"
+      ],
+      "deliverable": "按年龄、数据用途和默认设置列出差距及例外理由。",
+      "uncertainty": "适用性需结合省级法律、实际用户及服务功能判断；没有审计TikTok实际产品。",
+      "titleEn": "Canada Children’s Privacy Code",
+      "reviewStatus": "正文及发布公告已复核；历史补录",
+      "sourceCheckedAt": "2026-11-09T10:43:59.363Z",
+      "effectiveDate": null,
+      "deadlineType": "反馈截止",
+      "statusEvidence": "正文Statutory framework及Scope and applicability；发布公告明确反馈截止日。",
+      "policyImplication": {
+        "direction": "把儿童保护拆成不同用途的可执行要求，避免用一个年龄标签替代全部隐私判断。",
+        "proposal": "项目建议：以观看推荐、公开资料、商业画像分别建立判断条件；年龄核验数据只服务必要目的，不能顺带用于营销。为默认私密、主动公开和撤回同意准备相邻案例。",
+        "trigger": "现在评估现有法下的义务；1月20日前可整理反馈，不能把该日当作现有义务的宽限期。",
+        "tradeoff": "增加年龄核验可能增加敏感数据收集；默认保护也需兼顾青少年的合理自主权，避免直接关闭所有正常功能。",
+        "validation": "分年龄及语言抽查默认设置和撤回是否生效，同时记录误判年龄、申诉纠正、数据删除耗时；问题应区分规则不清、产品配置错误和年龄信号不足。",
+        "analysisUpdatedAt": "2026-11-09"
+      },
+      "evidence": [
+        {
+          "url": "https://www.priv.gc.ca/en/privacy-topics/privacy-for-businesses/protection-of-children-for-businesses/childrens-privacy-code/children-code-final-report-2026/",
+          "publisher": "Office of the Privacy Commissioner of Canada",
+          "locator": "Statutory framework; Scope and applicability; Summary of expectations",
+          "checkedAt": "2026-11-09T10:43:59.363Z",
+          "supports": "法律性质、适用儿童及服务、隐私保护期待。",
+          "access": "官方正文"
+        },
+        {
+          "url": "https://www.priv.gc.ca/en/opc-news/news-and-announcements/2026/nr-c_261020/",
+          "publisher": "OPC",
+          "locator": "2026-10-20发布公告及反馈段落",
+          "checkedAt": "2026-11-09T10:43:59.363Z",
+          "supports": "原始发布日期及2027-01-20反馈截止。",
+          "access": "官方正文"
+        }
+      ]
     }
   ],
   "collection": {
-    "lastSuccess": "2026-11-08",
+    "lastSuccess": "2026-11-09",
     "schedule": "每天北京时间21:00研究更新",
     "failedSources": [
       "TikTok LIVE Monetization Guidelines：页面可定位但正文未由检索工具获取",
@@ -4164,7 +4278,10 @@
       "2026-11-05 澳大利亚议会aph.gov.au：robots.txt阻止读取；未据此更新Digital Duty of Care法案阶段。",
       "2026-11-06 Congress.gov与aph.gov.au检索被robots.txt阻止；KOSA阶段仅沿用已核实官方材料，澳大利亚Digital Duty of Care未据此更新。",
       "2026-11-06 California Legislative Information的AB 1709正文自动读取返回403；仅使用州长官方签署公告概括核心限制，未写入无法复核的细节。",
-      "2026-11-08 土耳其《官方公报》20261010-15.pdf重新读取超时；保留11月1日已核实记录及旧checkedAt，不新增结论。"
+      "2026-11-08 土耳其《官方公报》20261010-15.pdf重新读取超时；保留11月1日已核实记录及旧checkedAt，不新增结论。",
+      "2026-11-09 土耳其官方公报20261010-15.pdf重读超时；保留原记录及旧checkedAt。",
+      "2026-11-09 澳大利亚议会法案页面读取受限；Reuters当日听证报道仅作线索，未据此推进Digital Duty of Care阶段。",
+      "2026-11-09 arXiv检索工具正文读取失败，已通过云端直接取得2610.35335v1全文并核对方法、结果和限制。"
     ]
   }
 }
