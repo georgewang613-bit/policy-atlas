@@ -1,16 +1,16 @@
 {
   "schemaVersion": 2,
   "updatedAt": "2026-11-09",
-  "reviewedAt": "2026-11-09T10:43:59.363Z",
+  "reviewedAt": "2026-11-09T13:08:18.319Z",
   "briefTitle": "今日重点",
   "briefEventIds": [
+    "au-duty-bill",
     "eu-ai",
     "eu-tiktok-addictive-design",
-    "ca-child-privacy-code",
-    "au-feed-draft"
+    "ca-child-privacy-code"
   ],
-  "runStatus": "48条政策 · 17条技术动态 · 重点复核及历史补漏",
-  "brief": "过去24小时未核实到新增重大法律效力变化，无新增P0。注意欧盟AI透明度12月2日节点仅适用于限定既有系统，不是全部义务延期。补录加拿大10月20日儿童隐私守则：1月20日是反馈截止，重点准备默认隐私和数据用途评估；技术侧补录10月26日人工升级研究，区分模型分歧与真实违规。澳大利亚11月9日听证媒体线索尚缺可读取的议会记录，不推进法案阶段；土耳其公报仍读取失败。仅更新实际核实条目的复核日期，本轮不代表全部记录或完整全球覆盖。",
+  "runStatus": "48条政策 · 17条技术动态 · 澳大利亚法案听证跟进",
+  "brief": "澳大利亚Digital Duty of Care法案11月9日进入参议院调查听证，法律效力没有改变；适用范围、年龄核验、隐私和过度执行仍是争议重点，等待委员会材料和后续表决。无新增P0。欧盟AI透明度12月2日节点仅适用于限定既有系统，不是全部义务延期。补录的加拿大儿童隐私守则仍处反馈期。技术侧过去24小时未发现需要新增的已核实动态。本轮复核主要市场和美国州级重点线索，不代表完整全球覆盖。",
   "events": [
     {
       "id": "ny-safe",
@@ -1678,17 +1678,17 @@
         -25
       ],
       "topic": "未成年人保护",
-      "title": "Digital Duty of Care：草案反馈摘要公布",
+      "title": "Digital Duty of Care：参议院调查听证开始",
       "stage": "立法审议 / 已提出",
-      "eventDate": "2026-10-26",
+      "eventDate": "2026-11-09",
       "deadline": null,
       "priority": "P1",
-      "fact": "主管部门公布草案反馈摘要，讨论义务边界、合理可行措施、基本权利和规则授权；法案仍按议会程序推进。",
+      "fact": "澳大利亚通信部长11月9日确认，参议院对Digital Duty of Care法案的调查听证当日开始，并将连续两天听取多方证据。法案仍在议会审议，听证不等于通过或生效。",
       "impact": "LIVE的挑战活动、连麦风险、推荐和投诉流程可能需要统一风险评估。",
       "action": "用连麦、挑战活动和推荐场景测试风险评估表；记录安全、表达和隐私方面的影响，跟踪议会修订。",
       "scope": "政府公告介绍拟议制度；提出法案不等于已获正式批准，具体义务须以最终文本为准。",
-      "source": "https://minister.infrastructure.gov.au/wells/media-release/digital-duty-care-next-step-australias-world-leading-reforms",
-      "checkedAt": "2026-10-27",
+      "source": "https://minister.infrastructure.gov.au/wells/transcript/today-show-sylvia-jeffreys-1",
+      "checkedAt": "2026-11-09",
       "confidence": "官方一手来源",
       "history": [
         {
@@ -1698,6 +1698,10 @@
         {
           "date": "2026-10-26",
           "event": "主管部门公布草案反馈主题摘要。"
+        },
+        {
+          "date": "2026-11-09",
+          "event": "通信部长确认参议院调查听证开始，计划连续两天听取各方证据；法案法律效力未改变。"
         }
       ],
       "review": "独立研究建议 · 非法律签批",
@@ -1713,20 +1717,20 @@
         "危机内容"
       ],
       "appliesTo": "政府公告介绍拟议制度；提出法案不等于已获正式批准，具体义务须以最终文本为准。",
-      "priorityReason": "最近两周的新立法进展，与LIVE实时伤害防范直接相关。",
+      "priorityReason": "参议院调查已进入听证阶段，平台适用范围、年龄核验、隐私和过度执行仍可能影响最终文本。",
       "owners": [
         "Policy",
         "Legal",
         "相关产品团队"
       ],
       "deliverable": "场景风险评估模板、产品默认设置审查和可执行投诉流程选项。",
-      "uncertainty": "未穷尽议会后续程序；不将公告中的拟议处罚和响应时限写成当前义务。",
-      "titleEn": "Digital Duty of Care：10月15日提交议会",
-      "reviewStatus": "官方反馈摘要已核实 / 立法审议",
-      "sourceCheckedAt": "2026-10-27T11:03:00.807820+00:00",
+      "uncertainty": "议会委员会页面本轮仍受robots限制；部长官方访谈只确认听证开始，不能证明最终修订、表决结果或生效日期。",
+      "titleEn": "Digital Duty of Care: Senate inquiry hearing begins",
+      "reviewStatus": "官方确认参议院调查听证开始 / 立法审议",
+      "sourceCheckedAt": "2026-11-09T13:08:18.319Z",
       "effectiveDate": null,
       "deadlineType": "无已确认生效日",
-      "statusEvidence": "10月26日发布的是征询反馈摘要，未据此认定法案通过或生效。",
+      "statusEvidence": "11月9日部长官方访谈确认参议院调查听证当日开始；未据媒体报道认定法案已获参议院通过。",
       "policyImplication": {
         "direction": "LIVE的挑战活动、连麦风险、推荐和投诉流程可能需要统一风险评估。",
         "proposal": "用连麦、挑战活动和推荐场景测试风险评估表；记录安全、表达和隐私方面的影响，跟踪议会修订。",
@@ -1750,6 +1754,14 @@
           "checkedAt": "2026-10-27T11:03:00.807820+00:00",
           "supports": "反馈涉及义务边界、合理可行措施、权利权衡及授权范围。",
           "access": "官方PDF正文"
+        },
+        {
+          "url": "https://minister.infrastructure.gov.au/wells/transcript/today-show-sylvia-jeffreys-1",
+          "publisher": "Australian Minister for Communications",
+          "locator": "Transcript · Monday 9 November 2026",
+          "checkedAt": "2026-11-09T13:08:18.319Z",
+          "supports": "参议院调查听证于11月9日开始并计划听取两天证据；不支持法案已通过。",
+          "access": "官方访谈文字稿"
         }
       ]
     },
