@@ -1,5 +1,5 @@
 {
-  "reviewedAt": "2026-11-09",
+  "reviewedAt": "2026-11-10",
   "items": [
     {
       "id": "hybrid-live-moderation",
@@ -391,6 +391,34 @@
           "url": "https://arxiv.org/html/2610.35335v1",
           "publisher": "Wawer & Chudziak / arXiv",
           "locator": "§5.1–5.4，Table 1及§6限制；云端取得正文"
+        }
+      ]
+    },
+    {
+      "id": "caselaw-precedent-moderation",
+      "title": "用案例库适配政策变化",
+      "category": "审核模型",
+      "publishedAt": "2026-11-09",
+      "version": "arXiv:2611.11812 v1",
+      "status": "预印本；未验证LIVE部署",
+      "checkedAt": "2026-11-10",
+      "conclusion": "把政策边界放在可更新案例库中，可以减少每次规则变化都重训模型的需求，但案例质量仍决定结果。",
+      "fact": "CaseLaw先把文本、图像、视频和音频转成结构化证据，再检索案例并投票。作者在MFO-RedNotes政策变更后报告各风险等级Precision为79.9%至86.8%、Recall为74.1%至88.0%；无案例达到阈值时转人工。",
+      "liveUse": "项目建议：把义务感索礼、正常感谢、引用后制止和AI身份误导做成成对案例。政策更新时先改案例标签和版本，而不是直接改一个总模型；未命中或案例冲突进入人工。",
+      "limits": "结果来自作者构建的性别对立风险和CoPro基准，没有验证直播时序、真实多语言、生产延迟或长期漂移。案例库可能陈旧、失衡或重复，论文指标不能当作LIVE线上效果。",
+      "nextStep": "用固定的LIVE离线样本比较现有规则引擎与案例检索；保留案例政策版本、原始证据和改标历史。先小规模测试，不让相似案例自动决定永久处罚。",
+      "measure": "按语言和风险等级报告Precision、Recall、未命中转人工率、旧案例命中率、重复案例偏置、处理延迟及合规主播误限时长；政策改版前后使用同一盲测集。",
+      "analysisUpdatedAt": "2026-11-10",
+      "sources": [
+        {
+          "url": "https://arxiv.org/abs/2611.11812",
+          "publisher": "Lu 等 / arXiv",
+          "locator": "v1提交2026-11-09；摘要、方法、Table 1及Limitations"
+        },
+        {
+          "url": "https://arxiv.org/html/2611.11812v1",
+          "publisher": "Lu 等 / arXiv",
+          "locator": "Thresholded Precedent Voting；Table 1；§Limitations"
         }
       ]
     }

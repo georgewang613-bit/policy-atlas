@@ -1,16 +1,16 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-11-09",
-  "reviewedAt": "2026-11-09T13:08:18.319Z",
+  "updatedAt": "2026-11-10",
+  "reviewedAt": "2026-11-10T13:00:06.136Z",
   "briefTitle": "今日重点",
   "briefEventIds": [
+    "fr-genai-vulnerability-report",
     "au-duty-bill",
-    "eu-ai",
     "eu-tiktok-addictive-design",
-    "ca-child-privacy-code"
+    "eu-ai"
   ],
-  "runStatus": "48条政策 · 17条技术动态 · 澳大利亚法案听证跟进",
-  "brief": "澳大利亚Digital Duty of Care法案11月9日进入参议院调查听证，法律效力没有改变；适用范围、年龄核验、隐私和过度执行仍是争议重点，等待委员会材料和后续表决。无新增P0。欧盟AI透明度12月2日节点仅适用于限定既有系统，不是全部义务延期。补录的加拿大儿童隐私守则仍处反馈期。技术侧过去24小时未发现需要新增的已核实动态。本轮复核主要市场和美国州级重点线索，不代表完整全球覆盖。",
+  "runStatus": "49条政策 · 18条技术动态 · 法国AI脆弱性报告",
+  "brief": "法国11月10日公布生成式AI与脆弱性专家报告，建议严格约束过度拟人化和奉承机制，并对面向公众的生成式AI开展上市前评估及强化上市后监督；这仍是非约束政策建议，没有实施期限。对LIVE可先研究AI主播身份理解、情绪依赖、隐性商业影响和未成年人保护。无新增P0，澳大利亚Digital Duty of Care仍处参议院调查阶段。技术侧新增CaseLaw预印本，适合测试政策变化时更新案例库，但尚未验证直播、跨语言或生产效果。本轮为主要市场和美国州级重点复核，不代表完整全球覆盖。",
   "events": [
     {
       "id": "ny-safe",
@@ -4271,10 +4271,98 @@
           "access": "官方正文"
         }
       ]
+    },
+    {
+      "id": "fr-genai-vulnerability-report",
+      "region": "法国",
+      "code": "France",
+      "xy": [
+        2,
+        46
+      ],
+      "topic": "AI真实性",
+      "title": "生成式AI脆弱性报告：未成年人和情绪商业化",
+      "stage": "专家报告 / 非约束建议",
+      "eventDate": "2026-11-10",
+      "deadline": null,
+      "priority": "P3",
+      "fact": "法国总统府11月10日公布政府委托专家委员会报告。报告提出严格约束过度拟人化和奉承式机制，关注未成年人、情绪依赖、隐性广告及对心理特征的商业利用，并建议对面向公众的生成式AI开展上市前跨学科评估和强化上市后监督。这些是政策建议，不是已生效法律。",
+      "impact": "若LIVE使用AI主播、AI嘉宾或陪伴式互动，可把身份理解、情绪依赖、送礼诱导和隐性商业影响拆开评估；报告本身不直接新增平台义务。",
+      "action": "建立AI角色的设计审查样本，测试未成年人能否理解身份、商业目的和退出方式；持续跟踪法国或欧盟是否将建议转化为立法或监管要求。",
+      "scope": "报告面向法国及欧洲公共政策讨论，覆盖聊天机器人、AI伴侣和AI玩具；对LIVE的分析属于场景映射，不代表TikTok已违规。",
+      "source": "https://www.elysee.fr/emmanuel-macron/2026/11/10/remise-du-rapport-de-la-commission-dexperts-ia-generative-et-vulnerabilites",
+      "checkedAt": "2026-11-10",
+      "confidence": "法国总统府及官方委员会材料",
+      "history": [
+        {
+          "date": "2026-02-20",
+          "event": "法国政府委托CIANum组织“生成式AI与脆弱性”专家委员会。"
+        },
+        {
+          "date": "2026-11-10",
+          "event": "专家报告提交总统并公开，提出18项非约束建议。"
+        }
+      ],
+      "review": "跟踪建议是否进入法国或欧盟立法、监管指引或自愿准则。",
+      "lawId": "Protéger sans empêcher : les vulnérabilités à l’ère de l’IA générative",
+      "instrument": "政府委托专家报告",
+      "topics": [
+        "AI真实性",
+        "未成年人保护",
+        "打赏与变现",
+        "有害内容与身心健康"
+      ],
+      "scenarios": [
+        "AI主播",
+        "陪伴式互动",
+        "商业披露"
+      ],
+      "appliesTo": "当前为政策建议，未形成直接适用于平台的强制义务；未来范围取决于法国或欧盟采取的具体措施。",
+      "priorityReason": "与AI身份、未成年人及情绪商业化方向相关，但没有现行合规期限，先研究和准备。",
+      "owners": [
+        "Policy",
+        "Legal",
+        "AI产品",
+        "未成年人安全"
+      ],
+      "deliverable": "AI角色身份、情绪依赖、商业影响和未成年人保护的场景测试表。",
+      "uncertainty": "报告中的统计和因果主张未在本条逐项复现；尚无相应立法文本、实施范围或日期。",
+      "titleEn": "France expert report on generative AI vulnerabilities",
+      "reviewStatus": "官方报告发布已核实 / 非约束建议",
+      "sourceCheckedAt": "2026-11-10T13:00:06.136Z",
+      "effectiveDate": null,
+      "deadlineType": "无已确认实施日期",
+      "statusEvidence": "法国总统府和CIANum均将其描述为专家委员会报告及建议，未作为已通过法律发布。",
+      "policyImplication": {
+        "direction": "AI角色治理应同时看身份理解、情绪依赖、商业影响和未成年人脆弱性。",
+        "proposal": "项目建议：为AI主播和AI嘉宾提供清晰身份提示，避免用依赖、奉承或排他承诺推动送礼；未成年人场景提高人工复核和退出保护。",
+        "trigger": "当前先做风险评估；只有后续法国或欧盟形成适用规则并明确实施日期后，才转为强制落实计划。",
+        "tradeoff": "既要减少情绪操纵和隐性商业影响，也要保留创意角色、正常陪伴和表达空间；身份披露不能代替对具体行为的判断。",
+        "validation": "用未成年人和成年人样本测试身份理解、商业意图识别、退出能力、危机升级和合规角色误限，分别报告结果。",
+        "analysisUpdatedAt": "2026-11-10"
+      },
+      "evidence": [
+        {
+          "url": "https://www.elysee.fr/emmanuel-macron/2026/11/10/remise-du-rapport-de-la-commission-dexperts-ia-generative-et-vulnerabilites",
+          "publisher": "Présidence de la République française",
+          "locator": "Publié le 10 novembre 2026；18 recommandations",
+          "checkedAt": "2026-11-10T13:00:06.136Z",
+          "supports": "报告发布日期、对象、政策性质及主要建议。",
+          "access": "官方网页正文"
+        },
+        {
+          "url": "https://www.conseil-ia-numerique.fr/nos-travaux/proteger-sans-empecher-nos-vulnerabilites-lere-de-lia-generative",
+          "publisher": "Conseil de l’IA et du numérique",
+          "locator": "18 recommandations；protection des mineurs；évaluation ex ante",
+          "checkedAt": "2026-11-10T13:00:06.136Z",
+          "supports": "专家委员会构成、未成年人和拟人化风险、上市前后评估建议。",
+          "access": "官方网页正文"
+        }
+      ]
     }
   ],
   "collection": {
-    "lastSuccess": "2026-11-09",
+    "lastSuccess": "2026-11-10",
     "schedule": "每天北京时间21:00研究更新",
     "failedSources": [
       "TikTok LIVE Monetization Guidelines：页面可定位但正文未由检索工具获取",
@@ -4293,7 +4381,9 @@
       "2026-11-08 土耳其《官方公报》20261010-15.pdf重新读取超时；保留11月1日已核实记录及旧checkedAt，不新增结论。",
       "2026-11-09 土耳其官方公报20261010-15.pdf重读超时；保留原记录及旧checkedAt。",
       "2026-11-09 澳大利亚议会法案页面读取受限；Reuters当日听证报道仅作线索，未据此推进Digital Duty of Care阶段。",
-      "2026-11-09 arXiv检索工具正文读取失败，已通过云端直接取得2610.35335v1全文并核对方法、结果和限制。"
+      "2026-11-09 arXiv检索工具正文读取失败，已通过云端直接取得2610.35335v1全文并核对方法、结果和限制。",
+      "2026-11-10 澳大利亚议会Digital Duty of Care委员会页面仍被robots.txt阻止；未据媒体或部长表态推进法案阶段。",
+      "2026-11-10 土耳其官方公报20261010-15.pdf仅提取到首页元数据；保留11月1日已逐页核实记录及旧checkedAt，不新增结论。"
     ]
   }
 }
