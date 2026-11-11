@@ -1,16 +1,16 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-11-10",
-  "reviewedAt": "2026-11-10T13:00:06.136Z",
+  "updatedAt": "2026-11-11",
+  "reviewedAt": "2026-11-11T13:01:46.460Z",
   "briefTitle": "今日重点",
   "briefEventIds": [
-    "fr-genai-vulnerability-report",
-    "au-duty-bill",
+    "eu-dfa-frontier",
     "eu-tiktok-addictive-design",
-    "eu-ai"
+    "au-duty-bill",
+    "fr-genai-vulnerability-report"
   ],
-  "runStatus": "49条政策 · 18条技术动态 · 法国AI脆弱性报告",
-  "brief": "法国11月10日公布生成式AI与脆弱性专家报告，建议严格约束过度拟人化和奉承机制，并对面向公众的生成式AI开展上市前评估及强化上市后监督；这仍是非约束政策建议，没有实施期限。对LIVE可先研究AI主播身份理解、情绪依赖、隐性商业影响和未成年人保护。无新增P0，澳大利亚Digital Duty of Care仍处参议院调查阶段。技术侧新增CaseLaw预印本，适合测试政策变化时更新案例库，但尚未验证直播、跨语言或生产效果。本轮为主要市场和美国州级重点复核，不代表完整全球覆盖。",
+  "runStatus": "49条政策 · 18条技术动态 · 欧盟DFA正式提案",
+  "brief": "欧盟委员会11月11日正式提出Digital Fairness Act法规草案，政策窗口从“酝酿”进入议会与理事会审议。草案直接触及LIVE礼物币价展示、未成年人付费虚拟货币、可变奖励和成瘾性设计，但尚未生效，也没有可执行截止日。现在应做条款到LIVE功能的差距盘点和可逆准备，不应把草案当作现行义务。过去24小时主要市场和美国州级重点复核未发现其他足以改变既有记录阶段的官方材料；技术侧未发现需要新增的实质发布。本轮不代表完整全球覆盖。",
   "events": [
     {
       "id": "ny-safe",
@@ -1150,27 +1150,31 @@
         50
       ],
       "topic": "打赏与变现",
-      "title": "Digital Fairness Act：正式提案尚未公布",
-      "stage": "政策酝酿 / 待提案",
-      "eventDate": "2026-10-21",
+      "title": "Digital Fairness Act：委员会正式提出法规草案",
+      "stage": "委员会提案 / 普通立法程序",
+      "eventDate": "2026-11-11",
       "deadline": null,
       "priority": "P1",
-      "fact": "EESC于10月21日通过探索性意见；10月5日欧洲议会研究简报仍把DFA列为委员会准备中的倡议，预计2026年第四季度提出。",
-      "impact": "提前检查送礼界面、连续奖励、倒计时和网红营销，是否诱导用户作出不愿意的消费选择。",
-      "action": "列出诱导消费的设计，准备礼物购买、退订和商业合作标识的修改方案，跟踪正式提案。",
-      "scope": "EESC通过的是咨询意见，不是欧盟通过法律；最终法律形式及条款尚未确认。",
-      "source": "https://www.eesc.europa.eu/en/our-work/opinions-information-reports/opinions/digital-fairness-act",
-      "checkedAt": "2026-10-26",
-      "confidence": "官方一手来源",
+      "fact": "欧盟委员会11月11日通过Digital Fairness Act法规提案COM(2026) 1100 final（2026/0356(COD)）。草案拟把不公平商业行为规则改为直接适用的法规，并覆盖暗黑模式、网红营销、不公平个性化、虚拟货币、可变奖励和成瘾性设计；仍须欧洲议会和理事会审议，尚未生效。",
+      "impact": "对LIVE最直接的是未成年人默认关闭付费虚拟货币并经监护人批准后开启，以及让成人可关闭特定成瘾性功能。草案第14(1)条把受拟议EU KIDS Act披露义务约束的社交网络和视频分享平台排除在本法币价展示条款之外；未成年人可变奖励和成瘾性设计也有交叉适用条款，必须把两项草案合并评估。",
+      "action": "建立“条款—LIVE功能—证据—现有控制”对照：先盘点礼物币价展示、未成年人付费开关、连续观看/通知/连续激励和商业推广标识；法务跟踪议会与理事会修订，产品仅做可逆准备，不把草案当作现行义务。",
+      "scope": "拟议法规面向针对欧盟消费者开展B2C商业行为的经营者，包括境外经营者；委员会草案不是已通过法律。草案拟在最终法规生效12个月后适用，但生效和适用日期均取决于后续通过及《官方公报》发布，目前无可执行截止日。",
+      "source": "https://commission.europa.eu/law/law-topic/consumer-protection-law/digital-fairness-act_en",
+      "checkedAt": "2026-11-11",
+      "confidence": "官方提案正文",
       "history": [
         {
           "date": "2026-10-21",
           "event": "EESC于10月21日通过探索性意见；10月5日欧洲议会研究简报仍把DFA列为委员会准备中的倡议，预计2026年第四季度提出。"
+        },
+        {
+          "date": "2026-11-11",
+          "event": "欧盟委员会通过Digital Fairness Act法规提案COM(2026) 1100 final，进入欧洲议会和理事会普通立法程序；草案尚未生效。"
         }
       ],
       "review": "独立研究建议 · 非法律签批",
-      "lawId": "DFA / EESC INT/1132",
-      "instrument": "未定案政策 / 规则形成进程",
+      "lawId": "COM(2026) 1100 final / 2026/0356(COD)",
+      "instrument": "欧盟法规提案 / 普通立法程序",
       "topics": [
         "打赏与变现",
         "欺诈与商业行为"
@@ -1180,27 +1184,27 @@
         "PK与激励",
         "商业推广"
       ],
-      "appliesTo": "EESC通过的是咨询意见，不是欧盟通过法律；最终法律形式及条款尚未确认。",
-      "priorityReason": "涉及直播收入和消费设计，正式文本公布前可准备修改建议。",
+      "appliesTo": "拟议法规面向针对欧盟消费者开展B2C商业行为的经营者，包括境外经营者；委员会草案不是已通过法律。草案拟在最终法规生效12个月后适用，但生效和适用日期均取决于后续通过及《官方公报》发布，目前无可执行截止日。",
+      "priorityReason": "正式提案把虚拟货币、未成年人付费控制和成瘾性设计写入可谈判条款，直接影响LIVE礼物和互动设计；当前无即时强制义务。",
       "owners": [
         "Policy",
         "Legal",
         "相关产品团队"
       ],
-      "deliverable": "风险模式—现行义务—拟议选项对照表，以及不依赖新法也可改进的设计建议。",
-      "uncertainty": "第四季度是预期计划，不是生效日；不能据此编造条款。",
-      "titleEn": "Digital Fairness Act：提案前政策窗口",
-      "reviewStatus": "原文核对 / 尚未定案",
-      "sourceCheckedAt": "2026-10-26T14:00:48Z",
+      "deliverable": "条款—LIVE功能—现有控制—待决修订对照表，以及礼物币价、未成年人付费和成瘾性功能的可逆改造清单。",
+      "uncertainty": "议会和理事会可修改或删除条款；草案第40条的12个月适用期只有在最终法规通过并生效后才开始计算。与EU KIDS Act的交叉适用也取决于两项最终文本。",
+      "titleEn": "Digital Fairness Act: Commission proposal adopted",
+      "reviewStatus": "提案正文核对 / 尚未定案",
+      "sourceCheckedAt": "2026-11-11T13:01:46.460Z",
       "effectiveDate": null,
       "deadlineType": "尚无正式实施日期",
-      "statusEvidence": "已核对下列官方证据；不把政策意向或规则草案当作最终义务。",
+      "statusEvidence": "委员会政策页和72页提案正文均已核对；阶段为委员会提案，不是生效法律。",
       "policyImplication": {
-        "direction": "提前检查送礼界面、连续奖励、倒计时和网红营销，是否诱导用户作出不愿意的消费选择。",
-        "proposal": "列出诱导消费的设计，准备礼物购买、退订和商业合作标识的修改方案，跟踪正式提案。",
-        "trigger": "确认最终规则、生效安排和受影响的产品后，再落实当地强制要求；此前可先研究和做小范围测试。",
-        "tradeoff": "既要减少伤害，也要保护正常表达和隐私；年龄判断出错时，用户应能方便地申诉。",
-        "validation": "风险模式—现行义务—拟议选项对照表，以及不依赖新法也可改进的设计建议。"
+        "direction": "对LIVE最直接的是未成年人默认关闭付费虚拟货币并经监护人批准后开启，以及让成人可关闭特定成瘾性功能。草案第14(1)条把受拟议EU KIDS Act披露义务约束的社交网络和视频分享平台排除在本法币价展示条款之外；未成年人可变奖励和成瘾性设计也有交叉适用条款，必须把两项草案合并评估。",
+        "proposal": "建立“条款—LIVE功能—证据—现有控制”对照：先盘点礼物币价展示、未成年人付费开关、连续观看/通知/连续激励和商业推广标识；法务跟踪议会与理事会修订，产品仅做可逆准备，不把草案当作现行义务。",
+        "trigger": "欧洲议会和理事会形成稳定文本后更新差距分析；最终法规公布后，按正式适用期排期落实。",
+        "tradeoff": "减少诱导消费和过度使用时，应避免把正常互动一概视为成瘾设计，并用年龄最小化、申诉和误判监测控制隐私与可用性成本。",
+        "validation": "条款—LIVE功能—现有控制—待决修订对照表，以及礼物币价、未成年人付费和成瘾性功能的可逆改造清单。"
       },
       "evidence": [
         {
@@ -1218,6 +1222,22 @@
           "checkedAt": "2026-10-26T14:00:48Z",
           "supports": "倡议阶段、预计季度和议题；研究简报不是立法文本",
           "access": "官方网页正文"
+        },
+        {
+          "url": "https://commission.europa.eu/law/law-topic/consumer-protection-law/digital-fairness-act_en",
+          "publisher": "European Commission",
+          "locator": "Digital Fairness Act Proposal · 11 November 2026",
+          "checkedAt": "2026-11-11T13:01:46.460Z",
+          "supports": "委员会通过提案、政策范围和配套文件",
+          "access": "官方网页正文"
+        },
+        {
+          "url": "https://commission.europa.eu/document/download/0575d59f-554f-4a9e-b54b-e6b717175809_en?filename=Proposal%20for%20a%20Digital%20Fairness%20Act_0.pdf",
+          "publisher": "European Commission",
+          "locator": "COM(2026) 1100 final · Articles 14–17 and 40",
+          "checkedAt": "2026-11-11T13:01:46.460Z",
+          "supports": "虚拟货币、未成年人控制、成瘾性设计及拟议适用安排",
+          "access": "官方提案PDF全文"
         }
       ]
     },
@@ -4362,7 +4382,7 @@
     }
   ],
   "collection": {
-    "lastSuccess": "2026-11-10",
+    "lastSuccess": "2026-11-11",
     "schedule": "每天北京时间21:00研究更新",
     "failedSources": [
       "TikTok LIVE Monetization Guidelines：页面可定位但正文未由检索工具获取",
@@ -4383,7 +4403,8 @@
       "2026-11-09 澳大利亚议会法案页面读取受限；Reuters当日听证报道仅作线索，未据此推进Digital Duty of Care阶段。",
       "2026-11-09 arXiv检索工具正文读取失败，已通过云端直接取得2610.35335v1全文并核对方法、结果和限制。",
       "2026-11-10 澳大利亚议会Digital Duty of Care委员会页面仍被robots.txt阻止；未据媒体或部长表态推进法案阶段。",
-      "2026-11-10 土耳其官方公报20261010-15.pdf仅提取到首页元数据；保留11月1日已逐页核实记录及旧checkedAt，不新增结论。"
+      "2026-11-10 土耳其官方公报20261010-15.pdf仅提取到首页元数据；保留11月1日已逐页核实记录及旧checkedAt，不新增结论。",
+      "2026-11-11 西班牙青年部长要求TikTok暂停服务的Reuters线索：本轮未在政府、检察机关或AEPD官方页面定位到相应正式决定或程序文件，未新增记录。"
     ]
   }
 }
