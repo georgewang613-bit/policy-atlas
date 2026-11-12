@@ -9,8 +9,7 @@ import {insetRegions} from '../data/live-geography.mjs';
 import PolicyOwner from './components/PolicyOwner';
 import InformationBrief from './components/InformationBrief';
 import {LiveMetrics,GiftTimeline,ReviewChart} from './components/DecisionBrief';
-import {responsePaths} from '../data/response-paths.mjs';
-import ResponsePlan from './components/ResponsePlan';
+import MeetingRoom from './components/MeetingRoom';
 import DecisionFlow from './components/DecisionFlow';
 import LiveContext,{SceneThumb} from './components/LiveContext';
 import {policyContext,LMG_URL,VIRTUAL_URL,POLICY_REVIEWED} from '../data/live-context.mjs';
@@ -72,12 +71,12 @@ function DecisionRoom({item,at,saved,backend,onSave,onExit}:any){
  const [step,setStep]=useState(seedState?.step??0),[variant,setVariant]=useState(seedState?.variant??false),[prediction,setPrediction]=useState(seedState?.prediction||'');
  const [initial,setInitial]=useState(seedState?.initial||''),[team,setTeam]=useState<string[]>(seedState?.team||['safety','ops','legal']);
  const [opinions,setOpinions]=useState<any>(seedState?.opinions||{}),[busy,setBusy]=useState<any>({}),[errors,setErrors]=useState<any>({});
- const [mode,setMode]=useState(backend?.configured?'ai':'preset'),[decisions,setDecisions]=useState<any>(seedState?.decisions||{content:'',recommendation:'',monetization:''});
+ const mode=backend?.configured?'ai':'preset';const [decisions,setDecisions]=useState<any>(seedState?.decisions||{content:'',recommendation:'',monetization:''});
  const [reason,setReason]=useState(seedState?.reason||''),[openAxis,setOpenAxis]=useState('monetization'),[question,setQuestion]=useState('');
  const [follow,setFollow]=useState(''),[drop,setDrop]=useState(false),[original,setOriginal]=useState<any>(seedState?.original||null),[notice,setNotice]=useState('');
  const [workbench,setWorkbench]=useState<any>(seedState?.workbench||{});
- const {day,weekOpen,challenge,review,dilemma,reply,...ownerDraft}=workbench;
- const delivery=responsePaths.find(d=>d.id===workbench.path)||null;
+ const {day,weekOpen,challenge,review,dilemma,reply,path:oldPath,option,goal,constraints,...ownerDraft}=workbench;
+ const delivery=null;
  const [completed,setCompleted]=useState(Boolean(seedState?.completed&&seedState?.at===at));const mounted=useRef(true),run=useRef(0);
  useEffect(()=>{mounted.current=true;return()=>{mounted.current=false;run.current++;};},[]);
  const updateWorkbench=(v:any)=>{const {day,weekOpen,challenge,review,...next}=v;if(JSON.stringify(next)!==JSON.stringify(ownerDraft))setCompleted(false);setWorkbench(v);};
@@ -90,7 +89,7 @@ function DecisionRoom({item,at,saved,backend,onSave,onExit}:any){
  const ask=async(id:string,q='')=>{const current=run.current,ctx=context;setBusy((s:any)=>({...s,[id]:true}));setErrors((s:any)=>({...s,[id]:''}));try{
   let o;if(mode==='preset')o=presetOpinion(id,item,variant);else{const response=await fetch('./api/opinions',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({caseId:item.id,department:id,variant,at,question:q,draft:JSON.stringify({decisions,reason,workbench:ownerDraft,delivery})}),signal:AbortSignal.timeout(35000)});const body=await response.json();if(!response.ok)throw new Error(body.error||'服务未返回意见。');o=body;}
   if(mounted.current&&run.current===current)setOpinions((s:any)=>({...s,[id]:{...o,context:ctx,question:q}}));
- }catch(e:any){if(mounted.current&&run.current===current)setErrors((s:any)=>({...s,[id]:e.name==='TimeoutError'?'等待超时，请重试或切换预设意见。':e.message}));}finally{if(mounted.current&&run.current===current)setBusy((s:any)=>({...s,[id]:false}));}};
+ }catch(e:any){if(mounted.current&&run.current===current)setErrors((s:any)=>({...s,[id]:e.name==='TimeoutError'?'本轮响应超时，重新开会可重试。':e.message}));}finally{if(mounted.current&&run.current===current)setBusy((s:any)=>({...s,[id]:false}));}};
  const axes=[{id:'content',label:'Content',question:'这场直播是否继续？',options:['暂不限制','建议限制相关内容','证据不足']},{id:'recommendation',label:'For You feed',question:'是否继续扩大曝光？',options:['暂不限制','For You feed ineligible','证据不足']},{id:'monetization',label:'Monetization',question:'是否允许通过当前行为获利？',options:['暂不限制','建议限制 LIVE Gifts','证据不足']}];
  const jump=(i:number)=>{setStep(i);setNotice('');window.scrollTo(0,0);};
 
@@ -103,13 +102,7 @@ function DecisionRoom({item,at,saved,backend,onSave,onExit}:any){
  <InformationBrief item={item} at={at} variant={variant} evidence={evidence}/>
  <div className="brief-actions"><button className="inline-link" onClick={()=>jump(2)}>直接作出决定</button><button className="primary" onClick={()=>jump(1)}>听取部门意见<ArrowRight size={18}/></button></div>
  </>:step===1?<>
- <section className="executive-lead"><div><span className="eyebrow">讨论重点</span><h2>{delivery?.title||'明确处置范围'}</h2><p>{workbench.constraints||'选择处理路径，再听取相关部门的执行意见。'}</p></div></section>
- <ResponsePlan value={workbench} onChange={updateWorkbench}/>
- <div className="department-toolbar"><div className="department-toggle-group" aria-label="参与部门">{departments.map(d=>{const Icon=iconMap[d.id],selected=team.includes(d.id);return <button key={d.id} draggable aria-label={`参与${d.name}`} aria-pressed={selected} onDragStart={e=>e.dataTransfer.setData('text/plain',d.id)} onClick={()=>setTeam(t=>selected?t.filter(x=>x!==d.id):[...t,d.id])}><Icon size={19}/><span>{d.name}</span>{selected&&<Check size={13}/>}</button>})}</div><select aria-label="意见来源" value={mode} onChange={e=>setMode(e.target.value)}>{backend?.configured&&<option value="ai">DeepSeek 模拟</option>}<option value="preset">预设意见</option></select><button className="secondary" disabled={!team.length||Object.values(busy).some(Boolean)} onClick={()=>team.forEach(id=>ask(id,question))}>{Object.values(busy).some(Boolean)?'正在听取…':'听取意见'}</button></div>
- <div className="opinion-meter"><span>反馈 <b>{team.filter(id=>opinions[id]?.context===context).length} / {team.length}</b></span><span>异议 <b className="highlight-pink">{team.filter(id=>opinions[id]?.context===context&&opinions[id]?.stance==='oppose').length}</b></span><span>补证 <b className="highlight-amber">{team.filter(id=>opinions[id]?.context===context&&opinions[id]?.stance==='insufficient').length}</b></span></div>
- <div className={'brief-opinions '+(drop?'drag-over':'')} onDragOver={e=>{e.preventDefault();setDrop(true);}} onDragLeave={()=>setDrop(false)} onDrop={e=>{e.preventDefault();setDrop(false);addTeam(e.dataTransfer.getData('text/plain'));}}>{team.filter(id=>opinions[id]||busy[id]||errors[id]).map(id=>{const d=departments.find(x=>x.id===id)!,o=opinions[id],Icon=iconMap[id];return <article key={id} className="brief-opinion"><header><h3><Icon size={18}/>{d.name}</h3>{o&&<span className={'stance '+o.stance}>{stanceLabels[o.stance]}</span>}</header>{busy[id]?<p role="status">正在形成意见…</p>:o?<><p className="opinion-summary">{o.proposal.split(/(?<=[。！？])/)[0]}</p>{o.context!==context&&<p className="stale-label">方案已变，重新征询</p>}<details><summary>完整意见</summary><p>{o.proposal}</p><p>顾虑：{o.concern}</p><p>待补证：{o.missing_info}</p><p>调整条件：{o.change_condition}</p><small>{o.source} · {o.evidence_ids.join('、')}</small><form className="followup" onSubmit={e=>{e.preventDefault();const v=(e.currentTarget.elements.namedItem('followup') as HTMLInputElement).value;if(v.trim())ask(id,v);}}><input name="followup" aria-label={`追问${d.name}`} maxLength={500} placeholder="追问这个部门" required/><button type="submit">发送</button></form></details></>:<p>{d.question}</p>}{errors[id]&&<p className="warning-note" role="alert">{errors[id]}<button onClick={()=>ask(id,question)}>重试</button></p>}</article>;})}{!team.length&&<p>在下方添加部门，或拖入讨论区。</p>}</div>
- <details className="brief-detail"><summary>补充讨论问题</summary><label className="discussion-question">讨论问题<input value={question} maxLength={500} onChange={e=>setQuestion(e.target.value)} placeholder="这次需要部门回答什么？"/></label></details>
- <div className="brief-actions"><span>{stale>0?`${stale} 份意见待更新`:''}</span><button className="primary" onClick={()=>jump(2)}>作出决定<ArrowRight size={18}/></button></div>
+ <MeetingRoom item={item} team={team} onTeam={setTeam} opinions={opinions} errors={errors} context={context} onBegin={()=>{setOpinions({});setErrors({});}} onAsk={(id:string)=>ask(id)} onContinue={()=>jump(2)}/>
  </>:step===2?<>
  <DecisionFlow item={item} evidence={evidence} initial={initial} workbench={workbench} onChange={updateWorkbench}>
  <div className="decision-picks">{axes.map(a=><label key={a.id}><span>{a.label}</span><select aria-label={a.label} value={decisions[a.id]} onChange={e=>{setDecisions((v:any)=>({...v,[a.id]:e.target.value}));setCompleted(false);}}><option value="">选择处置</option>{a.options.map(o=><option key={o}>{o}</option>)}</select></label>)}</div>
