@@ -1,0 +1,72 @@
+/* Shared visual rules for the public dashboard and decision workflow. */
+.atlas-app{font-family:'TikTok Sans',-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif;--ui-ink:#161823;--ui-muted:#5e6b76;--ui-border:#dce4e8;--ui-hover:#f2f6f7;--ui-selected:#e1f8f6;--ui-selected-hover:#ccefeb;--ui-accent:#007b78;--ui-radius:10px;--ui-body:14px;--ui-small:12px;--ui-section:18px}
+.atlas-app ::selection{background:#b6f2ee;color:#161823}
+.atlas-app :is(input,textarea){caret-color:var(--ui-accent)}
+.atlas-app :is(input,textarea)::placeholder{color:var(--ui-muted);opacity:1}
+.atlas-app :is(button,input,select,textarea){font-family:inherit}
+.atlas-app :is(h1,h2,h3){text-wrap:balance;letter-spacing:-.02em;line-height:1.4}
+.atlas-app :is(button,summary,a){transition:background-color .16s ease,color .16s ease,border-color .16s ease}
+.atlas-app button:not(.primary):not(.secondary):not(:disabled):hover{background-color:var(--ui-hover);color:var(--ui-ink);border-color:#aebfc5}
+.atlas-app button:is(.active,.selected,.chosen,[aria-pressed=true],[aria-selected=true]):not(.primary):not(.secondary){background-color:var(--ui-selected);color:#006965;border-color:#63bdb7}
+.atlas-app button:is(.active,.selected,.chosen,[aria-pressed=true],[aria-selected=true]):not(.primary):not(.secondary):not(:disabled):hover{background-color:var(--ui-selected-hover);color:#005e5b;border-color:#26968e}
+.atlas-app .atlas-header nav button,.atlas-app .atlas-header nav button.selected{background:transparent;color:var(--ui-ink);border-color:transparent}
+.atlas-app .atlas-header nav button:hover{color:var(--ui-accent)}
+.atlas-app .flow-steps button{border-radius:12px;font-size:14px}
+.atlas-app .flow-steps button.active{background:var(--ui-selected);color:var(--ui-ink)}
+.atlas-app :is(.primary,.secondary){min-height:44px;padding:11px 18px;font-size:14px;font-weight:600;line-height:1.4;border-radius:8px;gap:8px}
+.atlas-app :is(button,a,summary,input,select,textarea):focus-visible{outline:2px solid var(--ui-accent);outline-offset:3px}
+.atlas-app :is(.content-heading h1,.decision-heading h1,.watch-title h1,.intro h1){font-size:28px;line-height:1.3}
+.atlas-app :is(.decision-page h2,.content-page h2,.tech-card h2){font-size:var(--ui-section);font-weight:650}
+.atlas-app .content-heading{margin-bottom:28px}
+.atlas-app .content-page>.technology{padding:0}
+.atlas-app .tech-grid{gap:24px 32px}
+.atlas-app .tech-card{padding:24px 0;display:flex;flex-direction:column;gap:0}
+.atlas-app .tech-card h2{margin:20px 0 12px}
+.atlas-app .tech-card .update-title{font-size:18px;line-height:1.5;padding:0;text-align:left}
+.atlas-app .tech-card-conclusion{font-size:14px;font-weight:500;line-height:1.75;margin:0 0 16px}
+.atlas-app .tech-facts-disclosure{margin:0 0 16px;font-size:13px;color:var(--ui-muted)}
+.atlas-app .tech-facts-disclosure summary{padding:8px 0;cursor:pointer}
+.atlas-app .tech-use{padding:14px 16px;border:0;background:#f5f8f9;border-radius:8px;margin-top:auto}
+.atlas-app .tech-use p{font-size:14px;line-height:1.75;margin:0}
+.atlas-app .tech-card-footer{font-size:12px;color:var(--ui-muted);margin-top:16px}
+.atlas-app :is(.tech-status,.tech-card-facts,.tech-filters>span){color:var(--ui-muted)}
+.atlas-app .event{padding:20px 16px}
+.atlas-app .event>p{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;line-height:1.75;font-size:14px}
+.atlas-app .event h3{font-size:17px;line-height:1.5}
+.atlas-app .event footer{font-size:12px;color:var(--ui-muted)}
+.atlas-app .case-index>button{padding:22px 16px;gap:16px}
+.atlas-app .case-index h2{margin:0 0 8px;font-size:18px}
+.atlas-app .case-index p{font-size:13px;color:var(--ui-muted)}
+.atlas-app .information-intro{padding:0;border:0;margin:22px 0}
+.atlas-app .information-intro>p{margin:0;font-size:15px;line-height:1.75}
+.ai-source{display:inline-block;font-size:12px;font-weight:600;color:var(--ui-accent);margin-right:14px}
+.atlas-app .info-unknown{border-left:0;padding:16px 18px}
+.atlas-app :is(.info-facts dt,.info-evidence-meta,.info-creator>div>span,.info-gift-metrics>div>span,.spine-label>span,.matrix-head,.risk-slider-ticks){font-size:12px;color:var(--ui-muted)}
+.atlas-app :is(.info-facts dd,.info-evidence li>p,.info-policy-cue p,.info-policy-basics p,.spine-content>p,.qual-insight blockquote,.signal-actions){font-size:14px;line-height:1.75}
+.atlas-app .info-facts{gap:18px 24px}
+.atlas-app .info-policy-basics{margin-top:20px;padding-top:20px}
+.atlas-app .decision-picks :is(label,select),.atlas-app .reason-field textarea{font-size:14px}
+.atlas-app .spine-label h3{font-size:16px}
+.atlas-app .risk-slider-heading output{font-size:12px}
+.atlas-app .risk-sliders{gap:24px}
+.atlas-app .meeting-controls,.atlas-app .meeting-room>.brief-actions{justify-content:flex-end}
+.atlas-app :is(.meeting-attendance small,.meeting-status,.meeting-log-title b,.meeting-message small,.qual-insight small){font-size:12px;color:var(--ui-muted)}
+.atlas-app .meeting-seat{opacity:1}
+.atlas-app .meeting-seat:not([aria-pressed=true]){background:#fff;color:#566b70;border-color:#b5c6c8}
+.atlas-app .meeting-seat:disabled{opacity:1;cursor:wait}
+.atlas-app :is(.meeting-message p,.meeting-minutes p){font-size:14px;line-height:1.75}
+.atlas-app .meeting-log{scrollbar-width:thin;scrollbar-color:#a2b9bc #f4f7f8}
+.atlas-app .meeting-empty p{color:var(--ui-muted);font-size:13px}
+.atlas-app .meeting-heading h2{margin-bottom:8px}
+.atlas-app .matrix-row{min-height:46px;padding:12px 14px}
+.atlas-app .matrix-head{padding:0 14px 12px}
+.atlas-app .qual-insight h3{font-size:16px;margin:0 0 14px}
+.atlas-app .qual-insight{padding:22px}
+.atlas-app .chart-heading{margin-top:28px}
+.atlas-app .review-tabs{margin-bottom:16px}
+.atlas-app .compare-chart{padding:20px;margin:0 0 24px}
+.atlas-app .compare-chart p{line-height:1.6}
+.atlas-app :is(.method-card,.method-fold){border-top-width:1px;background:#fff;box-shadow:none}
+@media(prefers-reduced-motion:reduce){.atlas-app :is(button,summary,a){transition:none}}
+
+.atlas-app .technology-overview{padding-left:0;padding-right:0}.atlas-app .tech-use{margin-top:0}.atlas-app .tech-card-top{margin-bottom:0}.atlas-app .info-evidence-meta,.atlas-app .gift-table{font-variant-numeric:tabular-nums}

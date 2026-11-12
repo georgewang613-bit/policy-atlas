@@ -37,7 +37,7 @@ export default function Technology(){
    <div className="tech-card-top"><span className="tech-category"><DirectionIcon kind={accent.icon}/>{x.category}</span><span className="tech-status">{x.status}</span></div>
    <h2><button className="update-title" ref={el=>{if(el)buttons.current.set(x.id,el);else buttons.current.delete(x.id);}} onClick={()=>open(x)}>{x.title}<span aria-hidden="true">↗</span></button></h2>
    <p className="tech-card-conclusion">{organizationNames(x.conclusion)}</p>
-   <TextPoints className="tech-card-facts" text={x.fact}/>
+   <details className="tech-facts-disclosure"><summary>研究细节</summary><TextPoints className="tech-card-facts" text={x.fact}/></details>
    <div className="tech-use"><span>直播应用</span><p>{organizationNames(x.liveUse)}</p></div>
    <div className="tech-card-footer"><time dateTime={x.publishedAt||undefined}>{x.publishedAt||'发布日期未列'}</time><span>{organizationNames(x.sources[0].publisher,false)} · {x.sources.length} 项来源</span></div>
   </article>;})}</div>
