@@ -112,8 +112,8 @@ function DecisionRoom({item,at,saved,backend,onSave,onExit}:any){
  </>:<>
  <section className="executive-lead"><div><span className="eyebrow">{completed?'决定已保存':'复盘预览'}</span><h2>先修复误伤，再决定扩量</h2><p>{reason||'在示例数据中，风险暴露下降，但 Precision 同时下降。'}</p></div></section>
  <div className="decision-summary">{axes.map(a=><div key={a.id}><span>{a.label}</span><strong>{decisions[a.id]||'尚未决定'}</strong></div>)}</div>
+ <details className="brief-detail execution-plan" open><summary>执行计划{workbench.owner?` · ${workbench.owner}`:''}</summary><p>{workbench.trigger||'设置复核条件，分阶段推进。'}</p><PolicyOwner stage={3} value={workbench} onChange={updateWorkbench} item={item}/></details>
  <ReviewChart/>
- <details className="brief-detail"><summary>执行计划{workbench.owner?` · ${workbench.owner}`:''}</summary><p>{workbench.trigger||'设置复核条件，分阶段推进。'}</p><PolicyOwner stage={3} value={workbench} onChange={updateWorkbench} item={item}/></details>
  <div className="brief-actions"><button className="inline-link" onClick={()=>download(`${item.id}-研判.json`,{...state(),source:'Policy Atlas 情境推演',evidence})}><DownloadSimple size={18}/>导出研判</button><button className="primary" onClick={()=>{onSave(state());onExit();}}>返回看台<ArrowRight size={18}/></button></div>
  </>}
  </main>;
