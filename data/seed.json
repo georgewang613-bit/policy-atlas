@@ -1,16 +1,16 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-11-11",
-  "reviewedAt": "2026-11-11T13:01:46.460Z",
+  "updatedAt": "2026-11-12",
+  "reviewedAt": "2026-11-12T13:02:36.268Z",
   "briefTitle": "今日重点",
   "briefEventIds": [
+    "es-tiktok-csam-investigation",
     "eu-dfa-frontier",
     "eu-tiktok-addictive-design",
-    "au-duty-bill",
-    "fr-genai-vulnerability-report"
+    "au-duty-bill"
   ],
-  "runStatus": "49条政策 · 18条技术动态 · 欧盟DFA正式提案",
-  "brief": "欧盟委员会11月11日正式提出Digital Fairness Act法规草案，政策窗口从“酝酿”进入议会与理事会审议。草案直接触及LIVE礼物币价展示、未成年人付费虚拟货币、可变奖励和成瘾性设计，但尚未生效，也没有可执行截止日。现在应做条款到LIVE功能的差距盘点和可逆准备，不应把草案当作现行义务。过去24小时主要市场和美国州级重点复核未发现其他足以改变既有记录阶段的官方材料；技术侧未发现需要新增的实质发布。本轮不代表完整全球覆盖。",
+  "runStatus": "50条政策 · 18条技术动态 · 西班牙儿童安全调查",
+  "brief": "西班牙检察机关11月11日正式调查TikTok上涉嫌儿童性虐待内容及未成年人腐败行为，官方公告列出的举报场景包括内容传播、推荐，以及直播中出现未成年人并伴随经济补偿。AEPD采取的是调取信息并准备阻断构成非法数据处理的具体链接和内容，并未下令全面暂停TikTok，也尚无最终违法认定。对LIVE应立即联查画面、搜索与推荐路径、评论、账户网络和礼物时间戳，保全证据并启用人工紧急升级。过去24小时主要市场和美国州级复核未发现其他足以改变既有事件阶段的官方材料；技术侧未发现需要新增的实质发布。本轮不代表完整全球覆盖。",
   "events": [
     {
       "id": "ny-safe",
@@ -4379,10 +4379,93 @@
           "access": "官方网页正文"
         }
       ]
+    },
+    {
+      "id": "es-tiktok-csam-investigation",
+      "region": "西班牙",
+      "code": "Spain",
+      "xy": [
+        -3.7,
+        40.4
+      ],
+      "topic": "有害内容",
+      "title": "TikTok儿童性虐待内容：检察机关与AEPD启动调查",
+      "stage": "刑事调查 / 监管处置中",
+      "eventDate": "2026-11-11",
+      "deadline": null,
+      "priority": "P0",
+      "fact": "西班牙检察总长11月11日签署决定，指定网络犯罪检察官调查可能发生在TikTok上的儿童性虐待内容制作、传播及未成年人腐败相关犯罪。官方公告说明，举报涉及材料发布、传播和销售、相关内容推荐，以及直播中出现未成年人并伴随经济补偿。AEPD另已启动权限范围内的行动，要求提供具体链接并向TikTok索取下架信息，待分析后可针对构成未成年人数据非法处理的具体链接和内容下达阻断。",
+      "impact": "该案同时触及LIVE画面、推荐扩散和经济补偿链路。当前应把儿童性虐待内容识别、直播紧急中止、证据保存、打赏与账户关联、搜索推荐降扩散和跨机构报送放在同一事件链中检查，而不是只复核单条视频是否下架。",
+      "action": "立即抽查西班牙语及相关变体的直播、搜索、评论和推荐逃逸模式；对高可信儿童性虐待信号启用人工紧急升级，保全直播片段、推荐路径、礼物与账户时间戳，并由法务和隐私团队统一响应检察机关、AEPD及爱尔兰DPC的正式要求。未经具体命令，不把全面暂停平台作为既定处置。",
+      "scope": "这是针对涉嫌犯罪和具体数据处理的调查及后续定向阻断安排，不是法院终局认定，也不是AEPD已经命令TikTok在西班牙全面停运。TikTok在欧洲的主要监管机构仍为爱尔兰DPC；AEPD说明其直接措施限于法定例外情形。",
+      "source": "https://www.fiscal.es/-/la-fiscal-general-encomienda-a-la-fiscal-de-criminalidad-inform%C3%A1tica-la-investigaci%C3%B3n-de-los-presuntos-casos-de-abuso-sexual-infantil-en-tiktok",
+      "checkedAt": "2026-11-12",
+      "confidence": "官方调查公告",
+      "history": [
+        {
+          "date": "2026-11-11",
+          "event": "检察总长指定网络犯罪检察官调查举报所涉儿童性虐待内容及未成年人腐败相关犯罪；AEPD同步启动信息调取和针对具体链接的审查。"
+        }
+      ],
+      "review": "独立研究建议 · 非法律签批",
+      "lawId": "Fiscalía General del Estado decree / GDPR Article 66 / LOPDGDD Article 84.2",
+      "instrument": "刑事调查与数据保护监管行动",
+      "topics": [
+        "未成年人保护",
+        "有害内容",
+        "隐私与数据"
+      ],
+      "scenarios": [
+        "直播内容",
+        "推荐分发",
+        "礼物与变现"
+      ],
+      "appliesTo": "西班牙检察机关调查的涉嫌犯罪事实，以及AEPD权限范围内涉及未成年人数据的具体链接和内容；不等同于对平台整体作出违法认定。",
+      "priorityReason": "涉及儿童性虐待内容、直播中未成年人及经济补偿，属于即时重大伤害；监管与刑事调查已启动，应立即核查风险链路，但不存在已公布的统一合规截止日。",
+      "owners": [
+        "LIVE Policy",
+        "Trust & Safety",
+        "Legal",
+        "Privacy",
+        "Operations"
+      ],
+      "deliverable": "西班牙语风险模式与账号网络清单、直播—推荐—礼物时间线、紧急升级记录、证据保全包及对监管请求的逐项响应台账。",
+      "uncertainty": "官方公告记录的是举报内容和待调查事项，不证明TikTok、具体账户或推荐系统已被最终认定违法；AEPD尚未公布具体阻断链接、决定编号或完成时间。",
+      "titleEn": "Spain opens TikTok child sexual abuse content investigations",
+      "reviewStatus": "官方调查公告核对 / 尚无最终认定",
+      "sourceCheckedAt": "2026-11-12T13:02:36.268Z",
+      "effectiveDate": null,
+      "deadlineType": "无统一实施期限；具体命令另行响应",
+      "statusEvidence": "已核对西班牙检察机关与AEPD的11月11日官方公告；两者均为调查或待执行的定向措施，不支持“平台已被全面暂停”或“违法已终局认定”。",
+      "policyImplication": {
+        "direction": "把儿童性虐待内容识别、直播紧急中止、证据保存、打赏链路和推荐降扩散作为同一套高危事件控制，而不是相互独立的审核动作。",
+        "proposal": "立即开展西班牙语与变体红队抽查，检查直播画面、语音、评论、搜索词、推荐路径及礼物时间戳；高可信事件进入人工紧急通道并保全证据。",
+        "trigger": "当前即启动风险核查；收到检察机关、AEPD、爱尔兰DPC或欧盟委员会的具体请求或命令后，按对象、地域和期限执行并留痕。",
+        "tradeoff": "对儿童性虐待风险应快速处置，同时把阻断限定在有证据支持的内容、链接和账户网络，避免用未经核实的举报推导平台整体责任或实施不成比例的普遍限制。",
+        "validation": "用独立复核样本验证检出率、紧急处置时长、重复传播率和误伤率；回放直播—推荐—礼物全链路确认控制是否真正切断扩散与获利。"
+      },
+      "evidence": [
+        {
+          "url": "https://www.fiscal.es/-/la-fiscal-general-encomienda-a-la-fiscal-de-criminalidad-inform%C3%A1tica-la-investigaci%C3%B3n-de-los-presuntos-casos-de-abuso-sexual-infantil-en-tiktok",
+          "publisher": "Fiscalía General del Estado",
+          "locator": "11 November 2026 · decree and complaint summary",
+          "checkedAt": "2026-11-12T13:02:36.268Z",
+          "supports": "刑事调查启动、调查对象及举报所述直播和经济补偿场景；不支持最终违法认定",
+          "access": "官方网页正文"
+        },
+        {
+          "url": "https://www.aepd.es/prensa-y-comunicacion/notas-de-prensa/agencia-espanola-de-proteccion-de-datos-ante-la-difusion-tiktok-abuso-sexual-infantil",
+          "publisher": "Agencia Española de Protección de Datos",
+          "locator": "11 November 2026 · actuaciones de la AEPD",
+          "checkedAt": "2026-11-12T13:02:36.268Z",
+          "supports": "信息调取、针对具体链接和内容的拟议阻断、跨境监管边界；不支持全面停运",
+          "access": "官方公告正文"
+        }
+      ]
     }
   ],
   "collection": {
-    "lastSuccess": "2026-11-11",
+    "lastSuccess": "2026-11-12",
     "schedule": "每天北京时间21:00研究更新",
     "failedSources": [
       "TikTok LIVE Monetization Guidelines：页面可定位但正文未由检索工具获取",
@@ -4404,7 +4487,8 @@
       "2026-11-09 arXiv检索工具正文读取失败，已通过云端直接取得2610.35335v1全文并核对方法、结果和限制。",
       "2026-11-10 澳大利亚议会Digital Duty of Care委员会页面仍被robots.txt阻止；未据媒体或部长表态推进法案阶段。",
       "2026-11-10 土耳其官方公报20261010-15.pdf仅提取到首页元数据；保留11月1日已逐页核实记录及旧checkedAt，不新增结论。",
-      "2026-11-11 西班牙青年部长要求TikTok暂停服务的Reuters线索：本轮未在政府、检察机关或AEPD官方页面定位到相应正式决定或程序文件，未新增记录。"
+      "2026-11-11 西班牙青年部长要求TikTok暂停服务的Reuters线索：当轮未定位正式文件；2026-11-12已取得检察机关和AEPD官方公告并补录，官方行动为刑事调查及针对具体链接的监管审查，不是全面停运命令。",
+      "2026-11-12 BBC检索继续受robots.txt限制；未将无法核实的媒体页面作为法律状态依据。"
     ]
   }
 }
