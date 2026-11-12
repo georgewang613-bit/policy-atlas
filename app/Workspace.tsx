@@ -6,7 +6,9 @@ import us from 'us-atlas/states-10m.json';
 import {incidents,streams,departments,caseEvidence,presetOpinion,DEMO_VERSION} from '../data/live-demo.mjs';
 import LegacyPage from './page';
 import {insetRegions} from '../data/live-geography.mjs';
-import PolicyOwner from './components/PolicyOwner';
+import ExecutionTimeline from './components/ExecutionTimeline';
+import {decisionAxes,normalizeDecisions} from '../data/case-briefing.mjs';
+import {exportCasePdf} from '../lib/export-pdf';
 import InformationBrief from './components/InformationBrief';
 import {LiveMetrics,GiftTimeline,ReviewChart} from './components/DecisionBrief';
 import MeetingRoom from './components/MeetingRoom';
@@ -72,7 +74,7 @@ function DecisionRoom({item,at,saved,backend,onSave,onExit}:any){
  const [step,setStep]=useState(seedState?.step??0),[variant,setVariant]=useState(seedState?.variant??false),[prediction,setPrediction]=useState(seedState?.prediction||'');
  const [initial,setInitial]=useState(seedState?.initial||''),[team,setTeam]=useState<string[]>(seedState?.team||['safety','ops','legal']);
  const [opinions,setOpinions]=useState<any>(seedState?.opinions||{}),[busy,setBusy]=useState<any>({}),[errors,setErrors]=useState<any>({});
- const mode=backend?.configured?'ai':'preset';const [decisions,setDecisions]=useState<any>(seedState?.decisions||{content:'',recommendation:'',monetization:''});
+ const mode=backend?.configured?'ai':'preset';const [decisions,setDecisions]=useState<any>(()=>normalizeDecisions(seedState?.decisions));
  const [reason,setReason]=useState(seedState?.reason||''),[openAxis,setOpenAxis]=useState('monetization'),[question,setQuestion]=useState('');
  const [follow,setFollow]=useState(''),[drop,setDrop]=useState(false),[original,setOriginal]=useState<any>(seedState?.original||null),[notice,setNotice]=useState('');
  const [workbench,setWorkbench]=useState<any>(seedState?.workbench||{});
@@ -81,7 +83,7 @@ function DecisionRoom({item,at,saved,backend,onSave,onExit}:any){
  const [completed,setCompleted]=useState(Boolean(seedState?.completed&&seedState?.at===at));const mounted=useRef(true),run=useRef(0);
  useEffect(()=>{mounted.current=true;return()=>{mounted.current=false;run.current++;};},[]);
  const updateWorkbench=(v:any)=>{const {day,weekOpen,challenge,review,...next}=v;if(JSON.stringify(next)!==JSON.stringify(ownerDraft))setCompleted(false);setWorkbench(v);};
- const evidence=caseEvidence(item,variant,at);const context=JSON.stringify({version:DEMO_VERSION,at,variant,evidence,gifting:policyContext(item,variant,at).gifting,decisions,reason,ownerDraft,delivery});
+ const evidence=caseEvidence(item,variant,at);const context=JSON.stringify({version:DEMO_VERSION,at,variant,evidence,gifting:policyContext(item,variant,at).gifting});
  const state=()=>({version:DEMO_VERSION,caseId:item.id,at,step,variant,initial,team,opinions,decisions,reason,workbench,original,prediction,completed,savedAt:new Date().toISOString()});
  const autosave=JSON.stringify({...state(),savedAt:undefined});
  useEffect(()=>{try{const all=loadDrafts();if(all[item.id]&&(all[item.id].version!==DEMO_VERSION||all[item.id].at!==at))localStorage.setItem(`${saveKey}-archive-${item.id}-${Date.now()}`,JSON.stringify(all[item.id]));localStorage.setItem(saveKey,JSON.stringify({...all,[item.id]:state()}));}catch{setNotice('自动保存失败，请导出研判。');}},[autosave]);
@@ -91,7 +93,7 @@ function DecisionRoom({item,at,saved,backend,onSave,onExit}:any){
   let o;if(mode==='preset')o=presetOpinion(id,item,variant);else{const response=await fetch('./api/opinions',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({caseId:item.id,department:id,variant,at,question:q,draft:JSON.stringify({decisions,reason,workbench:ownerDraft,delivery})}),signal:AbortSignal.timeout(35000)});const body=await response.json();if(!response.ok)throw new Error(body.error||'服务未返回意见。');o=body;}
   if(mounted.current&&run.current===current)setOpinions((s:any)=>({...s,[id]:{...o,context:ctx,question:q}}));
  }catch(e:any){if(mounted.current&&run.current===current)setErrors((s:any)=>({...s,[id]:e.name==='TimeoutError'?'本轮响应超时，重新开会可重试。':e.message}));}finally{if(mounted.current&&run.current===current)setBusy((s:any)=>({...s,[id]:false}));}};
- const axes=[{id:'content',label:'Content',question:'这场直播是否继续？',options:['暂不限制','建议限制相关内容','证据不足']},{id:'recommendation',label:'For You feed',question:'是否继续扩大曝光？',options:['暂不限制','For You feed ineligible','证据不足']},{id:'monetization',label:'Monetization',question:'是否允许通过当前行为获利？',options:['暂不限制','建议限制 LIVE Gifts','证据不足']}];
+ const axes=decisionAxes;
  const jump=(i:number)=>{setStep(i);setNotice('');window.scrollTo(0,0);};
 
  const stale=Object.entries(opinions).filter(([id,o]:any)=>team.includes(id)&&o.context!==context).length;
@@ -105,17 +107,17 @@ function DecisionRoom({item,at,saved,backend,onSave,onExit}:any){
  </>:step===1?<>
  <MeetingRoom item={item} team={team} onTeam={setTeam} opinions={opinions} errors={errors} context={context} onBegin={()=>{setOpinions({});setErrors({});}} onAsk={(id:string)=>ask(id)} onContinue={()=>jump(2)}/>
  </>:step===2?<>
- <DecisionFlow item={item} evidence={evidence} initial={initial} workbench={workbench} onChange={updateWorkbench}>
- <div className="decision-picks">{axes.map(a=><label key={a.id}><span>{a.label}</span><select aria-label={a.label} value={decisions[a.id]} onChange={e=>{setDecisions((v:any)=>({...v,[a.id]:e.target.value}));setCompleted(false);}}><option value="">选择处置</option>{a.options.map(o=><option key={o}>{o}</option>)}</select></label>)}</div>
+ <DecisionFlow item={item} evidence={evidence}>
+ <div className="decision-picks decision-sliders">{axes.map(a=>{const index=a.options.indexOf(decisions[a.id]);return <label className="risk-slider" key={a.id}><span className="risk-slider-heading"><b>{a.label}</b><output>{decisions[a.id]}</output></span><input type="range" aria-label={a.label} aria-valuetext={decisions[a.id]} min="0" max="2" step="1" value={index} style={{'--risk-fill':`${index*50}%`,'--risk-color':index===2?'#fe2c55':'#008b86'} as any} onChange={e=>{setDecisions((v:any)=>({...v,[a.id]:a.options[Number(e.target.value)]}));setCompleted(false);}}/><span className="risk-slider-ticks">{a.short.map(t=><span key={t}>{t}</span>)}</span></label>})}</div>
  <label className="reason-field">决定理由<textarea value={reason} maxLength={1000} rows={2} onChange={e=>{setReason(e.target.value);setCompleted(false);}} placeholder="一句话说明关键证据、处置范围和取舍。"/></label>
  </DecisionFlow>
- <div className="brief-actions"><button className="inline-link" onClick={()=>jump(1)}>返回部门意见</button><button className="primary" onClick={()=>{if(!Object.values(decisions).every(Boolean)||reason.trim().length<5){setNotice('请完成三项处置和决定理由。');return;}if(decisions.recommendation==='For You feed ineligible'&&decisions.monetization==='暂不限制'){setNotice('FYF ineligible 时，Monetization 也不符合资格，请调整变现处置。');return;}setCompleted(true);onSave({...state(),completed:true,step:3});jump(3);}}>记录决定<CheckCircle size={18}/></button></div>
+ <ExecutionTimeline item={item}/>
+ <div className="brief-actions"><button className="inline-link" onClick={()=>jump(1)}>返回部门意见</button><button className="primary" onClick={()=>{if(decisions.recommendation==='For You feed ineligible'&&decisions.monetization==='暂不限制'){setNotice('FYF ineligible 时，Monetization 也不符合资格，请调整变现处置。');return;}setCompleted(true);onSave({...state(),completed:true,step:3});jump(3);}}>记录决定<CheckCircle size={18}/></button></div>
  </>:<>
  <section className="executive-lead"><div><h2>先修复误伤，再决定扩量</h2><p>{reason||'在示例数据中，风险暴露下降，但 Precision 同时下降。'}</p></div></section>
  <div className="decision-summary">{axes.map(a=><div key={a.id}><span>{a.label}</span><strong>{decisions[a.id]||'尚未决定'}</strong></div>)}</div>
- <details className="brief-detail execution-plan" open><summary>执行计划{workbench.owner?` · ${workbench.owner}`:''}</summary>{workbench.trigger&&<p>{workbench.trigger}</p>}<PolicyOwner stage={3} value={workbench} onChange={updateWorkbench} item={item}/></details>
  <ReviewChart/>
- <div className="brief-actions"><button className="inline-link" onClick={()=>download(`${item.id}-研判.json`,{...state(),source:'Policy Atlas 情境推演',evidence})}><DownloadSimple size={18}/>导出研判</button><button className="primary" onClick={()=>{onSave(state());onExit();}}>返回看台<ArrowRight size={18}/></button></div>
+ <div className="brief-actions"><button className="inline-link" onClick={()=>exportCasePdf(item,evidence,decisions,reason,team,opinions,context,at,variant).catch(()=>setNotice('PDF 生成失败，请重试。'))}><DownloadSimple size={18}/>导出简报 PDF</button><button className="primary" onClick={()=>{onSave(state());onExit();}}>返回看台<ArrowRight size={18}/></button></div>
  </>}
  </main>;
 }
