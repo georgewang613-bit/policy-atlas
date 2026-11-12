@@ -7,6 +7,7 @@ import {incidents,streams,departments,caseEvidence,presetOpinion,DEMO_VERSION} f
 import LegacyPage from './page';
 import {insetRegions} from '../data/live-geography.mjs';
 import PolicyOwner from './components/PolicyOwner';
+import InformationBrief from './components/InformationBrief';
 import {LiveMetrics,GiftTimeline,ReviewChart} from './components/DecisionBrief';
 import {responsePaths} from '../data/response-paths.mjs';
 import ResponsePlan from './components/ResponsePlan';
@@ -96,17 +97,11 @@ function DecisionRoom({item,at,saved,backend,onSave,onExit}:any){
  const stale=Object.entries(opinions).filter(([id,o]:any)=>team.includes(id)&&o.context!==context).length;
  return <main className="decision-page executive-page"><div className="decision-top"><button className="inline-link" onClick={()=>{onSave(state());onExit();}}><ArrowLeft size={18}/>返回</button><span>{item.id} · 情境推演{variant?' · 条件已改变':''}</span><button className="inline-link" onClick={()=>onSave(state())}>保存进度</button></div><div className="decision-heading"><h1>{item.title}</h1><p>{item.city} · {item.scene} · 证据截至 {displayTime(at)}</p></div>
  {seedState&&seedState.at!==at&&<p className="warning-note">Replay 时刻已改变，原记录已归档。旧意见需按当前证据和 Gifting 重新核对，本次研判尚未完成。</p>}{archives.length>0&&<button className="inline-link" onClick={()=>download(`${item.id}-历史归档.json`,archives.map(k=>JSON.parse(localStorage.getItem(k)||'null')))}>导出历史归档</button>}{saved&&saved.version!==DEMO_VERSION&&<p className="warning-note">旧记录属于其他案例版本，未自动沿用。<button onClick={()=>download(`${item.id}-旧版.json`,saved)}>导出旧记录</button></p>}
- <nav className="flow-steps" aria-label="研判步骤">{['风险摘要','部门意见','决定','复盘'].map((t,i)=><button key={t} className={step===i?'active':''} aria-current={step===i?'step':undefined} onClick={()=>jump(i)}><span>{i+1}</span>{t}</button>)}</nav>
+ <nav className="flow-steps" aria-label="研判步骤">{['信息汇总','部门意见','决定','复盘'].map((t,i)=><button key={t} className={step===i?'active':''} aria-current={step===i?'step':undefined} onClick={()=>jump(i)}><span>{i+1}</span>{t}</button>)}</nav>
  {notice&&<p className="warning-note" role="alert">{notice}</p>}
  {step===0?<>
- <section className="executive-lead"><div><span className="eyebrow">需要判断</span><h2>{initial||(item.id==='LA-1042'||item.id==='MIA-4088'?'优先核实即时伤害':'先核对行为成立要件')}</h2><p>“{variant&&item.variant.evidenceId==='E1'?item.variant.text:item.quote}”</p></div><Tag urgent={item.priority==='优先'}>{item.category}</Tag></section>
- <LiveMetrics item={item} at={at} variant={variant}/>
- <GiftTimeline item={item} at={at} variant={variant}/>
- <div className="brief-split"><section><h3>关键未知</h3><p>{variant?'核实改变后的事实及其对处置范围的影响。':item.known}</p></section><section><h3>初步判断</h3><div className="brief-choices">{['先核实即时伤害','先补齐行为证据','信息不足，先升级咨询'].map(t=><button key={t} aria-pressed={initial===t} onClick={()=>setInitial(t)}>{t}</button>)}</div></section></div>
- <details className="brief-detail"><summary>查看证据 · {evidence.length} 条</summary><ol className="evidence-timeline">{evidence.map((e:any)=><li key={e.id}><time>{displayTime(e.at)}</time><div><strong>{e.id}</strong><p>{e.text}</p><small>{e.source}</small></div></li>)}</ol></details>
- <LiveContext item={item} at={at} variant={variant} compact/>
- <details className="brief-detail"><summary>深入研判</summary><PolicyOwner stage={0} value={workbench} onChange={updateWorkbench} item={item}/></details>
- <div className="brief-actions"><button className="inline-link" onClick={()=>jump(2)}>直接作出决定</button><button className="primary" onClick={()=>{if(!initial){setNotice('先选择初步判断。');return;}jump(1);}}>听取部门意见<ArrowRight size={18}/></button></div>
+ <InformationBrief item={item} at={at} variant={variant} evidence={evidence}/>
+ <div className="brief-actions"><button className="inline-link" onClick={()=>jump(2)}>直接作出决定</button><button className="primary" onClick={()=>jump(1)}>听取部门意见<ArrowRight size={18}/></button></div>
  </>:step===1?<>
  <section className="executive-lead"><div><span className="eyebrow">讨论重点</span><h2>{delivery?.title||'明确处置范围'}</h2><p>{workbench.constraints||'选择处理路径，再听取相关部门的执行意见。'}</p></div></section>
  <ResponsePlan value={workbench} onChange={updateWorkbench}/>
