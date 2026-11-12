@@ -22,7 +22,7 @@ function BoundaryPractice(){
     {answer!==undefined&&<div className="practice-feedback" role="status"><h4>{answer===item.answer?'与参考判断一致':'再看缺少的证据'}</h4><p><strong>参考判断：</strong>{item.options[item.answer]}</p><dl><div><dt>证据</dt><dd>{item.evidence}</dd></div><div><dt>边界</dt><dd>{item.boundary}</dd></div><div><dt>处置建议</dt><dd>{item.action}</dd></div><div><dt>追问</dt><dd>{item.followup}</dd></div></dl></div>}
    </article>
   </section>
-  <section className="practice-section"><h2>证据强度和处罚强度分开考虑</h2><div className="practice-grid">
+  <section className="practice-section"><h2>处置尺度</h2><div className="practice-grid">
    <article><h3>不确定</h3><p>补充前后语境和发言人证据。对本条不作确定违规结论；如果有即时安全风险，使用对应保护措施。</p></article>
    <article><h3>已确认，较轻</h3><p>根据适用规则考虑提示或警告，说明哪段行为越界。警告也是有影响的决定，不能免于质量检查。</p></article>
    <article><h3>已确认，严重或反复</h3><p>考虑相关变现功能限制；严重、持续或永久限制应有更充分证据、人工复核和可用申诉。不能只因模型分数高就加重处罚。</p></article>
@@ -78,6 +78,6 @@ export default function PolicyPractice(){
    {section==='首月评估'&&<Evaluation/>}
    {section==='场景迁移'&&<section className="practice-section"><h2>同一套方法，换四种场景</h2><p>先找伤害机制，再找成立要件、反例与验证方法。以下均为虚构情景；不推断任何真实平台、主播或用户已违规。</p><div className="transfer-grid">{transferCases.map(c=><article key={c.title}><h3>{c.title}</h3><p className="practice-quote">{c.question}</p><dl><div><dt>判断原则</dt><dd>{c.principle}</dd></div><div><dt>需要证据</dt><dd>{c.evidence}</dd></div><div><dt>处理建议</dt><dd>{c.response}</dd></div><div><dt>效果检查</dt><dd>{c.measure}</dd></div></dl></article>)}</div></section>}
   </div>
-  <section className="practice-sources" aria-label="案例依据"><h2>依据和边界</h2><p className="practice-source-warning">最新 LIVE Monetization Guidelines 正文尚未取得；本页不把案例细化边界当作已核验的官方条款。公开事实、方法借鉴和项目建议按下列说明使用。</p>{studySources.map(s=><details id={'lab-source-'+s.id} className="practice-fold" key={s.id}><summary>{s.id} · {s.title}<span>{s.status}</span></summary><div><p>{s.note}</p><a href={s.url} target="_blank" rel="noreferrer">{s.publisher} · 查看原文 ↗</a><p className="practice-muted">{s.status==='已核对'?'核对':'尝试读取'}：{studyDate}</p></div></details>)}</section>
+  <section className="practice-sources" aria-label="案例依据"><h2>依据</h2><p className="practice-source-warning">最新 LIVE Monetization Guidelines 正文尚未取得；本页不把案例细化边界当作已核验的官方条款。公开事实、方法借鉴和项目建议按下列说明使用。</p>{studySources.map(s=><details id={'lab-source-'+s.id} className="practice-fold" key={s.id}><summary>{s.id} · {s.title}<span>{s.status}</span></summary><div><p>{s.note}</p><a href={s.url} target="_blank" rel="noreferrer">{s.publisher} · 查看原文 ↗</a><p className="practice-muted">{s.status==='已核对'?'核对':'尝试读取'}：{studyDate}</p></div></details>)}</section>
  </div>;
 }
