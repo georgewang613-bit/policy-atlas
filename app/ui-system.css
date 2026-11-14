@@ -128,3 +128,27 @@
  .atlas-app .signal-row{padding:4px 10px}.atlas-app .signal-row strong{line-height:18px}
  .atlas-app .signal-row p{margin:0;line-height:20px}.atlas-app .signal-bottom{top:4px}
 }
+/* Unified wordmark with theme-color chromatic offsets. */
+.atlas-app .atlas-header .atlas-brand{display:inline-flex;align-items:center;gap:7px;font-weight:900;font-size:27px;line-height:1;letter-spacing:-1px;font-style:normal}
+.atlas-app .atlas-brand .brand-policy,.atlas-app .atlas-brand .brand-atlas{font:inherit;letter-spacing:inherit;text-transform:none;color:#161823;background:transparent;padding:0;border-radius:0;text-shadow:-1.5px -1px 0 #25f4ee,1.5px 1px 0 #fe2c55}
+/* Keep the middle label at the exact 50% slider coordinate, regardless of endpoint width. */
+.atlas-app .decision-sliders .risk-slider-heading{min-height:66px;text-align:center;margin-bottom:8px}
+.atlas-app .decision-sliders input[type=range]{width:calc(66.6666667% + 19px);margin-left:calc(16.6666667% - 9.5px);margin-right:calc(16.6666667% - 9.5px)}
+.atlas-app .decision-sliders .risk-slider-ticks{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;height:40px;margin:0;font-size:12px;line-height:1.5;text-align:center}
+.atlas-app .decision-sliders .risk-slider-ticks span{justify-self:center;white-space:nowrap}
+.atlas-app .decision-sliders input[type=range]::-moz-range-thumb{width:19px;height:19px;box-sizing:border-box}
+.behavior-summary{padding:16px 20px;border-radius:10px;background:#f5f8f9}.behavior-summary p{margin:0 0 8px;font-size:16px;font-weight:600}.behavior-summary small{font-size:12px;color:#5e6b76}
+.guideline-comparisons{display:grid;gap:12px}.guideline-comparisons article{padding:18px 20px;border:1px solid #dce4e8;border-radius:10px;background:#fff}.guideline-comparisons h4{margin:0 0 10px;font-size:15px}.guideline-comparisons h4 a{color:#006965;text-decoration:none}.guideline-comparisons p{font-size:14px;line-height:1.7;margin:0}.rule-criterion{color:#5e6b76}.rule-assessment{display:flex;gap:12px;align-items:baseline;padding:12px 0}.rule-assessment>span{font-size:12px;font-weight:650;color:#007b78;white-space:nowrap}.guideline-comparisons .rule-missing,.guideline-comparisons>small{font-size:12px;color:#5e6b76}.guideline-comparisons>small{line-height:1.7}
+@media(min-width:1000px) and (min-height:650px){
+ .atlas-app .atlas-header{height:68px;min-height:68px}
+ .atlas-app .watch-page:not(.has-live-details){height:calc(100dvh - 68px);display:grid;grid-template-rows:auto minmax(0,1fr) auto auto;gap:10px;padding:12px 24px 8px}
+ .atlas-app .watch-heading{margin:0}.atlas-app .watch-layout{height:100%;min-height:0;grid-template-columns:250px minmax(0,1fr);gap:14px}
+ .atlas-app .watch-page:not(.has-live-details) .incident-strip{min-height:0;margin:0;padding:10px 16px;gap:18px}
+ .atlas-app .watch-page:not(.has-live-details) .scene-thumb{width:54px;flex:0 0 54px;margin:0}.atlas-app .watch-page:not(.has-live-details) .scene-thumb .scene-still{width:54px;height:54px}
+ .atlas-app .watch-page:not(.has-live-details) .incident-strip h2{font-size:18px}.atlas-app .watch-page:not(.has-live-details) .incident-strip .inline-link{min-height:28px}
+ .atlas-app .watch-page:not(.has-live-details) .replay-bar{margin:0;padding:4px 0;min-height:44px}
+ .atlas-app .geo-stage{grid-template-columns:110px minmax(0,1fr)}.atlas-app .geo-stage>svg{padding:4px 8px 4px 0}
+ .atlas-app .inset-maps{width:110px;padding:8px;gap:10px}.atlas-app .map-foot{min-height:40px;padding:4px 10px}.atlas-app .map-foot select{padding:5px 8px;min-height:30px}
+}
+@media(max-width:1100px){.atlas-app .decision-sliders{grid-template-columns:1fr}.atlas-app .decision-sliders .risk-slider-heading{min-height:0;display:flex;justify-content:space-between;text-align:left}.atlas-app .decision-sliders output{margin-top:0}}
+@media(max-width:760px){.atlas-app .atlas-header .atlas-brand{font-size:25px}.atlas-app .atlas-brand .brand-policy,.atlas-app .atlas-brand .brand-atlas{text-shadow:-1.25px -.8px 0 #25f4ee,1.25px .8px 0 #fe2c55}.rule-assessment{display:block}.rule-assessment>span{display:block;margin-bottom:6px}.guideline-comparisons article{padding:16px}}

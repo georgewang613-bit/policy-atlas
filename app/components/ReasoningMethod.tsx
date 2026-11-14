@@ -3,7 +3,7 @@ import {incidents,caseEvidence,departments,DEMO_VERSION} from '../../data/live-d
 import {decisionAxes} from '../../data/case-briefing.mjs';
 import {policyContext} from '../../data/live-context.mjs';
 const steps=[
- {title:'信息汇总',framework:'Behavior → Harm → Risk → Evidence',question:'发生了什么，哪些事实还不足以支持结论？',points:['把现场行为、潜在伤害、紧迫程度分开记录。','用时间戳和 E1–E3 对齐原音、画面及 Gifts；账号与商业信息只是上下文。','注明已知、未知和反证；高风险先保护，同时继续补证。']},
+ {title:'信息汇总',framework:'Behavior → Harm → Guideline → Evidence',question:'发生了什么，哪些事实还不足以支持结论？',points:['把现场行为、潜在伤害、紧迫程度分开记录。','用时间戳和 E1–E3 对齐原音、画面及 Gifts；账号与商业信息只是上下文。','注明已知、未知和反证；高风险先保护，同时继续补充证据。']},
  {title:'部门意见',framework:'Goal → Constraints → Options',question:'各部门担心什么，分歧如何改变方案？',points:['安全看即时伤害，运营看正常创作，法务看地区和依据。','审核校准成立要件，产品确认工具粒度，公关只回应已核实事实。','逐条记录证据、异议和改变意见的条件，不把多数赞成当作证据。']},
  {title:'决定',framework:'Evidence → Proportional action → Delivery',question:'为什么是这个措施，什么条件下会改判？',points:['分别判断内容、推荐与变现，写清各自依据和适用范围。','比较维持、定向限制、升级处理；同时考虑伤害、误伤和可逆性。','明确执行人、通知、申诉和恢复条件；用反例检查边界。']},
  {title:'复盘',framework:'Outcome → Guardrails → Learning',question:'风险是否减少，代价是否可接受？',points:['同时看风险暴露、干预延迟、误伤和申诉改判；注明分母与观察窗口。','区分模拟结果与实测结果，检查自然降温等混杂因素。','写下继续、收紧或回滚的条件，将新证据反馈到规则和审核样例。']}

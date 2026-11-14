@@ -25,9 +25,9 @@ export function caseAssessment(item,evidence){
  return {harms:p.harms,risks:[{label:'Severity',value:p.severity,note:p.harms[0],level:p.severity==='High'?3:2},{label:'Immediacy',value:p.timing,note:'依据当前回放证据预评估',level:p.severity==='High'?3:2},{label:'Exposure',value:'单场 LIVE',note:'尚无跨场传播证据',level:1}],facts:evidence.slice(0,2).map(e=>({label:e.id,text:e.text,status:/尚未|未知|未确认|不足|未提供|没有核实|疑似|可疑|相似/.test(e.text)?'待核实':'已记录'}))};
 }
 export const decisionAxes=[
- {id:'content',label:'Content',options:['暂不限制','证据不足','建议限制相关内容'],short:['保留','补证','限制']},
- {id:'recommendation',label:'For You feed',options:['暂不限制','证据不足','For You feed ineligible'],short:['保留','补证','FYF ineligible']},
- {id:'monetization',label:'Monetization',options:['暂不限制','证据不足','建议限制 LIVE Gifts'],short:['保留','补证','限制 LIVE Gifts']}
+ {id:'content',label:'Content',options:['暂不限制','证据不足','建议限制相关内容'],short:['保留','补充证据','限制']},
+ {id:'recommendation',label:'For You feed',options:['暂不限制','证据不足','For You feed ineligible'],short:['保留','补充证据','FYF ineligible']},
+ {id:'monetization',label:'Monetization',options:['暂不限制','证据不足','建议限制 LIVE Gifts'],short:['保留','补充证据','限制 LIVE Gifts']}
 ];
 export function normalizeDecisions(value={}){return Object.fromEntries(decisionAxes.map(a=>[a.id,a.options.includes(value[a.id])?value[a.id]:'证据不足']));}
 
