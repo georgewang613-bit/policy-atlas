@@ -1,16 +1,16 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-11-13",
-  "reviewedAt": "2026-11-13T13:04:52Z",
+  "updatedAt": "2026-11-14",
+  "reviewedAt": "2026-11-14T13:02:01Z",
   "briefTitle": "今日重点",
   "briefEventIds": [
+    "ny-warning-label-lawsuit",
     "es-tiktok-csam-investigation",
     "uk-age-forthcoming",
-    "eu-dfa-frontier",
-    "au-duty-bill"
+    "eu-dfa-frontier"
   ],
-  "runStatus": "50条政策 · 18条技术动态 · 英国拟议范围更新",
-  "brief": "英国：11月12日重申未成年人社交媒体与高风险LIVE功能限制方向，并补充未满18岁访问性化聊天机器人的拟议限制，尚未生效。西班牙：TikTok儿童性虐待内容调查尚无最终认定，优先保全直播、推荐、账户网络和礼物链路证据。LIVE准备：按年龄、服务和功能建立控制矩阵，为对话式AI单列内容边界，等待正式法规确认范围与实施日期。过去24小时未发现新的P0变化；其余主要市场和美国州级未发现足以改变既有事件阶段的官方材料；技术侧未发现需要新增的实质发布。本轮不代表完整全球覆盖。",
+  "runStatus": "51条政策 · 18条技术动态 · 纽约警示标签诉讼",
+  "brief": "纽约州：社交媒体警示标签法定于2027年1月1日生效，NetChoice于11月13日提起联邦诉讼，主张强制警示违反第一修正案。目前只有诉状，没有法院暂停令，仍应按原日期准备。LIVE准备：识别纽约用户和信息流、自动播放、无限滚动等适用功能，做好可配置的警示层、累计使用时长及回滚开关，同时跟踪禁令申请和法院命令。西班牙儿童安全调查暂无新的官方处置或最终认定。过去24小时其他主要市场和美国州级未发现足以改变既有事件阶段的官方材料；技术侧未发现需要新增的实质发布。本轮不代表完整全球覆盖。",
   "events": [
     {
       "id": "ny-safe",
@@ -4475,10 +4475,117 @@
           "access": "官方公告正文"
         }
       ]
+    },
+    {
+      "id": "ny-warning-label-lawsuit",
+      "region": "美国 · 纽约州",
+      "code": "New York",
+      "xy": [
+        -75,
+        43
+      ],
+      "topic": "未成年人保护",
+      "title": "社交媒体警示标签法：生效前遭联邦诉讼",
+      "stage": "已通过 / 待实施 / 诉讼中",
+      "eventDate": "2026-11-13",
+      "deadline": "2027-01-01",
+      "priority": "P1",
+      "fact": "纽约州《一般商业法》第45-A条定于2027年1月1日生效，要求提供成瘾性信息流、自动播放或无限滚动等重要功能的适用社交媒体平台向纽约适用用户显示不可跳过的警示。NetChoice于11月13日在纽约南区联邦法院提起诉讼，主张该要求违反第一及第十四修正案；截至本轮仅确认诉状，未见法院签发暂停执行命令。",
+      "impact": "纽约用户进入含直播推荐、自动播放或无限滚动的产品时，可能需要显示警示并累计活跃使用时长；礼物或PK本身不是本法列明功能，需结合承载它们的信息流和播放方式判断。",
+      "action": "按2027年1月1日继续准备地域识别、适用功能清单、每日首次警示、三小时后按小时警示及审计日志；把警示层和时长计算做成可配置开关，并由法务跟踪禁令申请和法院命令。",
+      "scope": "适用于在纽约向适用用户提供成瘾性信息流、自动播放或无限滚动作为重要服务部分的平台；对已合理判断为18岁以上的用户可不显示。诉讼本身不暂停法律，也不证明TikTok或其他平台已违规。",
+      "source": "https://www.nysenate.gov/legislation/laws/GBS/1521",
+      "checkedAt": "2026-11-14",
+      "confidence": "官方法条与已提交联邦诉状核实",
+      "history": [
+        {
+          "date": "2025-12-26",
+          "event": "纽约州长签署S4505/A5346，并说明将通过章节修正明确警示标签制度。"
+        },
+        {
+          "date": "2026-02-27",
+          "event": "修正后的法条版本明确警示文本、显示方式及2027年1月1日生效日期。"
+        },
+        {
+          "date": "2026-11-13",
+          "event": "NetChoice在纽约南区联邦法院提起NetChoice v. James，案号1:26-cv-09983，请求宣告和禁令救济。"
+        }
+      ],
+      "review": "独立研究建议 · 非法律签批",
+      "lawId": "New York General Business Law Article 45-A; NetChoice v. James, No. 1:26-cv-09983",
+      "instrument": "州法及联邦宪法诉讼",
+      "topics": [
+        "未成年人保护",
+        "推荐与产品设计"
+      ],
+      "scenarios": [
+        "直播推荐",
+        "自动播放",
+        "无限滚动",
+        "使用时长提示"
+      ],
+      "appliesTo": "在纽约提供法定成瘾性功能的平台及其适用用户；具体产品功能需按法定定义逐项判断。",
+      "priorityReason": "距2027年1月1日实施日不足两个月，诉讼尚未产生暂停令；产品准备和司法跟踪必须并行。",
+      "owners": [
+        "Policy",
+        "US Legal",
+        "推荐产品",
+        "未成年人安全",
+        "数据与工程"
+      ],
+      "deliverable": "纽约适用功能矩阵、警示层原型、累计活跃时长规则、年龄与地域测试、审计日志及法院命令触发的上线或回滚清单。",
+      "uncertainty": "法院尚未处理实体主张或签发禁令；后续动议、听证安排和最终适用边界待案卷更新。",
+      "titleEn": "New York social media warning-label law challenged before effective date",
+      "reviewStatus": "官方法条已核对 / 联邦诉讼进行中",
+      "sourceCheckedAt": "2026-11-14T13:02:01Z",
+      "effectiveDate": "2027-01-01",
+      "deadlineType": "法律生效日期；可能受法院命令影响",
+      "statusEvidence": "纽约州官方法条确认适用功能、警示方式和2027年1月1日生效日；11月13日诉状确认挑战已提交，但不支持法律已被暂停。",
+      "policyImplication": {
+        "direction": "把纽约警示义务映射到直播推荐、自动播放和无限滚动的具体入口，并与年龄、地域和活跃时长判断联动。",
+        "proposal": "准备可配置的警示层和计时服务，分别测试每日首次进入、三小时阈值及其后每小时触发；不要因诉状存在而停止实施准备。",
+        "trigger": "2027年1月1日前按现行法律上线；若法院签发临时限制令、初步禁令或州法修订，再按正式文本调整范围和日期。",
+        "tradeoff": "满足不可跳过、显示面积和持续时间要求，同时减少对正常观看、无障碍使用及成年用户的过度干扰，并控制年龄判断带来的隐私风险。",
+        "validation": "用纽约边界测试账号验证地域、年龄、每日重置、三小时累计、每小时重复、跨设备一致性和回滚开关；分别记录漏触发、误触发和观看中断。"
+      },
+      "evidence": [
+        {
+          "url": "https://www.governor.ny.gov/news/governor-hochul-signs-legislation-require-warning-labels-social-media-platforms",
+          "publisher": "New York Governor",
+          "locator": "26 December 2025 · S4505/A5346 signing announcement",
+          "checkedAt": "2026-11-14T13:02:01Z",
+          "supports": "签署状态、覆盖成瘾性信息流、自动播放和无限滚动的政策范围，以及警示不可跳过。",
+          "access": "州政府官方网页"
+        },
+        {
+          "url": "https://www.nysenate.gov/legislation/laws/GBS/1520",
+          "publisher": "New York State Senate",
+          "locator": "General Business Law §1520 · effective January 1, 2027",
+          "checkedAt": "2026-11-14T13:02:01Z",
+          "supports": "成瘾性功能、平台、运营者及适用用户定义。",
+          "access": "州议会官方法条"
+        },
+        {
+          "url": "https://www.nysenate.gov/legislation/laws/GBS/1522",
+          "publisher": "New York State Senate",
+          "locator": "General Business Law §1522 · display requirements",
+          "checkedAt": "2026-11-14T13:02:01Z",
+          "supports": "每日首次警示、三小时后及其后每小时警示的持续时间、显示面积和不可跳过要求。",
+          "access": "州议会官方法条"
+        },
+        {
+          "url": "https://netchoice.org/wp-content/uploads/2026/11/2026.11.13-001-Complaint.pdf",
+          "publisher": "NetChoice / filed in U.S. District Court for the Southern District of New York",
+          "locator": "Case 1:26-cv-09983 · Document 1 · filed 13 November 2026",
+          "checkedAt": "2026-11-14T13:02:01Z",
+          "supports": "诉状提交、当事人、案号、宪法主张和请求的宣告及禁令救济；不支持法院已采纳主张或暂停法律。",
+          "access": "已提交法院的诉状全文，由原告公开"
+        }
+      ]
     }
   ],
   "collection": {
-    "lastSuccess": "2026-11-13",
+    "lastSuccess": "2026-11-14",
     "schedule": "每天北京时间21:00研究更新",
     "failedSources": [
       "TikTok LIVE Monetization Guidelines：页面可定位但正文未由检索工具获取",
