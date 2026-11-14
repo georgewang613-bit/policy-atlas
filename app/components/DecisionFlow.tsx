@@ -1,13 +1,12 @@
-import {guidelineComparison} from '../../data/guideline-comparison.mjs';
-import {caseAssessment,casePlans} from '../../data/case-briefing.mjs';
-export default function DecisionFlow({item,evidence,children}:any){
- const assessment=caseAssessment(item,evidence);
+import {evidenceDossier} from '../../data/case-exercises.mjs';
+import {casePlans} from '../../data/case-briefing.mjs';
+export default function DecisionFlow({item,evidence,variant=false,at,children}:any){
+ const rows=evidenceDossier(item,evidence,variant,at);
  const sections=[
- {label:'行为',term:'Behavior',content:<div className="behavior-summary"><p>{casePlans[item.id].focus}</p><small>现场记录 {evidence.map((e:any)=>e.id).join(' · ')}，完整原话见下方证据。</small></div>},
- {label:'伤害',term:'Harm',content:<div className="harm-cards">{assessment.harms.map((h:string)=><article key={h}><strong>{h}</strong></article>)}</div>},
- {label:'规则对照',term:'Guideline check',content:<div className="guideline-comparisons">{guidelineComparison(item,evidence).map((r:any)=><article key={r.topic}><h4><a href={r.source} target="_blank" rel="noreferrer">{r.term} ↗</a></h4><p className="rule-criterion">{r.criterion}</p><div className="rule-assessment"><span>{r.refs.join(' · ')||'暂无证据'}</span><p>{r.assessment}</p></div><p className="rule-missing">待核实：{r.missing}</p></article>)}<small>LIVE Monetization Guidelines · 项目收录核对 2026-11-12。以上为案例分析，内容、推荐和变现分别作出判断。</small></div>},
- {label:'证据',term:'Evidence',content:<ul className="decision-evidence-list">{evidence.map((e:any)=><li key={e.id}><b>{e.id}</b><div><p>{e.text}</p><small>{Math.floor(e.at/60)}:{String(e.at%60).padStart(2,'0')} · {e.source}</small></div></li>)}</ul>},
+ {label:'行为概括',term:'Behavior',content:<div className="behavior-summary"><p>{casePlans[item.id].focus}</p><small>{variant?'情境条件已变化，请按本轮记录判断。':item.known}</small></div>},
+ {label:'伤害与规则',term:'Harm & policy',content:<div className="guideline-comparisons">{rows.map((r:any)=><article key={r.topic}><h4><a href={r.source} target="_blank" rel="noreferrer">{r.term} ↗</a></h4><p className="harm-explanation">{r.harm}</p><p className="rule-criterion">{r.criterion}</p><p className="rule-assessment">{r.assessment}</p></article>)}<small>英文标题保留项目收录的官方术语；中文为解释。来源：LIVE Monetization Guidelines，收录核对 2026-11-12。</small></div>},
+ {label:'逐项证据',term:'Evidence mapping',content:<div className="evidence-dossier"><p className="simulation-note">以下细化条件为演练设计（Simulated review criteria），不是 TikTok 内部 guideline；“线索支持”也不等于已认定违规。</p>{rows.map((r:any)=><article className="violation-evidence" key={r.topic}><h4>{r.term}</h4>{r.quantitative&&<p className="quant-evidence">{r.quantitative}</p>}{r.checks.map((c:any)=><section className="criterion-evidence" key={c.id}><div className="criterion-heading"><h5>{c.condition}</h5><span className={'evidence-status '+(c.status==='线索支持'?'supports':c.status==='反向线索'?'counter':'missing')}>{c.status}</span></div><ul>{c.records.map((e:any)=><li key={e.id}><b>{e.id}</b><div>{e.text}<small>{Math.floor(e.at/60)}:{String(e.at%60).padStart(2,'0')} · {e.source}</small></div></li>)}</ul><p>{c.reason}</p></section>)}<p className="evidence-gap"><b>下一份证据</b> {r.missing}</p></article>)}</div>},
  {label:'决定',term:'Decision',content:children}
  ];
- return <ol className="decision-spine">{sections.map((s,i)=><li key={s.term} className={i===4?'spine-final':''}><span className="spine-dot">0{i+1}</span><div className="spine-row"><div className="spine-label"><h3>{s.label}</h3><span>{s.term}</span></div><div className="spine-content">{s.content}</div></div></li>)}</ol>;
+ return <ol className="decision-spine">{sections.map((s,i)=><li key={s.term} className={i===3?'spine-final':''}><span className="spine-dot">0{i+1}</span><div className="spine-row"><div className="spine-label"><h3>{s.label}</h3><span>{s.term}</span></div><div className="spine-content">{s.content}</div></div></li>)}</ol>;
 }

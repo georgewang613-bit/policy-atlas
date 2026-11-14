@@ -1,6 +1,6 @@
-import {caseAssessment,departmentBrief,meetingSummary,casePlans,decisionAxes,executionTasks} from '../data/case-briefing.mjs';
+import {departmentBrief,meetingSummary,casePlans,decisionAxes} from '../data/case-briefing.mjs';
 import {liveContext,LMG_URL,VIRTUAL_URL} from '../data/live-context.mjs';
-import {launchDays} from '../data/policy-owner.mjs';
+import {evidenceDossier,executionMissions,policyRevisions} from '../data/case-exercises.mjs';
 type Block={title:string;lines:string[]};
 const ink='#161823',muted='#5e6b76',cyan='#007b78',pink='#fe2c55';
 // Rasterized at 2.5x to preserve CJK rendering on every browser without remote fonts.
@@ -25,13 +25,16 @@ export async function exportPdf(filename:string,title:string,subtitle:string,blo
  const xref=offset,count=3+pages.length*3;push(bytes(`xref\n0 ${count}\n0000000000 65535 f \n${offsets.slice(1).map(o=>`${String(o).padStart(10,'0')} 00000 n \n`).join('')}trailer\n<< /Size ${count} /Root 1 0 R >>\nstartxref\n${xref}\n%%EOF`));
  const url=URL.createObjectURL(new Blob(parts as BlobPart[],{type:'application/pdf'}));const a=document.createElement('a');a.href=url;a.download=filename;a.click();setTimeout(()=>URL.revokeObjectURL(url),10000);
 }
-export function exportCasePdf(item:any,evidence:any[],decisions:any,reason:string,team:string[],opinions:any,context:string,at=600,variant=false){
- const a=caseAssessment(item,evidence),c=liveContext(item,variant,at);
- const blocks:Block[]=[{title:'LIVE / Gifting',lines:[`${c.viewers.toLocaleString()} Viewers · ${c.giftCount} Gifts · ${c.gifters} Gifters · ${c.coinsUsed} Coins`,c.purpose]},{title:'决定',lines:[...decisionAxes.map(axis=>`${axis.label}：${decisions[axis.id]}`),`理由：${reason||'未填写'}`]},{title:'行为和潜在伤害',lines:[...a.facts.map((f:any)=>`${f.status} · ${f.label}：${f.text}`),`潜在伤害：${a.harms.join(' / ')}`]},{title:'风险预评估',lines:a.risks.map((r:any)=>`${r.label}：${r.value} — ${r.note}`)},{title:'现场证据',lines:evidence.map(e=>`${e.id} · ${Math.floor(e.at/60)}:${String(e.at%60).padStart(2,'0')}  ${e.text}`)}];
+export function exportCasePdf(item:any,evidence:any[],decisions:any,reason:string,team:string[],opinions:any,context:string,at=600,variant=false,execution:any=null){
+ const c=liveContext(item,variant,at);
+ const rows=evidenceDossier(item,evidence,variant,at);
+ const blocks:Block[]=[{title:'LIVE / Gifting',lines:[`${c.viewers.toLocaleString()} Viewers · ${c.giftCount} Gifts · ${c.gifters} Gifters · ${c.coinsUsed} Coins`,c.purpose]},{title:'行为概括',lines:[casePlans[item.id].focus]},{title:'决定',lines:[...decisionAxes.map(axis=>`${axis.label}：${decisions[axis.id]}`),`理由：${reason||'未填写'}`]}];
+ for(const row of rows){blocks.push({title:row.term,lines:[row.harm,row.criterion,row.assessment,`来源：${row.source}`, 'Simulated review criteria · 以下为演练条件，不是 TikTok 内部 guideline。',...(row.quantitative?[row.quantitative]:[]),...row.checks.flatMap((check:any)=>[`${check.condition} · ${check.status}`, ...check.records.map((e:any)=>`${e.id} · ${Math.floor(e.at/60)}:${String(e.at%60).padStart(2,'0')} · ${e.source}：${e.text}`),check.reason]),`补充证据：${row.missing}`]});}
  const received=team.filter(id=>opinions[id]?.context===context);
  for(const id of received){const o=opinions[id],b=departmentBrief(id,item,o);blocks.push({title:o.department,lines:[b.need,...b.actions.map((x:string)=>`• ${x}`)]});}
  const summary=meetingSummary(item,team,opinions,context);if(summary.length)blocks.push({title:'会议纪要',lines:[...summary.flatMap((g:any)=>g.items.map((x:string)=>`${g.title} · ${x}`)),`待核实：${item.known}`]});
- const tasks=executionTasks(item);blocks.push({title:'执行计划',lines:launchDays.map((d,i)=>`${d.day} · ${d.title} · ${d.owner}\n${tasks[i]}`)});
+ const revision=policyRevisions[item.id];blocks.push({title:'执行计划 · 演练 schedule',lines:executionMissions(item).map(m=>`${m.when} · ${m.title} · ${m.owner}\n${m.task}\nDeliverable: ${m.deliverable}\nReady when: ${m.gate}`)});
+ blocks.push({title:'Policy revision · 项目建议草案',lines:[execution?.draft??revision.draft,execution?.delta||'个人修改说明未填写。',`Counterexample: ${revision.counter}`,`Guardrail: ${revision.metric}`]});
  blocks.push({title:'Policy basis',lines:[...c.topics.map((t:any)=>t.term),LMG_URL,VIRTUAL_URL]});
  return exportPdf(`${item.id}-Policy-Atlas.pdf`,item.title,`${item.city} · ${item.id} · 研判简报`,blocks);
 }

@@ -26,8 +26,8 @@ export function caseAssessment(item,evidence){
 }
 export const decisionAxes=[
  {id:'content',label:'Content',options:['暂不限制','证据不足','建议限制相关内容'],short:['保留','补充证据','限制']},
- {id:'recommendation',label:'For You feed',options:['暂不限制','证据不足','For You feed ineligible'],short:['保留','补充证据','FYF ineligible']},
- {id:'monetization',label:'Monetization',options:['暂不限制','证据不足','建议限制 LIVE Gifts'],short:['保留','补充证据','限制 LIVE Gifts']}
+ {id:'recommendation',label:'For You feed',options:['暂不限制','证据不足','For You feed ineligible'],short:['保留','补充证据','限制']},
+ {id:'monetization',label:'Monetization',options:['暂不限制','证据不足','建议限制 LIVE Gifts'],short:['保留','补充证据','限制']}
 ];
 export function normalizeDecisions(value={}){return Object.fromEntries(decisionAxes.map(a=>[a.id,a.options.includes(value[a.id])?value[a.id]:'证据不足']));}
 
