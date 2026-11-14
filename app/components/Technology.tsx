@@ -38,7 +38,7 @@ export default function Technology(){
    <h2><button className="update-title" ref={el=>{if(el)buttons.current.set(x.id,el);else buttons.current.delete(x.id);}} onClick={()=>open(x)}>{x.title}<span aria-hidden="true">↗</span></button></h2>
    <p className="tech-card-conclusion">{organizationNames(x.conclusion)}</p>
    <details className="tech-facts-disclosure"><summary>研究细节</summary><TextPoints className="tech-card-facts" text={x.fact}/></details>
-   <div className="tech-use"><span>直播应用</span><p>{organizationNames(x.liveUse)}</p></div>
+   <div className="tech-use"><span>直播应用</span><TextPoints text={x.liveUse}/></div>
    <div className="tech-card-footer"><time dateTime={x.publishedAt||undefined}>{x.publishedAt||'发布日期未列'}</time><span>{organizationNames(x.sources[0].publisher,false)} · {x.sources.length} 项来源</span></div>
   </article>;})}</div>
   {items.length===0&&<div className="empty"><p>没有匹配结果</p><button onClick={()=>{setCategory('全部');setQuery('');}}>清除筛选</button></div>}
