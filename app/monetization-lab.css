@@ -1,0 +1,71 @@
+.monetization-lab { margin: 32px 0; }
+.monetization-lab h2 { margin: 0; }
+.monetization-intro {
+  margin: 8px 0 16px;
+  line-height: 1.75;
+  max-width: 62em;
+}
+.monetization-switch {
+  min-width: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+.monetization-switch legend,
+.monetization-switch label input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: 0;
+  padding: 0;
+  clip-path: inset(50%);
+  overflow: hidden;
+  white-space: nowrap;
+}
+.monetization-switch label { display: inline-flex; position: relative; cursor: pointer; }
+.monetization-switch label span {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  min-height: 44px;
+  padding: 7px 14px;
+  border: 1px solid var(--ui-border, #dce4e8);
+  border-radius: 7px;
+  color: var(--ui-ink, #161823);
+  font-size: 1rem;
+  background: #fff;
+}
+.monetization-switch label:hover span { border-color: #86bdb9; }
+.monetization-switch input:checked + span {
+  background: #e1f8f6;
+  color: #006864;
+  border-color: #63bdb7;
+  font-weight: 650;
+}
+.monetization-switch input:focus-visible + span { outline: 3px solid #087f82; outline-offset: 3px; }
+.monetization-evidence {
+  border-inline-start: 3px solid var(--ui-accent, #087f82);
+  margin: 18px 0 16px;
+  padding: 11px 15px;
+  background: #f3f8f8;
+  line-height: 1.7;
+}
+.monetization-evidence strong { display: block; margin-bottom: 2px; }
+.monetization-decisions {
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px 26px;
+}
+.monetization-decisions > div { border-top: 1px solid var(--ui-border, #dce4e8); padding-top: 10px; }
+.monetization-decisions dt { font-weight: 650; }
+.monetization-decisions dd { line-height: 1.7; margin: 4px 0 0; }
+.monetization-sources { display: flex; flex-wrap: wrap; gap: 4px 18px; margin-top: 14px; }
+.monetization-sources a { font-size: .875rem; color: var(--ui-accent, #087f82); }
+@media (max-width: 680px) {
+  .monetization-decisions { grid-template-columns: 1fr; }
+  .monetization-switch { display: grid; grid-template-columns: 1fr 1fr; }
+}

@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "vite build && node scripts/finalize-build.mjs",
     "preview": "vite preview",
-    "validate": "node scripts/validate-data.mjs && node scripts/test-live-context.mjs && node scripts/test-case-exercises.mjs"
+    "validate": "node scripts/validate-data.mjs && node scripts/test-live-context.mjs && node scripts/test-case-exercises.mjs && node scripts/test-live-alerts.mjs && node scripts/test-policy-watch-signals.mjs"
   },
   "dependencies": {
     "@phosphor-icons/react": "^2.1.10",

@@ -24,7 +24,7 @@ export default function Method({data}:{data:Atlas}){
    <article className="content-card"><h2>研究方法</h2>
     <p>政策事实核对政府、监管、议会和法院材料，媒体用于发现线索；按地区、法案和版本区分提案、法律效力、法院是否暂停或限制执行及实施日期。</p>
     <p>主题取自 <a href="https://www.tiktok.com/community-guidelines/en/" target="_blank" rel="noreferrer">TikTok 社区准则 ↗</a>，结合 LIVE 打赏、变现场景分类。</p>
-    <p>首页默认展示全部事件，可筛选尚未确定的政策。分别记录事件发生、网页读取和内容核对的日期，内容随项目版本更新。</p>
+    <p>法规页默认展示全部事件，可筛选尚未确定的政策。分别记录事件发生、网页读取和内容核对的日期，内容随项目版本更新。</p>
     <div className="source-meta"><span>复核 · 北京时间 {reviewed}</span></div>
    </article>
    <article className="content-card"><h2>行动优先级</h2>
@@ -43,8 +43,8 @@ export default function Method({data}:{data:Atlas}){
     <p>地图仅作事件导航：<a href="https://github.com/johan/world.geo.json" target="_blank" rel="noreferrer">世界边界 ↗</a> · <a href="https://github.com/PublicaMundi/MappingAPI" target="_blank" rel="noreferrer">美国州界 ↗</a></p>
    </div></details>
    <details className="method-fold"><summary><span>规则版本</span></summary><div className="fold-content">
-    <p>流程研究核对日期为 2026-10-27。可读取的社区准则为 2025 版；2026 版官方正文读取受限，版本差异待核对。</p>
-    <p>LIVE Monetization Guidelines 正文尚未核对；充值币（Coins）、礼物（Gifts）、钻石（Diamonds）和创作者奖励各有对应条款。</p>
+    <p>流程研究引用 2026-10-27 核对的历史版本。LIVE 政策页按主题列出本次采用的地区、文本和来源。</p>
+    <p>诱导送礼的变现依据见 TikTok 创作者网络政策第 2.3 节。金币、礼物和创作者奖励的适用条件另见对应地区的虚拟物品政策。</p>
     <p>流程按公开材料归纳。LIVE 单项规则的审批人、固定顺序和上线周期未公开；团队分工、准备材料和推进条件为项目建议。</p>
    </div></details>
    <details className="method-fold"><summary><span>流程参考来源</span><small>{flowSources.length}</small></summary><div className="fold-content source-list">{flowSources.map(s=><a className="sourcerow" key={s.url} href={s.url} target="_blank" rel="noreferrer"><span>{s.title} ↗<small>{s.note}</small></span></a>)}</div></details>
