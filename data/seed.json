@@ -1,16 +1,15 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-11-14",
-  "reviewedAt": "2026-11-14T13:02:01Z",
+  "updatedAt": "2026-11-25",
+  "reviewedAt": "2026-11-25T12:46:47Z",
   "briefTitle": "今日重点",
   "briefEventIds": [
-    "ny-warning-label-lawsuit",
-    "es-tiktok-csam-investigation",
-    "uk-age-forthcoming",
-    "eu-dfa-frontier"
+    "au-duty-bill",
+    "eu-tiktok-addictive-design",
+    "ny-warning-label-lawsuit"
   ],
-  "runStatus": "51条政策 · 18条技术动态 · 纽约警示标签诉讼",
-  "brief": "纽约州：社交媒体警示标签法定于2027年1月1日生效，NetChoice于11月13日提起联邦诉讼，主张强制警示违反第一修正案。目前只有诉状，没有法院暂停令，仍应按原日期准备。LIVE准备：识别纽约用户和信息流、自动播放、无限滚动等适用功能，做好可配置的警示层、累计使用时长及回滚开关，同时跟踪禁令申请和法院命令。西班牙儿童安全调查暂无新的官方处置或最终认定。过去24小时其他主要市场和美国州级未发现足以改变既有事件阶段的官方材料；技术侧未发现需要新增的实质发布。本轮不代表完整全球覆盖。",
+  "runStatus": "51条政策 · 20条技术动态 · 澳大利亚数字注意义务",
+  "brief": "澳大利亚：数字注意义务法案于11月25日获议会通过，政府公布12个月过渡安排。LIVE 团队可先测未成年人危险挑战曝光和人工响应时长。欧盟：委员会对 TikTok 推荐流的有害内容连续曝光作出初步认定，后续仍有程序。技术动态：TikTok 发布 AI 素材来源查询工具，并开始向符合资格的创作者推出肖像相似性检测。案例页新增米兰骚乱，记录 TikTok 对违规直播及部分变现功能的应对。",
   "events": [
     {
       "id": "ny-safe",
@@ -1711,17 +1710,17 @@
         -25
       ],
       "topic": "未成年人保护",
-      "title": "Digital Duty of Care：参议院调查听证开始",
-      "stage": "立法审议 / 已提出",
-      "eventDate": "2026-11-09",
+      "title": "澳大利亚数字注意义务法案获议会通过",
+      "stage": "已通过待生效",
+      "eventDate": "2026-11-25",
       "deadline": null,
       "priority": "P1",
-      "fact": "澳大利亚通信部长11月9日确认，参议院对Digital Duty of Care法案的调查听证当日开始，并将连续两天听取多方证据。法案仍在议会审议，听证不等于通过或生效。",
-      "impact": "LIVE的挑战活动、连麦风险、推荐和投诉流程可能需要统一风险评估。",
-      "action": "用连麦、挑战活动和推荐场景测试风险评估表；记录安全、表达和隐私方面的影响，跟踪议会修订。",
-      "scope": "政府公告介绍拟议制度；提出法案不等于已获正式批准，具体义务须以最终文本为准。",
-      "source": "https://minister.infrastructure.gov.au/wells/transcript/today-show-sylvia-jeffreys-1",
-      "checkedAt": "2026-11-09",
+      "fact": "澳大利亚通信部长于11月25日确认数字注意义务法案获议会通过。政府称义务将在12个月后生效，覆盖严重有害内容、行为及功能风险，并要求保护未成年人免受美化犯罪及危及生命的特技等内容的伤害。",
+      "impact": "对 LIVE 而言，可先拆解挑战行为、连麦、推荐和观众举报，分别检验哪些功能会放大可预见的伤害。",
+      "action": "测试儿童可能看到的危险挑战曝光、人工升级延时和合法内容误限，保留改动与复核记录。按正式法令及配套规则确认实施时间。",
+      "scope": "公告概述适用的在线服务，包括社交媒体。具体服务、条款和生效安排还需对照正式文本。",
+      "source": "https://minister.infrastructure.gov.au/wells/media-release/australias-digital-duty-care-becomes-law",
+      "checkedAt": "2026-11-25",
       "confidence": "官方一手来源",
       "history": [
         {
@@ -1735,11 +1734,15 @@
         {
           "date": "2026-11-09",
           "event": "通信部长确认参议院调查听证开始，计划连续两天听取各方证据；法案法律效力未改变。"
+        },
+        {
+          "date": "2026-11-25",
+          "event": "通信部长宣布法案获议会通过，数字注意义务将在12个月后生效。"
         }
       ],
       "review": "独立研究建议 · 非法律签批",
       "lawId": "Online Safety Amendment (Digital Duty of Care) Bill 2026",
-      "instrument": "未定案政策 / 规则形成进程",
+      "instrument": "立法 / 议会通过",
       "topics": [
         "未成年人保护",
         "有害内容与身心健康"
@@ -1749,27 +1752,28 @@
         "连麦与评论",
         "危机内容"
       ],
-      "appliesTo": "政府公告介绍拟议制度；提出法案不等于已获正式批准，具体义务须以最终文本为准。",
-      "priorityReason": "参议院调查已进入听证阶段，平台适用范围、年龄核验、隐私和过度执行仍可能影响最终文本。",
+      "appliesTo": "向澳大利亚用户提供适用在线服务的平台。",
+      "priorityReason": "议会已通过，可先用过渡期验证风险控制与申诉流程。",
       "owners": [
         "Policy",
         "Legal",
         "相关产品团队"
       ],
       "deliverable": "场景风险评估模板、产品默认设置审查和可执行投诉流程选项。",
-      "uncertainty": "议会委员会页面本轮仍受robots限制；部长官方访谈只确认听证开始，不能证明最终修订、表决结果或生效日期。",
-      "titleEn": "Digital Duty of Care: Senate inquiry hearing begins",
-      "reviewStatus": "官方确认参议院调查听证开始 / 立法审议",
-      "sourceCheckedAt": "2026-11-09T13:08:18.319Z",
+      "uncertainty": "本次核验确认议会通过及政府公布的12个月过渡安排。正式生效日和配套义务另以官方文本核对。",
+      "titleEn": "Australia’s Digital Duty of Care passes Parliament",
+      "reviewStatus": "通信部长确认议会通过",
+      "sourceCheckedAt": "2026-11-25T12:46:47Z",
       "effectiveDate": null,
-      "deadlineType": "无已确认生效日",
-      "statusEvidence": "11月9日部长官方访谈确认参议院调查听证当日开始；未据媒体报道认定法案已获参议院通过。",
+      "deadlineType": "待核对正式生效日",
+      "statusEvidence": "11月25日通信部长公告确认议会通过，并公布12个月过渡安排。",
       "policyImplication": {
-        "direction": "LIVE的挑战活动、连麦风险、推荐和投诉流程可能需要统一风险评估。",
-        "proposal": "用连麦、挑战活动和推荐场景测试风险评估表；记录安全、表达和隐私方面的影响，跟踪议会修订。",
-        "trigger": "确认最终规则、生效安排和受影响的产品后，再落实当地强制要求；此前可先研究和做小范围测试。",
+        "direction": "对 LIVE 而言，可先拆解挑战行为、连麦、推荐和观众举报，分别检验哪些功能会放大可预见的伤害。",
+        "proposal": "测试儿童可能看到的危险挑战曝光、人工升级延时和合法内容误限，保留改动与复核记录。按正式法令及配套规则确认实施时间。",
+        "trigger": "依据正式文本和配套规则确认各服务的适用范围与实施日期。",
         "tradeoff": "既要减少伤害，也要保护正常表达和隐私；年龄判断出错时，用户应能方便地申诉。",
-        "validation": "场景风险评估模板、产品默认设置审查和可执行投诉流程选项。"
+        "validation": "场景风险评估模板、产品默认设置审查和可执行投诉流程选项。",
+        "analysisUpdatedAt": "2026-11-25"
       },
       "evidence": [
         {
@@ -1795,6 +1799,14 @@
           "checkedAt": "2026-11-09T13:08:18.319Z",
           "supports": "参议院调查听证于11月9日开始并计划听取两天证据；不支持法案已通过。",
           "access": "官方访谈文字稿"
+        },
+        {
+          "url": "https://minister.infrastructure.gov.au/wells/media-release/australias-digital-duty-care-becomes-law",
+          "publisher": "Australian Minister for Communications",
+          "locator": "25 November 2026 · official media release",
+          "checkedAt": "2026-11-25T12:46:47Z",
+          "supports": "议会通过、义务范围、12个月过渡安排",
+          "access": "官方网页正文"
         }
       ]
     },
@@ -4585,7 +4597,7 @@
     }
   ],
   "collection": {
-    "lastSuccess": "2026-11-14",
+    "lastSuccess": "2026-11-25",
     "schedule": "每天北京时间21:00研究更新",
     "failedSources": [
       "TikTok LIVE Monetization Guidelines：页面可定位但正文未由检索工具获取",

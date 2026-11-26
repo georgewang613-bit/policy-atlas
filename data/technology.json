@@ -1,6 +1,50 @@
 {
-  "reviewedAt": "2026-11-14",
+  "reviewedAt": "2026-11-25",
   "items": [
+    {
+      "id": "tiktok-aigc-veradura",
+      "title": "AI 素材来源查询",
+      "category": "来源验证",
+      "publishedAt": "2026-11-20",
+      "version": "C2PA Content Credentials + VeraDura",
+      "status": "TikTok 公告已上线",
+      "checkedAt": "2026-11-25",
+      "conclusion": "审核员可以多拿到一条来源线索，再核对主播的现场声明。",
+      "fact": "TikTok 公布可上传图片或视频的查询工具，无需 TikTok 账号。工具检查内容凭证及其 VeraDura 隐形水印，用于识别 TikTok AI 工具生成或编辑的素材。",
+      "liveUse": "遇到疑似把生成素材冒充现场的直播，先从已留存的片段核对来源，再对照主播原话和连续画面。",
+      "limits": "未检出也可能是工具覆盖范围之外或信号流失。公告没有提供实时直播接入或独立准确率。",
+      "nextStep": "用原始素材和经过常见转码的副本做对照，再交由审核员查看语境。",
+      "measure": "分别报告有信号样本的识别率、来源未知比例及人工复核时间。",
+      "sources": [
+        {
+          "url": "https://newsroom.tiktok.com/strumenti-chiarezza-e-controllo-contenuti-ia?lang=it-IT",
+          "publisher": "TikTok Newsroom",
+          "locator": "2026-11-20 · VeraDura 与 Content Credentials"
+        }
+      ]
+    },
+    {
+      "id": "tiktok-likeness-detection",
+      "title": "AI 肖像冒用线索",
+      "category": "平台实践",
+      "publishedAt": "2026-11-20",
+      "version": "Likeness Detection",
+      "status": "开始推出 · 自愿加入",
+      "checkedAt": "2026-11-25",
+      "conclusion": "让符合资格的人查看疑似肖像冒用并提交复核。",
+      "fact": "TikTok 宣布开始在全球推出肖像相似性检测。符合资格的创作者和公众人物可选择加入，经第三方验证身份后，接收疑似匹配线索并提交举报。",
+      "liveUse": "项目建议：把本人反馈和账号声明一起交给审核员，核实授权、误导与实际伤害。",
+      "limits": "相似性是候选线索。公开公告未说明 LIVE 实时覆盖范围或独立误报率。",
+      "nextStep": "按相似本人、同名账号及有授权素材分组做复核演练。",
+      "measure": "记录每组误报、有效举报率和从举报到首次人工复核的用时。",
+      "sources": [
+        {
+          "url": "https://newsroom.tiktok.com/strumenti-chiarezza-e-controllo-contenuti-ia?lang=it-IT",
+          "publisher": "TikTok Newsroom",
+          "locator": "2026-11-20 · Rilevamento di somiglianza"
+        }
+      ]
+    },
     {
       "id": "hybrid-live-moderation",
       "title": "直播违规识别",

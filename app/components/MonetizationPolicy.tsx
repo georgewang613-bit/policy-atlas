@@ -50,6 +50,7 @@ export default function MonetizationPolicy() {
         <blockquote lang="en">“Monetization is a privilege, not a right.”</blockquote>
         <p>在 Bai 看来，主播投入时间做内容、经营社群。如果循环播放或催礼也能争夺同样的回报，平台就在改变哪一种投入更划算。</p>
         <div className="study-paths"><a href="#live-monetization-lab">试判一场直播</a><a href="#live-incentives">看三种激励设计</a></div>
+        <p><a href="?page=live&rule=safety">真实案例 · 米兰骚乱后的直播处置</a></p>
         <p className="summit-credit"><time dateTime="2026-09-15">2026 年 9 月 15 日</time> · 曼谷 Creator Networks Global Summit</p>
         <div className="study-sources"><Source url={sources.kontan}>Kontan 现场引语</Source><Source url={sources.warta}>Warta Ekonomi 现场报道</Source></div>
       </figure>

@@ -1,5 +1,24 @@
 export const livePolicyHistory = [
   {
+    id: 'it-milan-unrest',
+    ruleId: 'safety',
+    date: '2026-10-21',
+    title: '米兰骚乱后，TikTok 如何处理直播？',
+    scope: '意大利 · 平台公开回应',
+    fact: '意大利警方确认米兰在10月17日至18日发生暴力与破坏。10月21日，TikTok 在 Sky TG24 刊载的声明中称，已启动专项团队，借助图像和音频识别加强审核，对违规内容采取删除视频、暂停直播及封禁账号等措施。平台也收紧了相关搜索功能，并临时限制与抗议有关直播的部分变现功能。',
+    signal: '优先复核同一段画面中的主播原话和行为。现场记录、劝阻与鼓动伤害需要分别识别。若付费互动与现场危险行为挂钩，也应优先检查变现是否在放大风险。',
+    action: '推演建议：分别记录内容、搜索和变现的处置依据。对疑似鼓动暴力的内容优先人工复核；评估临时变现措施时，记录适用范围、复核时间和解除条件。',
+    limit: 'TikTok 称会区分纪实与煽动。声明未披露具体限制了哪些变现功能、覆盖多少场直播、何时解除，也未提供能独立评估处置效果的数据。',
+    source: {
+      title: 'Sky TG24 · TikTok 声明',
+      url: 'https://tg24.sky.it/cronaca/2026/10/21/scontri-milano-tiktok-dichiarazione',
+    },
+    contextSource: {
+      title: '意大利警方 · 米兰事件通报',
+      url: 'https://questure.poliziadistato.it/it/MonzaedellaBrianza/articolo/33876ae0693c9c415339468521',
+    },
+  },
+  {
     id: 'gb-live-raffle-payments',
     ruleId: 'gifts',
     date: '2026-08-13',

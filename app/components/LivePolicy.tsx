@@ -32,7 +32,7 @@ export function IncidentPolicyLink({id}: {id: string}) {
 
 function CaseStudy({item, linkRule = false}: {item: HistoryCase; linkRule?: boolean}) {
   const topic = topics.find(t => t.id === item.ruleId)!;
-  return <article className="live-history-item">
+  return <article className="live-history-item" id={linkRule ? item.id : undefined}>
     <p className="history-meta"><time dateTime={item.date}>{item.date}</time><span>{item.scope}</span></p>
     <h3>{item.title}</h3>
     <p>{item.fact}</p>
@@ -45,6 +45,7 @@ function CaseStudy({item, linkRule = false}: {item: HistoryCase; linkRule?: bool
       </dl>
     </details>
     <div className="history-links"><a href={item.source.url} target="_blank" rel="noreferrer">{item.source.title}</a>
+      {'contextSource' in item && <a href={item.contextSource.url} target="_blank" rel="noreferrer">{item.contextSource.title}</a>}
       {linkRule && <a href={ruleUrl(topic.id)}>推演「{topic.label}」</a>}
     </div>
   </article>;
